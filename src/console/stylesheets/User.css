@@ -1,0 +1,14 @@
+.user-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 140px;
+    width: 150px;
+}
+.user-items-list {
+    align-items: center;
+}
+.user-avatar {
+    margin-bottom: 10px;
+    color: #28688e;
+}

@@ -1,0 +1,35 @@
+{
+    "nbItems": 5,
+    "page": {
+        "url": "https://www.google.com/maps/place/Leroy+Merlin+La+Vigie+-+Ostwald/@48.534178,7.6942054,16.96z/data=!4m7!3m6!1s0x4796b5f8575c13ff:0x2e133d7b1fb5f3dc!8m2!3d48.5349224!4d7.6963112!9m1!1b1",
+        "extractList": [
+            {
+                "name": "name",
+                "type": "text",
+                "selector": "div[class='section-review-title']>span",
+                "maxItems": 5
+            },
+            {
+                "name": "date",
+                "type": "text",
+                "selector": "span[class='section-review-publish-date']",
+                "maxItems": 5
+            },
+            {
+                "name": "text",
+                "type": "text",
+                "selector": "span[class='section-review-text']",
+                "maxItems": 5
+            },
+            {
+                "name": "stars",
+                "type": "attribute",
+                "selector": {
+                    "element": "span[class='section-review-stars']",
+                    "attribute": "aria-label"
+                },
+                "maxItems": 5
+            }
+        ]
+    }
+}

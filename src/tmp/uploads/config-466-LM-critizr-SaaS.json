@@ -1,0 +1,65 @@
+{
+    "wait_task_ms": 0,
+    "wait_loop_ms": 0,
+    "scenarioList": [
+        "create_feeds_saas"
+    ],
+    "scenarioList_ALL": [
+        "delete_feeds",
+        "delete_templates",
+        "upload_templates",
+        "create_feeds"
+    ],
+    "upload_templates": {
+        "name": "Upload templates",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "LM_3_avis_enseigne", "type": "feed", "src": "D:/dsContent/slideTemplates/LM/V2/3_avis_enseigne"}},
+            {"action": "slideTemplate_upload", "data": {"name": "LM_4_avis_5_etoile", "type": "feed", "src": "D:/dsContent/slideTemplates/LM/V2/4_avis_5_etoile"}},
+            {"action": "slideTemplate_upload", "data": {"name": "LM_note_enseigne", "type": "feed", "src": "D:/dsContent/slideTemplates/LM/V2/note_enseigne"}},
+            {"action": "slideTemplate_upload", "data": {"name": "LM_note_google", "type": "feed", "src": "D:/dsContent/slideTemplates/LM/V2/note_google"}},
+            {"action": "slideTemplate_upload", "data": {"name": "LM_tps_tx_reponse", "type": "feed", "src": "D:/dsContent/slideTemplates/LM/V2/tps_tx_reponse"}}
+        ]
+    },
+    "delete_templates": {
+        "name": "Delete templates",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_delete", "data": {"name": "LM_3_avis_enseigne"}},
+            {"action": "slideTemplate_delete", "data": {"name": "LM_4_avis_5_etoile"}},
+            {"action": "slideTemplate_delete", "data": {"name": "LM_note_enseigne"}},
+            {"action": "slideTemplate_delete", "data": {"name": "LM_note_google"}},
+            {"action": "slideTemplate_delete", "data": {"name": "LM_tps_tx_reponse"}}
+        ]
+    },
+    "create_feeds": {
+        "name": "Create feeds",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "feed_create", "data": {"name": "LM_note_enseigne_la_vigie", "type": "xml", "template": "LM_note_enseigne", "url": "http://ftp.ds-piksel.com/feeds/XML/LM/LM-critizr-v2.xml", "frequency": "15m", "nbItem": 1, "typeGeneration": "1-1", "fields": {"Date": "/xml/date_recup", "Nommagasin": "'LA VIGIE'", "Indice": "/xml/note_critizr", "Avis": "/xml/nb_avis_critizr", "Txtavis": "'Avis'", "Nb_region": "/xml/rang_region_critizr", "Nb_region_text": "/xml/exposant_region_critizr", "Total_region": "/xml/nb_mag_region_critizr_long", "Nb_france": "/xml/rang_france_critizr", "Nb_france_text": "/xml/exposant_france_critizr", "Total_france": "/xml/nb_mag_france_critizr_long"}}},
+            {"action": "feed_create", "data": {"name": "LM_tps_tx_reponse_la_vigie", "type": "xml", "template": "LM_tps_tx_reponse", "url": "http://ftp.ds-piksel.com/feeds/XML/LM/LM-critizr-v2.xml", "frequency": "15m", "nbItem": 1, "typeGeneration": "1-1", "fields": {"Date": "/xml/date_recup", "Nommagasin": "'LA VIGIE'", "Tps_reponse": "/xml/temps_reponse_critizr", "Tx_reponse": "/xml/taux_traitement_critizr"}}},
+            {"action": "feed_create", "data": {"name": "LM_3_avis_enseigne_la_vigie", "type": "xml", "template": "LM_3_avis_enseigne", "url": "http://ftp.ds-piksel.com/feeds/XML/LM/LM-critizr-v2.xml", "frequency": "15m", "nbItem": 1, "typeGeneration": "1-1", "fields": {"Note_1": "/xml/image_note_avis_recent1", "Avis_1": "/xml/avis_recent1", "Note_2": "/xml/image_note_avis_recent2", "Avis_2": "/xml/avis_recent2", "Note_3": "/xml/image_note_avis_recent3", "Avis_3": "/xml/avis_recent3"}}},
+            {"action": "feed_create", "data": {"name": "LM_note_google_la_vigie", "type": "xml", "template": "LM_note_google", "url": "http://ftp.ds-piksel.com/feeds/XML/LM/LM-critizr-v2.xml", "frequency": "15m", "nbItem": 1, "typeGeneration": "1-1", "fields": {"Date": "/xml/date_recup", "Nommagasin": "'LA VIGIE'", "Indice": "/xml/note_google", "Avis": "/xml/nb_avis_google", "Txtavis": "'Avis'", "Nb_region": "do_not_display", "Nb_region_text": "do_not_display", "Total_region": "do_not_display", "Nb_france": "do_not_display", "Nb_france_text": "do_not_display", "Total_france": "do_not_display"}}}
+        ]
+    },
+    "create_feeds_saas": {
+        "name": "Create feeds on SaaS",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "feed_create", "data": {"name": "LM_note_enseigne_la_vigie", "type": "xml", "template": "note_enseigne", "url": "https://api.ds4.piksel.com/CritizrLM.php?shop=LEROY%20MERLIN%20LA%20VIGIE", "frequency": "15m", "nbItem": 1, "typeGeneration": "1-1", "fields": {"Date": "/xml/date_recup", "Nommagasin": "'LA VIGIE'", "Indice": "/xml/note_critizr", "Avis": "/xml/nb_avis_critizr", "Txtavis": "'Avis'", "Nb_region": "/xml/rang_region_critizr", "Nb_region_text": "/xml/exposant_region_critizr", "Total_region": "/xml/nb_mag_region_critizr_long", "Nb_france": "/xml/rang_france_critizr", "Nb_france_text": "/xml/exposant_france_critizr", "Total_france": "/xml/nb_mag_france_critizr_long"}}},
+            {"action": "feed_create", "data": {"name": "LM_tps_tx_reponse_la_vigie", "type": "xml", "template": "tps_tx_reponse", "url": "https://api.ds4.piksel.com/CritizrLM.php?shop=LEROY%20MERLIN%20LA%20VIGIE", "frequency": "15m", "nbItem": 1, "typeGeneration": "1-1", "fields": {"Date": "/xml/date_recup", "Nommagasin": "'LA VIGIE'", "Tps_reponse": "/xml/temps_reponse_critizr", "Tx_reponse": "/xml/taux_traitement_critizr"}}},
+            {"action": "feed_create", "data": {"name": "LM_3_avis_enseigne_la_vigie", "type": "xml", "template": "3_avis_enseigne", "url": "https://api.ds4.piksel.com/CritizrLM.php?shop=LEROY%20MERLIN%20LA%20VIGIE", "frequency": "15m", "nbItem": 1, "typeGeneration": "1-1", "fields": {"Note_1": "/xml/image_note_avis_recent1", "Avis_1": "/xml/avis_recent1", "Note_2": "/xml/image_note_avis_recent2", "Avis_2": "/xml/avis_recent2", "Note_3": "/xml/image_note_avis_recent3", "Avis_3": "/xml/avis_recent3"}}},
+            {"action": "feed_create", "data": {"name": "LM_note_google_la_vigie", "type": "xml", "template": "note_google", "url": "https://api.ds4.piksel.com/CritizrLM.php?shop=LEROY%20MERLIN%20LA%20VIGIE", "frequency": "15m", "nbItem": 1, "typeGeneration": "1-1", "fields": {"Date": "/xml/date_recup", "Nommagasin": "'LA VIGIE'", "Indice": "/xml/note_google", "Avis": "/xml/nb_avis_google", "Txtavis": "'Avis'", "Nb_region": "do_not_display", "Nb_region_text": "do_not_display", "Total_region": "do_not_display", "Nb_france": "do_not_display", "Nb_france_text": "do_not_display", "Total_france": "do_not_display"}}}
+        ]
+    },
+    "delete_feeds": {
+        "name": "Delete feeds",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "feed_delete", "data": {"name": "LM_note_enseigne_la_vigie"}},
+            {"action": "feed_delete", "data": {"name": "LM_tps_tx_reponse_la_vigie"}},
+            {"action": "feed_delete", "data": {"name": "LM_3_avis_enseigne_la_vigie"}},
+            {"action": "feed_delete", "data": {"name": "LM_note_google_la_vigie"}}
+        ]
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "server": {"name": "qa_azure", "apiUrl": "qa-dsapi.piksel.com", "apiPort": 80, "user": "demo", "password": "demo2020"},
+    "dataConnectors": {
+        "Xls1": {
+            "type": "Xls",
+            "access": {
+                "type": "googleApi"
+            },
+            "params": {
+                "file": "feeds",
+                "cellRange": "Feed1!A1:E7",
+                "sheet": "Feed1",
+                "majorDimension": "ROWS"
+            }
+        }
+    },
+    "playlist": "slidefeed",
+    "prefix": "DBDEMO0_",
+    "checkKeyList": ["Title", "Text1", "Text2", "Background", "Photo"],
+    "scanTimeSec": 30,
+    "forceUpdate": false,
+    "forceFileTimeChanged": false,
+    "template": "dbslide",
+    "slideName": "slidefeed",
+    "plugin": "../appsData/DbToSlide/plugin_default.js",
+    "templateMatrix": {
+        "Title": {
+            "type": "text",
+            "name": "Title"
+        },
+        "Text1": {
+            "type": "text",
+            "name": "Text1"
+        },
+        "Text2": {
+            "type": "text",
+            "name": "Text2"
+        },
+        "Photo": {
+            "type": "img",
+            "name": "Image1"
+        },
+        "Background": {
+            "type": "img",
+            "name": "Background"
+        }
+    }
+}

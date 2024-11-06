@@ -1,0 +1,58 @@
+.logdisplay-logs {
+    background: rgb(35, 35, 35);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: grid;
+    grid-template-rows: 100%;
+}
+.logdisplay-home {
+    background: rgb(35, 35, 35);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: grid;
+    grid-template-rows: 100%;
+}
+.logdisplay-servicedetails {
+    background: rgb(35, 35, 35);
+    padding-top: 1%;
+    display: grid;
+    grid-template-rows: 100%;
+}
+.logdisplay-agentdetails {
+    background: rgb(35, 35, 35);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: grid;
+    grid-template-rows: 100%;
+}
+.logdisplay-logfiles {
+    background: rgb(35, 35, 35);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: grid;
+    grid-template-rows: 100%;
+}
+.logarea-logs {
+    overflow: auto;
+    color: rgb(128, 223, 255);
+    font: 13px courier, sans-serif;
+    grid-row: 1 / 2;
+}
+.logarea-home {
+    overflow: auto;
+    color: rgb(128, 223, 255);
+    font: 13px courier, sans-serif;
+    grid-row: 1 / 2;
+}
+.logarea-servicedetails {
+    overflow: auto;
+    color: rgb(128, 223, 255);
+    font: 13px courier, sans-serif;
+    grid-row: 1 / 2;
+}
+.logarea-agentdetails {
+    overflow: auto;
+    color: rgb(128, 223, 255);
+    font: 13px courier, sans-serif;
+    grid-row: 1 / 2;
+}

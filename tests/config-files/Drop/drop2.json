@@ -1,0 +1,9 @@
+{
+    "server": {"name": "qa_azure", "apiUrl": "qa-dsapi.piksel.com", "apiPort": 80, "user": "api", "password": "test2019"},
+    "folderToScan": "appsData/Drop/drop2",
+    "playlist": "drop2",
+    "scanTimeSec": 5,
+    "deleteMediaLib": true,
+    "mediaPrefix": "DROP2_",
+    "scanPlaylistFrequency": 30
+}

@@ -1,0 +1,39 @@
+{
+    "server": {"name": "qa_azure", "apiUrl": "qa-dsapi.piksel.com", "apiPort": 80, "user": "demo", "password": "demo2020"},
+    "dataConnectors": {
+        "Xls1": {
+            "type": "Xls",
+            "access": {
+                "type": "googleApi"
+            },
+            "params": {
+                "file": "feeds",
+                "cellRange": "Feed2!A1:H7",
+                "sheet": "Feed2",
+                "majorDimension": "ROWS"
+            }
+        }
+    },
+    "prefix": "DBDEMO1_",
+    "checkKeyList": ["Category", "Product", "Reference", "Description", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    "scanTimeSec": 30,
+    "forceUpdate": false,
+    "forceFileTimeChanged": true,
+    "plugin": "../appsData/DbToSlide/plugin_demo1.js",
+    "template": "dbslide",
+    "slideName": "dbToSlide",
+    "templateMatrix": {
+        "Product": {
+            "type": "text",
+            "name": "Title"
+        },
+        "Reference": {
+            "type": "text",
+            "name": "Text1"
+        },
+        "Description": {
+            "type": "text",
+            "name": "Text2"
+        }
+    }
+}

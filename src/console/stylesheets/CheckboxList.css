@@ -1,0 +1,7 @@
+.checkboxlist {
+    flex: 1 1 auto;
+}
+.checkboxTitle {
+    width: 15%;
+    display: inline-block;
+}

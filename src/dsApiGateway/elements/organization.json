@@ -1,0 +1,22 @@
+{
+    "cmd" : {
+        "get": "getOrganizations", 
+		"getContext": "getContext"
+    },
+    "cmdList": {
+		"getOrganizations": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/context", 
+			"responseType": "application/json"
+		},
+		"getContext": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/products", 
+			"responseType": "application/json"
+        }
+    },
+    "createData": {
+    }
+}

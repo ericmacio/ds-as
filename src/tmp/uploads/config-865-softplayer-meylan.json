@@ -1,0 +1,21 @@
+{
+    "nbPlayer": 1,
+    "startTimerMs": 1000,
+    "playerTemplate": {
+        "organization": "API",
+        "ip": "99.99.999.X",
+        "computername": "SOFT_PLAYER_X",
+        "macaddress": "01:02:03:04:05:X",
+        "version": "11.5.2.11310",
+        "codekey": "1A2B3C4X"
+    },
+    "singlePlayer": true,
+    "player": {
+        "organization": "API",
+        "ip": "99.99.999.99",
+        "computername": "SOFT_SINGLE_PLAYER",
+        "macaddress": "AA:BB:CC:DD:EE:FF",
+        "version": "11.5.2.11310",
+        "codekey": "1A2B3C4D"
+    }
+}

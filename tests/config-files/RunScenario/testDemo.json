@@ -1,0 +1,234 @@
+{
+    "wait_task_ms": 0,
+    "wait_loop_ms": 1000,
+    "scenarioList": [
+        "create_airlines"
+    ],
+    "full_demo": [
+        "create_airlines",
+        "create_porter",
+        "create_airbox",
+        "create_demo",
+        "play_demo",
+        "delete_demo",
+        "delete_airlines",
+        "delete_porter",
+        "delete_airbox"
+    ],
+    "create_demo": {
+        "name": "Create Demo",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "layoutTemplate_upload", "data": {"name": "porter_demo_api", "src": "D:/dsContent/layoutTemplates/porter/porter"}},
+            {"action": "layout_create", "data": {"name": "porter_demo_api", "template": "porter_demo_api"}},
+            {"action": "layoutTemplate_upload", "data": {"name": "airbox_demo_api", "src": "D:/dsContent/layoutTemplates/airbox/airbox"}},
+            {"action": "layout_create", "data": {"name": "airbox_demo_api", "template": "airbox_demo_api"}},
+            {"action": "layoutTemplate_upload", "data": {"name": "airlines_demo_api", "src": "D:/dsContent/layoutTemplates/airlines/airlines"}},
+            {"action": "layout_create", "data": {"name": "airlines_demo_api", "template": "airlines_demo_api"}},
+            {"action": "channel_create", "data": {"name": "channel_demo_api", "description": "Demo channel including porter, airbox and airlines content"}},
+            {"action": "channel_post_content", "data": {"name": "channel_demo_api", "contentType": "playlist", "contentName": "porter_demo_api", "rank": 1}},
+            {"action": "channel_post_content", "data": {"name": "channel_demo_api", "contentType": "playlist", "contentName": "airbox_demo_api", "rank": 2}},
+            {"action": "channel_post_content", "data": {"name": "channel_demo_api", "contentType": "playlist", "contentName": "airlines_demo_api", "rank": 3}},
+            {"action": "channel_element_layout", "data": {"name": "channel_demo_api", "element": "porter_demo_api", "layout": "porter_demo_api", "value": "set"}},
+            {"action": "channel_element_layout", "data": {"name": "channel_demo_api", "element": "airbox_demo_api", "layout": "airbox_demo_api", "value": "set"}},
+            {"action": "channel_element_layout", "data": {"name": "channel_demo_api", "element": "airlines_demo_api", "layout": "airlines_demo_api", "value": "set"}},
+            {"action": "channel_publish", "data": {"name": "channel_demo_api"}}
+        ]
+    },
+    "wait_15s": {
+        "name": "Wait_15s",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "wait", "data": {"duration": 15}}
+        ]
+    },
+    "play_demo": {
+        "name": "Play demo",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "playlist_rights_to_device_list", "data": {"name": "porter_demo_api", "deviceList": ["QA_ERIC"], "value": "set"}},
+            {"action": "playlist_rights_to_device_list", "data": {"name": "airbox_demo_api", "deviceList": ["QA_ERIC"], "value": "set"}},
+            {"action": "playlist_rights_to_device_list", "data": {"name": "airlines_demo_api", "deviceList": ["QA_ERIC"], "value": "set"}},
+            {"action": "qm_delete_all", "data": {"device": "QA_ERIC"}},
+            {"action": "channel_associate_device_list", "data": {"name": "channel_demo_api", "deviceList":["QA_ERIC"]}},
+            {"action": "qm_check_exist", "data": {"check": {"device": "QA_ERIC", "title": "channel_update", "type": "command", "status": "new"}}},
+            {"action": "qm_check_exist", "data": {"check": {"device": "QA_ERIC", "title": "channel_update", "type": "command", "status": "end"}}},
+            {"action": "wait", "data": {"duration": 900}},
+            {"action": "device_check_content_status", "data": {"name": "QA_ERIC", "check": {"last_loop_duration_s": 291, "channel": {"display_name": "channel_demo_api", "current_version": 2, "global_state": "ok"}, "playlist": [{"display_name": "porter_demo_api", "current_version": 3, "rights": true, "global_state": "ok"}, {"display_name": "airbox_demo_api", "current_version": 3, "rights": true, "global_state": "ok"}, {"display_name": "airlines_demo_api", "current_version": 3, "rights": true, "global_state": "ok"}]}}}
+        ]
+    },
+    "check_demo": {
+        "name": "Check demo",
+        "nbLoop": 2,
+        "taskList": [
+            {"action": "device_check_content_status", "data": {"name": "QA_ERIC", "check": {"last_loop_duration_s": 290, "channel": {"display_name": "channel_demo_api", "current_version": 2, "global_state": "ok"}, "playlist": [{"display_name": "porter_demo_api", "current_version": 3, "rights": true, "global_state": "ok"}, {"display_name": "airbox_demo_api", "current_version": 3, "rights": true, "global_state": "ok"}, {"display_name": "airlines_demo_api", "current_version": 3, "rights": true, "global_state": "ok"}]}}},
+            {"action": "wait", "data": {"duration": 30}}
+        ]
+    },
+    "delete_demo": {
+        "name": "Delete Demo",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_associate_device_list", "data": {"name": "do_not_delete", "deviceList":["QA_ERIC"]}},
+            {"action": "channel_delete", "data": {"name": "channel_demo_api"}},
+            {"action": "layout_delete", "data": {"name": "porter_demo_api"}},
+            {"action": "layout_delete", "data": {"name": "airbox_demo_api"}},
+            {"action": "layout_delete", "data": {"name": "airlines_demo_api"}},
+            {"action": "layoutTemplate_delete", "data": {"name": "porter_demo_api"}},
+            {"action": "layoutTemplate_delete", "data": {"name": "airbox_demo_api"}},
+            {"action": "layoutTemplate_delete", "data": {"name": "airlines_demo_api"}}
+        ]
+    },
+    "create_airlines": {
+        "name": "Airlines",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "airlines1_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/airlines/airlines1"}},
+            {"action": "slide_create", "data": {"name": "airlines1_demo_api", "src": "D:/dsContent/slideData/airlines/airlines1.json", "template": "airlines1_demo_api"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airlines2_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/airlines/airlines2"}},
+            {"action": "slide_create", "data": {"name": "airlines2_demo_api", "src": "D:/dsContent/slideData/airlines/airlines2.json", "template": "airlines2_demo_api"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airlines3_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/airlines/airlines3"}},
+            {"action": "slide_create", "data": {"name": "airlines3_demo_api", "src": "D:/dsContent/slideData/airlines/airlines3.json", "template": "airlines3_demo_api"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airlines4_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/airlines/airlines4"}},
+            {"action": "slide_create", "data": {"name": "airlines4_demo_api", "src": "D:/dsContent/slideData/airlines/airlines4.json", "template": "airlines4_demo_api"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airlines5_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/airlines/airlines5"}},
+            {"action": "slide_create", "data": {"name": "airlines5_demo_api", "src": "D:/dsContent/slideData/airlines/airlines5.json", "template": "airlines5_demo_api"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airlines6_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/airlines/airlines6"}},
+            {"action": "slide_create", "data": {"name": "airlines6_demo_api", "src": "D:/dsContent/slideData/airlines/airlines6.json", "template": "airlines6_demo_api"}},
+            {"action": "playlist_create", "data": {"name": "airlines_demo_api", "description": "Airlines playlist"}},
+            {"action": "playlist_upload_content", "data": {"name": "airlines_demo_api", "src": "D:/dsContent/medias/airlines/intro.mp4", "contentName": "airlines_intro_demo_api"}},
+            {"action": "wait", "data": {"duration": 5}},
+            {"action": "media_check_video_encoded", "data": {"name": "airlines_intro_demo_api", "timeOut": "60"}},
+            {"action": "playlist_post_content", "data": {"name": "airlines_demo_api", "contentType": "slide", "contentName": "airlines1_demo_api", "rank": 2}},
+            {"action": "playlist_post_content", "data": {"name": "airlines_demo_api", "contentType": "slide", "contentName": "airlines2_demo_api", "rank": 3}},
+            {"action": "playlist_post_content", "data": {"name": "airlines_demo_api", "contentType": "slide", "contentName": "airlines3_demo_api", "rank": 4}},
+            {"action": "playlist_post_content", "data": {"name": "airlines_demo_api", "contentType": "slide", "contentName": "airlines4_demo_api", "rank": 5}},
+            {"action": "playlist_post_content", "data": {"name": "airlines_demo_api", "contentType": "slide", "contentName": "airlines5_demo_api", "rank": 6}},
+            {"action": "playlist_post_content", "data": {"name": "airlines_demo_api", "contentType": "slide", "contentName": "airlines6_demo_api", "rank": 7}},
+            {"action": "playlist_publish", "data": {"name": "airlines_demo_api"}}
+        ]
+    },
+    "delete_airlines": {
+        "name": "Delete Airlines",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "playlist_delete", "data": {"name": "airlines_demo_api"}},
+            {"action": "media_delete", "data": {"name": "airlines_intro_demo_api"}},
+            {"action": "media_delete", "data": {"name": "airlines1_demo_api"}},
+            {"action": "media_delete", "data": {"name": "airlines2_demo_api"}},
+            {"action": "media_delete", "data": {"name": "airlines3_demo_api"}},
+            {"action": "media_delete", "data": {"name": "airlines4_demo_api"}},
+            {"action": "media_delete", "data": {"name": "airlines5_demo_api"}},
+            {"action": "media_delete", "data": {"name": "airlines6_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airlines1_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airlines2_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airlines3_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airlines4_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airlines5_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airlines6_demo_api"}}
+        ]
+    },
+    "create_porter": {
+        "name": "Porter",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "porter1_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/porter/porter1"}},
+            {"action": "slide_create", "data": {"name": "porter1_demo_api", "src": "D:/dsContent/slideData/porter/porter1.json", "template": "porter1_demo_api"}},
+            {"action": "slideTemplate_upload", "data": {"name": "porter2_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/porter/porter2"}},
+            {"action": "slide_create", "data": {"name": "porter2_demo_api", "src": "D:/dsContent/slideData/porter/porter2.json", "template": "porter2_demo_api"}},
+            {"action": "slideTemplate_upload", "data": {"name": "porter3_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/porter/porter3"}},
+            {"action": "slide_create", "data": {"name": "porter3_demo_api", "src": "D:/dsContent/slideData/porter/porter3.json", "template": "porter3_demo_api"}},
+            {"action": "slideTemplate_upload", "data": {"name": "porter4_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/porter/porter4"}},
+            {"action": "slide_create", "data": {"name": "porter4_demo_api", "src": "D:/dsContent/slideData/porter/porter4.json", "template": "porter4_demo_api"}},
+            {"action": "slideTemplate_upload", "data": {"name": "porter5_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/porter/porter5"}},
+            {"action": "slide_create", "data": {"name": "porter5_demo_api", "src": "D:/dsContent/slideData/porter/porter5.json", "template": "porter5_demo_api"}},
+            {"action": "slideTemplate_upload", "data": {"name": "porter6_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/porter/porter6"}},
+            {"action": "slide_create", "data": {"name": "porter6_demo_api", "src": "D:/dsContent/slideData/porter/porter6.json", "template": "porter6_demo_api"}},
+            {"action": "slideTemplate_upload", "data": {"name": "porter7_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/porter/porter7"}},
+            {"action": "slide_create", "data": {"name": "porter7_demo_api", "src": "D:/dsContent/slideData/porter/porter6.json", "template": "porter7_demo_api"}},
+            {"action": "playlist_create", "data": {"name": "porter_demo_api", "description": "Porter playlist"}},
+            {"action": "playlist_upload_content", "data": {"name": "porter_demo_api", "src": "D:/dsContent/medias/porter/intro.mp4", "contentName": "porter_intro_demo_api"}},
+            {"action": "wait", "data": {"duration": 5}},
+            {"action": "media_check_video_encoded", "data": {"name": "porter_intro_demo_api", "timeOut": "60"}},
+            {"action": "playlist_post_content", "data": {"name": "porter_demo_api", "contentType": "slide", "contentName": "porter1_demo_api", "rank": 2}},
+            {"action": "playlist_post_content", "data": {"name": "porter_demo_api", "contentType": "slide", "contentName": "porter2_demo_api", "rank": 3}},
+            {"action": "playlist_post_content", "data": {"name": "porter_demo_api", "contentType": "slide", "contentName": "porter3_demo_api", "rank": 4}},
+            {"action": "playlist_post_content", "data": {"name": "porter_demo_api", "contentType": "slide", "contentName": "porter4_demo_api", "rank": 5}},
+            {"action": "playlist_post_content", "data": {"name": "porter_demo_api", "contentType": "slide", "contentName": "porter5_demo_api", "rank": 6}},
+            {"action": "playlist_post_content", "data": {"name": "porter_demo_api", "contentType": "slide", "contentName": "porter6_demo_api", "rank": 7}},
+            {"action": "playlist_post_content", "data": {"name": "porter_demo_api", "contentType": "slide", "contentName": "porter7_demo_api", "rank": 8}},
+            {"action": "playlist_publish", "data": {"name": "porter_demo_api"}}
+        ]
+    },
+    "delete_porter": {
+        "name": "Delete Porter",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "playlist_delete", "data": {"name": "porter_demo_api"}},
+            {"action": "media_delete", "data": {"name": "porter1_demo_api"}},
+            {"action": "media_delete", "data": {"name": "porter2_demo_api"}},
+            {"action": "media_delete", "data": {"name": "porter3_demo_api"}},
+            {"action": "media_delete", "data": {"name": "porter4_demo_api"}},
+            {"action": "media_delete", "data": {"name": "porter5_demo_api"}},
+            {"action": "media_delete", "data": {"name": "porter6_demo_api"}},
+            {"action": "media_delete", "data": {"name": "porter7_demo_api"}},
+            {"action": "media_delete", "data": {"name": "porter_intro_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "porter1_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "porter2_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "porter3_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "porter4_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "porter5_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "porter6_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "porter7_demo_api"}}
+        ]
+    },
+    "create_airbox": {
+        "name": "Airbox",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "airbox1_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/airbox/airbox1"}},
+            {"action": "slide_create", "data": {"name": "airbox1_demo_api", "src": "D:/dsContent/slideData/airbox/airbox1.json", "template": "airbox1_demo_api"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airbox2_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/airbox/airbox2"}},
+            {"action": "slide_create", "data": {"name": "airbox2_demo_api", "src": "D:/dsContent/slideData/airbox/airbox2.json", "template": "airbox2_demo_api"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airbox3_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/airbox/airbox3"}},
+            {"action": "slide_create", "data": {"name": "airbox3_demo_api", "src": "D:/dsContent/slideData/airbox/airbox3.json", "template": "airbox3_demo_api"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airbox4_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/airbox/airbox4"}},
+            {"action": "slide_create", "data": {"name": "airbox4_demo_api", "src": "D:/dsContent/slideData/airbox/airbox4.json", "template": "airbox4_demo_api"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airbox5_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/airbox/airbox5"}},
+            {"action": "slide_create", "data": {"name": "airbox5_demo_api", "src": "D:/dsContent/slideData/airbox/airbox5.json", "template": "airbox5_demo_api"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airbox6_demo_api", "type": "manual", "src": "D:/dsContent/slideTemplates/airbox/airbox6"}},
+            {"action": "slide_create", "data": {"name": "airbox6_demo_api", "src": "D:/dsContent/slideData/airbox/airbox6.json", "template": "airbox6_demo_api"}},
+            {"action": "playlist_create", "data": {"name": "airbox_demo_api", "description": "Airbox playlist"}},
+            {"action": "playlist_upload_content", "data": {"name": "airbox_demo_api", "src": "D:/dsContent/medias/airbox/intro.mp4", "contentName": "airbox_intro_demo_api"}},
+            {"action": "wait", "data": {"duration": 5}},
+            {"action": "media_check_video_encoded", "data": {"name": "airbox_intro_demo_api", "timeOut": "60"}},
+            {"action": "playlist_post_content", "data": {"name": "airbox_demo_api", "contentType": "slide", "contentName": "airbox1_demo_api", "rank": 2}},
+            {"action": "playlist_post_content", "data": {"name": "airbox_demo_api", "contentType": "slide", "contentName": "airbox2_demo_api", "rank": 3}},
+            {"action": "playlist_post_content", "data": {"name": "airbox_demo_api", "contentType": "slide", "contentName": "airbox3_demo_api", "rank": 4}},
+            {"action": "playlist_post_content", "data": {"name": "airbox_demo_api", "contentType": "slide", "contentName": "airbox4_demo_api", "rank": 5}},
+            {"action": "playlist_post_content", "data": {"name": "airbox_demo_api", "contentType": "slide", "contentName": "airbox5_demo_api", "rank": 6}},
+            {"action": "playlist_post_content", "data": {"name": "airbox_demo_api", "contentType": "slide", "contentName": "airbox6_demo_api", "rank": 7}},
+            {"action": "playlist_publish", "data": {"name": "airbox_demo_api"}}
+        ]
+    },
+    "delete_airbox": {
+        "name": "Delete Airbox",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "playlist_delete", "data": {"name": "airbox_demo_api"}},
+            {"action": "media_delete", "data": {"name": "airbox1_demo_api"}},
+            {"action": "media_delete", "data": {"name": "airbox2_demo_api"}},
+            {"action": "media_delete", "data": {"name": "airbox3_demo_api"}},
+            {"action": "media_delete", "data": {"name": "airbox4_demo_api"}},
+            {"action": "media_delete", "data": {"name": "airbox5_demo_api"}},
+            {"action": "media_delete", "data": {"name": "airbox6_demo_api"}},
+            {"action": "media_delete", "data": {"name": "airbox_intro_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airbox1_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airbox2_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airbox3_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airbox4_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airbox5_demo_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airbox6_demo_api"}}
+        ]
+    }
+}

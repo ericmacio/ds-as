@@ -1,0 +1,47 @@
+{
+    "cmd" : {
+        "get": "getVariables", 
+        "post": "postVariable",
+        "put": "putVariable",
+        "delete": "deleteVariable"
+    },
+    "cmdList": {
+        "getVariables": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/variables",
+			"description": "Get variables list",
+			"responseType": "application/json"
+        },
+        "postVariable": {
+			"request": "POST",
+			"cookie": true,
+			"contentType": "application/json",
+			"url": "/variables",
+			"description": "Create a new variable",
+			"responseType": "application/json"
+        },
+        "putVariable": {
+			"request": "PUT",
+			"cookie": true,
+			"contentType": "application/json",
+			"url": "/variables",
+			"attributes": "[variable_id]",
+			"description": "Modify a new variable",
+			"responseType": "application/json"
+        },
+        "deleteVariable": {
+			"request": "DELETE",
+			"cookie": true,
+			"url": "/variables",
+			"attributes": "[variable_id]",
+			"description": "Delete a variable",
+			"responseType": "application/json"
+		}
+    },
+    "createData": {
+        "link": "#variable/undefined",
+        "resource_name": null,
+        "description": ""
+    }
+}

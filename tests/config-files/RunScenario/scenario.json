@@ -1,0 +1,819 @@
+{
+    "wait_task_ms": 0,
+    "wait_loop_ms": 0,
+    "scenarioList": [
+        "TEST_1",
+        "TEST_2"
+    ],
+    "slideTemplate": {
+        "name": "slideTemplate",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "test-slideTemplate", "type": "manual", "url": "http://dsxfer.meylan.test/EMK/slideTemplates/rss1"}},
+            {"action": "slideTemplate_get_list", "data": {"display": ["title"]}}
+        ]
+    },
+    "TEST_1": {
+        "name": "Test_1",
+        "nbLoop": 2,
+        "taskList": [
+            {"action": "channel_get_list", "data": {"display": ["title", "media_nb"]}},
+            {"action": "wait", "data": {"duration": 1}},
+            {"action": "layout_get_list", "data": {"display": ["title"]}},
+            {"action": "wait", "data": {"duration": 5}}
+        ]
+    },
+    "TEST_2": {
+        "name": "Test_2",
+        "nbLoop": 3,
+        "taskList": [
+            {"action": "channel_get_list", "data": {"display": ["title", "media_nb"]}},
+            {"action": "wait", "data": {"duration": 1}},
+            {"action": "layout_get_list", "data": {"display": ["title"]}},
+            {"action": "wait", "data": {"duration": 1}}
+        ]
+    },
+    "TEST_3": {
+        "name": "Test_3",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_get_list", "data": {"display": ["title", "media_nb"]}},
+            {"action": "layout_get_list", "data": {"display": ["title"]}}
+        ]
+    },
+    "video_encoded": {
+        "name": "Test video encoding",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "media_upload", "data": {"name": "test_video", "src": "D:/dsContent/medias/all/video.mp4"}},
+            {"action": "media_check_video_encoded", "data": {"name": "test_video", "timeOut": "120"}},
+            {"action": "media_delete", "data": {"name": "test_video"}}
+        ]
+    },
+    "layout": {
+        "name": "Test Layout",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "layout_generate_all", "data": {}},
+            {"action": "layout_generate", "data": {"name": "multi_layout_api", "broadcastAreaList": [{"name": "Insert", "playlist": "do_not_delete"}]}}
+        ]
+    },
+    "wait": {
+        "name": "Test wait",
+        "nbLoop": 3,
+        "taskList": [
+            {"action": "wait", "data": {"duration": 5}},
+            {"action": "wait", "data": {"duration": 5}}
+        ]
+    },
+    "test_channel": {
+        "name": "Test channel",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_create", "data": {"name": "to_be_deleted", "description": "new channel created with API call"}},
+            {"action": "channel_get_list", "data": {"display": ["title"]}},
+            {"action": "channel_check_exist", "data": {"name": "to_be_deleted"}},
+            {"action": "channel_upload_content", "data": {"name": "to_be_deleted", "src": "D:/dsContent/medias/images/twc.jpg", "contentName": "media_test_1"}},
+            {"action": "channel_publish", "data": {"name": "to_be_deleted"}},
+            {"action": "channel_check_content_nb", "data": {"name": "to_be_deleted", "contentName": "media_test_1", "nbContent": 1}},
+            {"action": "channel_delete", "data": {"name": "to_be_deleted"}},
+            {"action": "media_delete", "data": {"name": "media_test_1"}}
+        ]
+    },
+    "create_rss_feed": {
+        "name": "Create RSS feed",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "rss_eric", "type": "feed", "src": "D:/dsContent/slideTemplates/rss1"}},
+            {"action": "feed_create", "data": {"name": "rss_eric_nasa", "type": "rss", "url": "https://www.nasa.gov/rss/dyn/educationnews.rss", "frequency": "15m", "nbItem": 2, "template": "rss_eric"}},
+            {"action": "feed_get_list", "data": {"display": ["title"]}},
+            {"action": "wait", "data": {"duration": 5}},
+            {"action": "feed_check_data", "data": {"name": "rss_eric_nasa", "check": {"generation_status": "ok"}}}
+        ]
+    },
+    "Test": {
+        "name": "Test",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_get_list", "data": {"display": ["title", "media_nb"]}},
+            {"action": "layout_get_list", "data": {"display": ["title"]}},
+            {"action": "layoutTemplate_get_list", "data": {"display": ["title"]}},
+            {"action": "slideTemplate_get_list", "data": {"display": ["title"]}}
+        ]
+    },
+    "createFullBooking": {
+        "name": "createFullBooking",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_1", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_2", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_3", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_4", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_5", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_6", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_7", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_8", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_9", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_10", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_11", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_12", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_13", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_14", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_15", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_16", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_17", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_18", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_19", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_20", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_21", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_22", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_23", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_24", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_25", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_26", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_27", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_28", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_29", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_30", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_31", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_32", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_33", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_34", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_35", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_36", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_37", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_38", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_39", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_40", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_41", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_42", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_43", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_44", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_45", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_46", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_47", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_48", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_49", "date": "2020-02-20"}},
+            {"action": "room_create_booking_full", "data": {"name": "booking", "room": "room_50", "date": "2020-02-20"}}
+        ]
+    },
+    "createOneBooking": {
+        "name": "createOneBooking",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_2", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}}
+        ]
+    },
+    "createBooking": {
+        "name": "createBooking",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_1", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_2", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_3", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_4", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_5", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_6", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_7", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_8", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_9", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_10", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_11", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_12", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_13", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_14", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_15", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_16", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_17", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_18", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_19", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_20", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_21", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_22", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_23", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_24", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_25", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_26", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_27", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_28", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_29", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_30", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_31", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_32", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_33", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_34", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_35", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_36", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_37", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_38", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_39", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_40", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_41", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_42", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_43", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_44", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_45", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_46", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_47", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_48", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_49", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_50", "startDate": "2020-02-14", "startHour": "16", "startMin": "30", "endDate": "2020-02-14", "endHour": "17", "endMin": "30"}}
+        ]
+    },
+    "createRooms": {
+        "name": "createRooms",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "room_create", "data": {"name": "room_1", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_2", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_3", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_4", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_5", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_6", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_7", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_8", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_9", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_10", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_11", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_12", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_13", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_14", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_15", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_16", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_17", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_18", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_19", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_20", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_21", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_22", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_23", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_24", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_25", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_26", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_27", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_28", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_29", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_30", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_31", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_32", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_33", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_34", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_35", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_36", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_37", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_38", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_39", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_40", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_41", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_42", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_43", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_44", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_45", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_46", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_47", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_48", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_49", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_create", "data": {"name": "room_50", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}}
+        ]
+    },
+    "rooms": {
+        "name": "Rooms",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "room_get_list", "data": {"display": ["title"]}},
+            {"action": "room_create", "data": {"name": "room_test_api_1", "number": "1234", "capacity": "20", "building": "133", "floor": "1", "description": "room API", "organization": "API"}},
+            {"action": "room_get_list", "data": {"display": ["title"]}},
+            {"action": "room_create_booking", "data": {"name": "booking_1", "room": "room_test_api_1", "startDate": "2020-08-14", "startHour": "16", "startMin": "30", "endDate": "2020-08-14", "endHour": "17", "endMin": "30"}},
+            {"action": "room_delete", "data": {"name": ["room_test_api_1"]}},
+            {"action": "room_get_list", "data": {"display": ["title"]}}
+        ]
+    },
+    "layout_generate_all": {
+        "name": "Generate all layout",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "layout_generate_all"}
+        ]
+    },
+    "scenario_test": {
+        "name": "Test",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "layout_get_content", "data": {"name": "multi_testcontent_api"}},
+            {"action": "layout_generate", "data": {"name": "multi_testcontent_api", "broadcastAreaList": [{"name": "Insert", "playlist": "scrap1"}]}}
+        ]
+    },
+    "scenario_QRC": {
+        "name": "QRC",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "qrc_create", "data": {"name": "qrc_test_api", "url": "http://ds.meylan.test"}},
+            {"action": "qrc_check_exist", "data": {"name": "qrc_test_api"}},
+            {"action": "qrc_get_list", "data": {"display": ["title"]}},
+            {"action": "qrc_get_data", "data": {"name": "qrc_test_api"}},
+            {"action": "qrc_delete", "data": {"name": "qrc_test_api"}}
+        ]
+    },
+    "scenario_stream": {
+        "name": "stream",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "stream_create", "data": {"name": "stream_test_api", "url": "http://artelive-lh.akamaihd.net/i/artelive_fr@344805/master.m3u8"}},
+            {"action": "stream_check_exist", "data": {"name": "stream_test_api"}},
+            {"action": "stream_get_list", "data": {"display": ["title"]}},
+            {"action": "stream_get", "data": {"name": "stream_test_api"}},
+            {"action": "stream_delete", "data": {"name": "stream_test_api"}}
+        ]
+    },
+    "scenario_web": {
+        "name": "Web",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "web_create", "data": {"name": "web_test_api", "url": "https://www.deezer.com"}},
+            {"action": "web_check_exist", "data": {"name": "web_test_api"}},
+            {"action": "web_get_list", "data": {"display": ["title"]}},
+            {"action": "web_get", "data": {"name": "web_test_api"}},
+            {"action": "web_delete", "data": {"name": "web_test_api"}}
+        ]
+    },
+    "scenario_event": {
+        "name": "Event",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "event_create", "data": {"name": "event_api", "channel": "do_not_delete", "type": "classic", "start": "June 19, 2020 15:00:00", "end": "June 19, 2020 16:00:00", "deviceList": ["QA_ERIC"]}},
+            {"action": "event_check_exist", "data": {"name": "event_api"}},
+            {"action": "event_get_list", "data": {"name": "event_api"}},
+            {"action": "event_get_data", "data": {"name": "event_api"}},
+            {"action": "event_check_data", "data": {"name": "event_api", "check": {"type_event": "classic", "channel_title": "do_not_delete"}}},
+            {"action": "event_delete", "data": {"name": "event_api"}}
+        ]
+    },
+    "scenario_elementLayout": {
+        "name": "Channel element layout",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_element_layout", "data": {"name": "do_not_delete", "element": "do_not_delete", "layout": "do_not_delete", "value": "set"}},
+            {"action": "channel_publish", "data": {"name": "do_not_delete"}},
+            {"action": "channel_check_element", "data": {"name": "do_not_delete", "element": "do_not_delete", "check": {"layout_name": "do_not_delete"}}},
+            {"action": "channel_element_layout", "data": {"name": "do_not_delete", "element": "do_not_delete", "layout": "do_not_delete", "value": "unset"}},
+            {"action": "channel_publish", "data": {"name": "do_not_delete"}},
+            {"action": "channel_check_element", "data": {"name": "do_not_delete", "element": "do_not_delete", "check": {"layout_name": "Full screen"}}}
+        ]
+    },
+    "scenario_defaultLayout": {
+        "name": "Channel default Layout",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_default_layout", "data": {"name": "do_not_delete", "layout": "do_not_delete", "value": "set"}},
+            {"action": "channel_publish", "data": {"name": "do_not_delete"}},
+            {"action": "channel_check_data", "data": {"name": "do_not_delete", "check": {"default_layout_name": "do_not_delete"}}},
+            {"action": "channel_default_layout", "data": {"name": "do_not_delete", "layout": "do_not_delete", "value": "unset"}},
+            {"action": "channel_publish", "data": {"name": "do_not_delete"}},
+            {"action": "channel_check_data", "data": {"name": "do_not_delete", "check": {"default_layout_name": ""}}}
+        ]
+    },
+    "scenario_qm": {
+        "name": "QM",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "qm_get_list", "data": {}},
+            {"action": "qm_get_list", "data": {"display": ["device", "title", "type", "status", "date"]}},
+            {"action": "qm_check_exist", "data": {"maxDelay": 60, "check": {"device": "QA_ERIC", "title": "config_update", "type": "set", "status": "new"}}}
+        ]
+    },
+    "scenario_demo1": {
+        "name": "Demo1",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "airbox2_api", "type": "manual", "src": "D:/dsContent/slideTemplates/airbox/airbox2"}},
+            {"action": "channel_create", "data": {"name": "channel_api", "description": "Demo channel"}},
+            {"action": "channel_upload_content", "data": {"name": "channel_api", "src": "D:/dsContent/medias/images/ville1.jpg", "contentName": "ville_api"}},
+            {"action": "slide_create", "data": {"name": "airbox2_api", "src": "D:/dsContent/slideData/airbox/airbox2_demo.json", "template": "airbox2_api"}},
+            {"action": "channel_post_content", "data": {"name": "channel_api", "contentType": "slide", "contentName": "airbox2_api"}},
+            {"action": "channel_publish", "data": {"name": "channel_api"}},
+            {"action": "channel_associate_device_list", "data": {"name": "channel_api", "deviceList":["eric web"]}},
+            {"action": "channel_delete", "data": {"name": "channel_api"}},
+            {"action": "slide_delete", "data": {"name": "airbox2_api"}},
+            {"action": "media_delete", "data": {"name": "ville_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airbox2_api"}}
+        ]
+    },
+    "scenario_deviceRights": {
+        "name": "Device rights",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "device_rights_to_list", "data": {"name": "QA_ERIC", "type": "playlist", "list": ["do_not_delete", "scrap1"], "value": "set"}},
+            {"action": "device_check_rights_to_list", "data": {"name": "QA_ERIC", "type": "playlist", "list": ["do_not_delete", "scrap1"], "value": "set"}},
+            {"action": "device_rights_to_list", "data": {"name": "QA_ERIC", "type": "playlist", "list": ["do_not_delete", "scrap1"], "value": "unset"}},
+            {"action": "device_check_rights_to_list", "data": {"name": "QA_ERIC", "type": "playlist", "list": ["do_not_delete", "scrap1"], "value": "unset"}}
+        ]
+    },
+    "scenario_playlistRights": {
+        "name": "Playlist rights",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "playlist_rights_to_device_list", "data": {"name": "do_not_delete", "deviceList": ["QA_ERIC", "eric web"], "value": "set"}},
+            {"action": "playlist_check_rights_to_device_list", "data": {"name": "do_not_delete", "deviceList": ["QA_ERIC", "eric web"], "value": "set"}},
+            {"action": "playlist_rights_to_device_list", "data": {"name": "do_not_delete", "deviceList": ["QA_ERIC"], "value": "unset"}},
+            {"action": "playlist_check_rights_to_device_list", "data": {"name": "do_not_delete", "deviceList": ["eric web"], "value": "set"}},
+            {"action": "playlist_check_rights_to_device_list", "data": {"name": "do_not_delete", "deviceList": ["QA_ERIC"], "value": "unset"}},
+            {"action": "playlist_rights_to_device_list", "data": {"name": "do_not_delete", "deviceList": ["eric web"], "value": "unset"}},
+            {"action": "playlist_check_rights_to_device_list", "data": {"name": "do_not_delete", "deviceList": ["eric web"], "value": "unset"}}
+        ]
+    },
+    "scenario_contentList": {
+        "name": "Test",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_check_content_list", "data": {"name": "do_not_delete", "contentList": ["US-2.jpg", "US-8.jpg", "video2.mp4"]}},
+            {"action": "playlist_check_content_list", "data": {"name": "do_not_delete", "contentList": ["bg4.jpg", "newYear.mp4"]}}
+        ]
+    },
+    "scenario_checkData": {
+        "name": "Check Data",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_get_data", "data": {"name": "do_not_delete"}},
+            {"action": "channel_check_data", "data": {"name": "do_not_delete", "check": {"title": "do_not_delete", "description": "Channel de test", "media_nb": 6}}},
+            {"action": "playlist_get_data", "data": {"name": "do_not_delete"}},
+            {"action": "playlist_check_data", "data": {"name": "do_not_delete", "check": {"title": "do_not_delete", "description": "", "media_nb": 3}}},
+            {"action": "device_get_data", "data": {"name": "QA_ERIC"}},
+            {"action": "device_check_data", "data": {"name": "QA_ERIC", "check": {"title": "QA_ERIC", "description": "QA Player own by EMK - Grenoble"}}}
+        ]
+    },
+    "scenario_getData": {
+        "name": "Get Data",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_get_data", "data": {"name": "do_not_delete"}},
+            {"action": "playlist_get_data", "data": {"name": "do_not_delete"}},
+            {"action": "device_get_data", "data": {"name": "QA_ERIC"}},
+            {"action": "media_get_data", "data": {"name": "do_not_delete"}}
+        ]
+    },
+    "scenario_demo": {
+        "name": "Demo",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_create", "data": {"name": "channel_api", "description": "new channel created with API call"}},
+            {"action": "channel_check_exist", "data": {"name": "channel_api"}},
+            {"action": "channel_upload_content", "data": {"name": "channel_api", "src": "D:/dsContent/medias/images/twc.jpg", "contentName": "twc_api_media_1"}},
+            {"action": "channel_publish", "data": {"name": "channel_api"}},
+            {"action": "channel_check_content_nb", "data": {"name": "channel_api", "contentName": "twc_api_media_1", "nbContent": 1}},
+            {"action": "playlist_create", "data": {"name": "playlist_api", "description": "new playlist created with API call"}},
+            {"action": "playlist_check_exist", "data": {"name": "playlist_api"}},
+            {"action": "playlist_upload_content", "data": {"name": "playlist_api", "src": "D:/dsContent/medias/images/twc.jpg", "contentName": "twc_api_media_2"}},
+            {"action": "playlist_publish", "data": {"name": "playlist_api"}},
+            {"action": "playlist_check_content_nb", "data": {"name": "playlist_api", "contentName": "twc_api_media_2", "nbContent": 1}},
+            {"action": "slideTemplate_upload", "data": {"name": "airbox1_api", "type": "manual", "src": "D:/dsContent/slideTemplates/airbox/airbox1"}},
+            {"action": "slide_create", "data": {"name": "airbox1_api", "src": "D:/dsContent/slideData/airbox/airbox1.json", "template": "airbox1_api"}},
+            {"action": "playlist_post_content", "data": {"name": "playlist_api", "contentType": "slide", "contentName": "airbox1_api"}},
+            {"action": "slideTemplate_upload", "data": {"name": "rss1_api", "type": "feed", "src": "D:/dsContent/slideTemplates/rss1"}},
+            {"action": "feed_create", "data": {"name": "rss_api", "type": "rss", "url": "http://www.sports.fr/fr/cmc/rss.xml", "frequency": "15m", "nbItem": 2, "template": "rss1_api"}},
+            {"action": "playlist_post_content", "data": {"name": "playlist_api", "contentType": "feed", "contentName": "rss_api"}},
+            {"action": "playlist_publish", "data": {"name": "playlist_api"}},
+            {"action": "channel_post_content", "data": {"name": "channel_api", "contentType": "playlist", "contentName": "playlist_api"}},
+            {"action": "channel_publish", "data": {"name": "channel_api"}},
+            {"action": "wait", "data": {"duration": 120}},
+            {"action": "playlist_delete", "data": {"name": "playlist_api"}},
+            {"action": "channel_delete", "data": {"name": "channel_api"}},
+            {"action": "slide_delete", "data": {"name": "airbox1_api"}},
+            {"action": "feed_delete", "data": {"name": "rss_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airbox1_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "rss1_api"}},
+            {"action": "media_delete", "data": {"name": "twc_api_media_1"}},
+            {"action": "media_delete", "data": {"name": "twc_api_media_2"}}
+        ]
+    },
+    "scenario_variable": {
+        "name": "Variable",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "variable_create", "data": {"name": "var_api_test", "type": "text", "value": "API variable test"}},
+            {"action": "variable_get_list", "data": {"display": ["title"]}},
+            {"action": "device_rights_to_list", "data": {"name": "QA_ERIC", "type": "variable", "list": ["var_api_test"], "value": "set"}},
+            {"action": "device_check_rights_to_list", "data": {"name": "QA_ERIC", "type": "variable", "list": ["var_api_test"], "value": "set"}},
+            {"action": "device_rights_to_list", "data": {"name": "QA_ERIC", "type": "variable", "list": ["var_api_test"], "value": "unset"}},
+            {"action": "device_check_rights_to_list", "data": {"name": "QA_ERIC", "type": "variable", "list": ["var_api_test"], "value": "unset"}},
+            {"action": "variable_modify", "data": {"name": "var_api_test", "value": "API variable test modified"}},
+            {"action": "variable_delete", "data": {"name": "var_api_test"}}
+        ]
+    },
+    "scenario_getId": {
+        "name": "Get playlist id",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "playlist_get_id", "data": {"name": "do_not_delete"}},
+            {"action": "slideTemplate_get_id", "data": {"name": "airbox1"}}
+        ]
+    },
+    "scenario_channel": {
+        "name": "Channel",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_get_list", "data": {"display": ["title", "media_nb"]}},
+            {"action": "channel_create", "data": {"name": "channel_api", "description": "new channel created with API call"}},
+            {"action": "channel_check_exist", "data": {"name": "channel_api"}},
+            {"action": "channel_upload_content", "data": {"name": "channel_api", "src": "D:/dsContent/medias/images/twc.jpg", "contentName": "twc_api_media"}},
+            {"action": "channel_publish", "data": {"name": "channel_api"}},
+            {"action": "channel_check_content_nb", "data": {"name": "channel_api", "contentName": "twc_api_media", "nbContent": 1}},
+            {"action": "channel_get_content", "data": {"name": "channel_api", "display": ["title"]}},
+            {"action": "channel_delete", "data": {"name": "channel_api"}},
+            {"action": "media_delete", "data": {"name": "twc_api_media"}}
+        ]
+    },
+    "scenario_playlist": {
+        "name": "Playlist",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "playlist_get_list", "data": {"display": ["title", "media_nb"]}},
+            {"action": "playlist_create", "data": {"name": "playlist_api", "description": "new playlist created with API call"}},
+            {"action": "playlist_check_exist", "data": {"name": "playlist_api"}},
+            {"action": "playlist_upload_content", "data": {"name": "playlist_api", "src": "D:/dsContent/medias/images/twc.jpg", "contentName": "twc_api_media"}},
+            {"action": "media_upload", "data": {"name": "tv_api", "src": "D:/dsContent/medias/images/tv.jpg"}},
+            {"action": "playlist_post_content", "data": {"name": "playlist_api", "contentType": "media", "contentName": "tv_api"}},
+            {"action": "playlist_publish", "data": {"name": "playlist_api"}},
+            {"action": "playlist_check_content_nb", "data": {"name": "playlist_api", "contentName": "twc_api_media", "nbContent": 1}},
+            {"action": "playlist_get_content", "data": {"name": "playlist_api", "display": ["title"]}},
+            {"action": "playlist_delete", "data": {"name": "playlist_api"}},
+            {"action": "media_delete", "data": {"name": "twc_api_media"}},
+            {"action": "media_delete", "data": {"name": "tv_api"}}
+        ]
+    },
+    "scenario_device_status": {
+        "name": "Device",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "device_get_list", "data": {"display": ["title", "content_status", "network_status"], "status": ["enabled", "content_ok", "network_ok"]}}
+        ]
+    },
+    "scenario_device": {
+        "name": "Device",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "device_get_list", "data": {"display": ["title", "identifier", "version", "global_status"]}},
+            {"action": "device_get_list", "data": {"attributes": {"title": "QA_ERIC"}, "display": ["title", "identifier", "version", "global_status"]}},
+            {"action": "device_get_list", "data": {"attributes": {"network_status": "error", "alert_status": "network"}, "display": ["title", "network_status"]}}
+        ]
+    },
+    "scenario_media": {
+        "name": "Media",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "media_get_list", "data": {"attributes": {"type[]": "feed"}, "display": ["title"]}},
+            {"action": "media_upload", "data": {"name": "tv_api", "src": "D:/dsContent/medias/images/tv.jpg"}},
+            {"action": "media_get_list", "data": {"attributes": {"type[]": "img"}, "display": ["title"]}},
+            {"action": "media_check_exist", "data": {"name": "tv_api"}},
+            {"action": "wait", "data": {"duration": 5}},
+            {"action": "media_delete", "data": {"name": "tv_api"}}
+        ]
+    },
+    "scenario_slide": {
+        "name": "Slide",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slide_get_list", "data": {"display": ["title"]}},
+            {"action": "slideTemplate_get_list", "data": {"display": ["title"]}},
+            {"action": "slideTemplate_upload", "data": {"name": "airbox1_api", "type": "manual", "src": "D:/dsContent/slideTemplates/airbox/airbox1"}},
+            {"action": "slideTemplate_get_list", "data": {"display": ["title"]}},
+            {"action": "slide_create", "data": {"name": "airbox1_api", "src": "D:/dsContent/slideData/airbox/airbox1.json", "template": "airbox1_api"}},
+            {"action": "slide_get_list", "data": {"display": ["title"]}},
+            {"action": "slide_delete", "data": {"name": "airbox1_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airbox1_api"}},
+            {"action": "slide_get_list", "data": {"display": ["title"]}},
+            {"action": "slideTemplate_get_list", "data": {"display": ["title"]}}
+        ]
+    },
+    "scenario_layout": {
+        "name": "Layout",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "layoutTemplate_upload", "data": {"name": "airbox_toDelete", "src": "D:/dsContent/layoutTemplates/airbox/airbox"}},
+            {"action": "layoutTemplate_get_list", "data": {"display": ["title"]}},
+            {"action": "layout_create", "data": {"name": "airbox_toDelete", "template": "airbox_toDelete"}},
+            {"action": "layout_get_list", "data": {"display": ["title"]}},
+            {"action": "layout_delete", "data": {"name": "airbox_toDelete"}},
+            {"action": "layoutTemplate_delete", "data": {"name": "airbox_toDelete"}}
+        ]
+    },
+    "scenario_list": {
+        "name": "List",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_get_list", "data": {"display": ["title", "media_nb"]}},
+            {"action": "device_get_list", "data": {"display": ["title", "identifier", "version", "global_status"]}},
+            {"action": "media_get_list", "data": {"attributes": {"type[]": "feed"}, "display": ["title"]}},
+            {"action": "playlist_get_list", "data": {"display": ["title", "media_nb"]}},
+            {"action": "slide_get_list", "data": {"display": ["title"]}},
+            {"action": "slideTemplate_get_list", "data": {"display": ["title"]}},
+            {"action": "layout_get_list", "data": {"display": ["title"]}},
+            {"action": "layoutTemplate_get_list", "data": {"display": ["title"]}}
+        ]
+    },
+    "scenario_rss_feed_KO": {
+        "name": "Create RSS feed",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "rss1_api", "type": "feed", "src": "D:/dsContent/slideTemplates/rss1"}},
+            {"action": "feed_create", "data": {"name": "rss_api", "type": "rss", "url": "http://www.sports.fr/fr/cmc/rss.xml", "frequency": "15m", "nbItem": 2, "template": "rss1_api"}},
+            {"action": "feed_check_data", "data": {"name": "rss_api", "check": {"generation_status": "ok"}}}
+        ]
+    },
+    "scenario_rss_feed": {
+        "name": "Create RSS feed",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "rss1_api", "type": "feed", "src": "D:/dsContent/slideTemplates/rss1"}},
+            {"action": "feed_create", "data": {"name": "rss_api", "type": "rss", "url": "https://www.nasa.gov/rss/dyn/educationnews.rss", "frequency": "15m", "nbItem": 2, "template": "rss1_api"}},
+            {"action": "feed_get_list", "data": {"display": ["title"]}},
+            {"action": "wait", "data": {"duration": 5}},
+            {"action": "feed_check_data", "data": {"name": "rss_api", "check": {"generation_status": "ok"}}},
+            {"action": "feed_delete", "data": {"name": "rss_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "rss1_api"}}
+        ]
+    },
+    "scenario_xml_feed": {
+        "name": "Create XML feed",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "mob_feed_api", "type": "feed", "src": "D:/dsContent/slideTemplates/mob_feed"}},
+            {"action": "feed_create", "data": {"name": "xml_mob_api", "type": "xml", "url": "http://ftp.ds-piksel.com/feeds/XML/MOB/ava06.xml", "frequency": "15m", "nbItem": 3, "typeGeneration": "n-1", "node": "/data/page", "fields": {"Ent1_i": "/entete/ent1", "Ent2_i": "/entete/ent2", "Ent3_i": "/entete/ent3", "Ent4_i": "/entete/ent4", "Col1_i": "/ligne[i]/col1", "Col2_i": "/ligne[i]/col2", "Col3_i": "/ligne[i]/col3", "Col4_i": "/ligne[i]/col4", "Retard_i": "/ligne[i]/retard", "Message_i": "/ligne[i]/message", "No_voit1_i": "/ligne[i]/no_voit1", "No_voit2_i": "/ligne[i]/no_voit2", "No_voit3_i": "/ligne[i]/no_voit3", "No_voit4_i": "/ligne[i]/no_voit4", "No_voit5_i": "/ligne[i]/no_voit5", "No_voit6_i": "/ligne[i]/no_voit6", "No_voit7_i": "/ligne[i]/no_voit7", "No_voit8_i": "/ligne[i]/no_voit8", "No_voit9_i": "/ligne[i]/no_voit9", "Text_indispo_i": "/text_indispo", "Img_secteurs_i": "/ligne[i]/img_secteurs", "Img_voit1_i": "/ligne[i]/img_voit1", "Img_voit2_i": "/ligne[i]/img_voit2", "Img_voit3_i": "/ligne[i]/img_voit3", "Img_voit4_i": "/ligne[i]/img_voit4", "Img_voit5_i": "/ligne[i]/img_voit5", "Img_voit6_i": "/ligne[i]/img_voit6", "Img_voit7_i": "/ligne[i]/img_voit7", "Img_voit8_i": "/ligne[i]/img_voit8", "Img_voit9_i": "/ligne[i]/img_voit9"}, "template": "mob_feed_api"}},
+            {"action": "wait", "data": {"duration": 5}},
+            {"action": "feed_check_data", "data": {"name": "xml_mob_api", "check": {"generation_status": "ok"}}},
+            {"action": "feed_get_list", "data": {"display": ["title"]}},
+            {"action": "feed_delete", "data": {"name": "xml_mob_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "mob_feed_api"}}
+        ]
+    },
+    "scenario_ftp_feed": {
+        "name": "Create FTP feed",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "feed_create", "data": {"name": "ftp_api_info", "type": "ftp", "url": "http://ftp.ds-piksel.com", "login":"qa", "password": "QA!Ks-player2019", "frequency": "15m", "nbItem": 10, "ftpXmlPath": "/feeds/PIKSEL_TEST/index.xml", "ftpXmlNodeType": "Info"}},
+            {"action": "feed_get_list", "data": {"display": ["title"]}},
+            {"action": "feed_delete", "data": {"name": "ftp_api_info"}}
+        ]
+    },
+    "delete_feeds": {
+        "name": "Delete feeds",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "feed_delete", "data": {"name": "xml_mob_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "mob_feed_api"}},
+            {"action": "feed_delete", "data": {"name": "rss_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "rss1_api"}},
+            {"action": "feed_delete", "data": {"name": "ftp_api_info"}}
+        ]
+    },
+    "scenario_get_content": {
+        "name": "Get content",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_get_content", "data": {"name": "do_not_delete"}},
+            {"action": "feed_get_content", "data": {"name": "mob_feed_1"}},
+            {"action": "playlist_get_content", "data": {"name": "do_not_delete"}}
+        ]
+    },
+    "scenario_post_content": {
+        "name": "Post content",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_post_content", "data": {"name": "do_not_delete", "contentType": "media", "contentName": "do_not_delete"}},
+            {"action": "channel_publish", "data": {"name": "do_not_delete"}},
+            {"action": "channel_get_content", "data": {"name": "do_not_delete", "display": ["title"]}},
+            {"action": "channel_delete_content", "data": {"name": "do_not_delete", "contentType": "media", "contentName": "do_not_delete"}},
+            {"action": "channel_publish", "data": {"name": "do_not_delete"}},
+            {"action": "channel_get_content", "data": {"name": "do_not_delete", "display": ["title"]}},
+            {"action": "playlist_post_content", "data": {"name": "do_not_delete", "contentType": "media", "contentName": "do_not_delete"}},
+            {"action": "playlist_publish", "data": {"name": "do_not_delete"}},
+            {"action": "playlist_get_content", "data": {"name": "do_not_delete", "display": ["title"]}},
+            {"action": "playlist_delete_content", "data": {"name": "do_not_delete", "contentType": "media", "contentName": "do_not_delete"}},
+            {"action": "playlist_publish", "data": {"name": "do_not_delete"}},
+            {"action": "playlist_get_content", "data": {"name": "do_not_delete", "display": ["title"]}}
+        ]
+    },
+    "scenario_channel_associate_device_list": {
+        "name": "Associate device",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_associate_device_list", "data": {"name": "do_not_delete", "deviceList":["QA_ERIC", "BEN_Nuc7PJYH"]}}
+        ]
+    },
+    "scenario_ALL": {
+        "name": "DO NOT RUN",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_associate_device_list", "data": {"name": "channel_api", "deviceList":["QA_ERIC", "BEN_Nuc7PJYH"]}},
+            {"action": "channel_check_content_list", "data": {"name": "do_not_delete", "contentList": ["US-1.jpg", "US-7.jpg", "video2.mp4"]}},
+            {"action": "channel_check_content_nb", "data": {"name": "channel_api", "contentName": "twc_api_media", "nbContent": 1}},
+            {"action": "channel_check_data", "data": {"name": "do_not_delete", "check": {"title": "do_not_delete", "description": "Channel de test", "media_nb": 3}}},
+            {"action": "channel_check_element", "data": {"name": "do_not_delete", "element": "do_not_delete", "check": {"layout_name": "porter_layout_api"}}},
+            {"action": "channel_check_exist", "data": {"name": "channel_api"}},
+            {"action": "channel_create", "data": {"name": "channel_api", "description": "new channel created with API call"}},
+            {"action": "channel_default_layout", "data": {"name": "do_not_delete", "layout": "porter_layout_api", "value": "set"}},
+            {"action": "channel_delete", "data": {"name": "channel_api"}},
+            {"action": "channel_delete_content", "data": {"name": "channel_api", "contentType": "media", "contentName": "twc_api"}},
+            {"action": "channel_element_layout", "data": {"name": "do_not_delete", "element": "do_not_delete", "layout": "porter_layout_api", "value": "set"}},
+            {"action": "channel_get_content", "data": {"name": "channel_api", "display": ["title"]}},
+            {"action": "channel_get_data", "data": {"name": "do_not_delete"}},
+            {"action": "channel_get_list", "data": {"display": ["title", "media_nb"]}},
+            {"action": "channel_post_content", "data": {"name": "channel_api", "contentType": "media", "contentName": "twc_api", "rank": 3}},
+            {"action": "channel_publish", "data": {"name": "channel_api"}},
+            {"action": "channel_upload_content", "data": {"name": "channel_api", "src": "D:/dsContent/medias/images/twc.jpg", "contentName": "twc_api_media"}},
+            {"action": "device_check_config", "data": {"name": "QA_ERIC", "check": {"subtitle_default_lang": "es", "boot_time": "04:00:00", "screen_freq":"50", "screen_size": "1920x1080", "boot_type": "complet", "screen_diag_duration": "500"}}},
+            {"action": "device_check_content_status", "data": {"name": "QA_ERIC", "check": {"channel": {"display_name": "channel_testcontent_api", "global_state": "ok", "version": "ok"}}}},
+            {"action": "device_check_content_status", "data": {"name": "QA_ERIC", "check": {"playlist": [{"display_name": "playlist1_testcontent_api", "rights": true, "global_state": "ok", "version": "ok"}, {"display_name": "playlist2_testcontent_api", "rights": true, "global_state": "ok", "version": "ok"}, {"display_name": "playlist3_testcontent_api", "rights": true, "global_state": "ok", "version": "ok"}, {"display_name": "playlist4_testcontent_api", "rights": false, "global_state": "error", "version": "ko"}]}}},
+            {"action": "device_check_content_status", "data": {"name": "QA_ERIC", "check": {"playlistList": ["insert1_testcontent_api", "playlist1_testcontent_api", "playlist2_testcontent_api", "playlist3_testcontent_api", "playlist4_testcontent_api"]}}},
+            {"action": "device_check_content_status", "data": {"name": "QA_ERIC", "check": {"last_loop_duration_s": 175, "contentError": 0, "mediaError": 0}}},
+            {"action": "device_check_data", "data": {"name": "QA_ERIC", "check": {"title": "QA_ERIC", "description": "QA Player own by EMK - Grenoble"}}},
+            {"action": "device_check_rights_to_list", "data": {"name": "QA_ERIC", "type": "playlist", "list": ["do_not_delete", "scrap1"], "value": "set"}},
+            {"action": "device_get_content_status", "data": {"name": "QA_ERIC", "infos": ["channel", "playlist", "variable", "error"]}},
+            {"action": "device_get_data", "data": {"name": "QA_ERIC"}},
+            {"action": "device_get_list", "data": {"display": ["title", "content_status", "network_status"], "status": ["enabled", "content_ok", "network_ok"]}},
+            {"action": "device_rights_to_list", "data": {"name": "QA_ERIC", "type": "playlist", "list": ["do_not_delete", "scrap1"], "value": "set"}},
+            {"action": "device_set_config", "data": {"name": "QA_ERIC", "config": {"subtitle_default_lang": "es", "boot_time": "04:00:00", "screen_freq":"50", "screen_size": "1920x1080", "reboot": "complet", "screen_diag_duration": "500"}}},
+            {"action": "event_check_data", "data": {"name": "event_api", "check": {"type_event": "classic", "channel_title": "do_not_delete"}}},
+            {"action": "event_check_exist", "data": {"name": "event_api"}},
+            {"action": "event_create", "data": {"name": "event_api", "channel": "do_not_delete", "type": "classic", "start": "June 19, 2020 15:00:00", "end": "June 19, 2020 16:00:00", "deviceList": ["QA_ERIC"]}},
+            {"action": "event_delete", "data": {"name": "event_api"}},
+            {"action": "event_get_data", "data": {"name": "event_api"}},
+            {"action": "event_get_list", "data": {"name": "event_api"}},
+            {"action": "feed_check_content_nb", "data": {"name": "ftp_feed_test_api", "nbContent": 2}},
+            {"action": "feed_check_data", "data": {"name": "rss_feed_test_api", "check": {"generation_status": "ok"}}},
+            {"action": "feed_create", "data": {"name": "xml_mob_api", "type": "xml", "url": "http://ftp.ds-piksel.com/feeds/XML/MOB/ava06.xml", "frequency": "15m", "nbItem": 3, "typeGeneration": "n-1", "node": "/data/page", "fields": {"Ent1_i": "/entete/ent1", "Ent2_i": "/entete/ent2", "Ent3_i": "/entete/ent3", "Ent4_i": "/entete/ent4", "Col1_i": "/ligne[i]/col1", "Col2_i": "/ligne[i]/col2", "Col3_i": "/ligne[i]/col3", "Col4_i": "/ligne[i]/col4", "Retard_i": "/ligne[i]/retard", "Message_i": "/ligne[i]/message", "No_voit1_i": "/ligne[i]/no_voit1", "No_voit2_i": "/ligne[i]/no_voit2", "No_voit3_i": "/ligne[i]/no_voit3", "No_voit4_i": "/ligne[i]/no_voit4", "No_voit5_i": "/ligne[i]/no_voit5", "No_voit6_i": "/ligne[i]/no_voit6", "No_voit7_i": "/ligne[i]/no_voit7", "No_voit8_i": "/ligne[i]/no_voit8", "No_voit9_i": "/ligne[i]/no_voit9", "Text_indispo_i": "/text_indispo", "Img_secteurs_i": "/ligne[i]/img_secteurs", "Img_voit1_i": "/ligne[i]/img_voit1", "Img_voit2_i": "/ligne[i]/img_voit2", "Img_voit3_i": "/ligne[i]/img_voit3", "Img_voit4_i": "/ligne[i]/img_voit4", "Img_voit5_i": "/ligne[i]/img_voit5", "Img_voit6_i": "/ligne[i]/img_voit6", "Img_voit7_i": "/ligne[i]/img_voit7", "Img_voit8_i": "/ligne[i]/img_voit8", "Img_voit9_i": "/ligne[i]/img_voit9"}, "template": "mob_feed_api"}},
+            {"action": "feed_create", "data": {"name": "rss_api", "type": "rss", "url": "http://www.sports.fr/fr/cmc/rss.xml", "frequency": "15m", "nbItem": 2, "template": "rss1_api"}},
+            {"action": "feed_create", "data": {"name": "ftp_api_info", "type": "ftp", "url": "ftp://ftp.ds-piksel.com", "login":"qa", "password": "QA!Ks-player2019", "frequency": "15m", "nbItem": 10, "ftpXmlPath": "/feeds/PIKSEL_TEST/index.xml", "ftpXmlNodeType": "Info"}},
+            {"action": "feed_delete", "data": {"name": "xml_mob_api"}},
+            {"action": "feed_get_content", "data": {"name": "mob_feed"}},
+            {"action": "feed_get_list", "data": {"display": ["title"]}},
+            {"action": "layout_create", "data": {"name": "airbox_layout_api", "template": "airbox_api"}},
+            {"action": "layout_delete", "data": {"name": "airbox_layout_api"}},
+            {"action": "layout_generate", "data": {"name": "multi_testcontent_api", "broadcastAreaList": [{"name": "Insert", "playlist": "scrap1"}]}},
+            {"action": "layout_generate_all"},
+            {"action": "layout_get_list", "data": {"display": ["title"]}},
+            {"action": "layout_get_content", "data": {"name": ["airbox_layout_api"]}},
+            {"action": "layout_get_data", "data": {"name": ["airbox_layout_api"]}},
+            {"action": "layout_get_id", "data": {"name": ["airbox_layout_api"]}},
+            {"action": "layoutTemplate_delete", "data": {"name": "airbox_api"}},
+            {"action": "layoutTemplate_get_list", "data": {"display": ["title"]}},
+            {"action": "layoutTemplate_upload", "data": {"name": "airbox_api", "src": "D:/dsContent/layoutTemplates/airbox/airbox"}},
+            {"action": "media_check_exist", "data": {"name": "tv_api"}},
+            {"action": "media_check_data", "data": {"name": "media_test_api", "description": "Media test API"}},
+            {"action": "media_check_video_encoded", "data": {"name": "media_test_api_video", "timeOut": "120"}},
+            {"action": "media_delete", "data": {"name": "twc_api_media"}},
+            {"action": "media_get_data", "data": {"name": "img_api"}},
+            {"action": "media_get_list", "data": {"attributes": {"type[]": "feed"}, "display": ["title"]}},
+            {"action": "media_upload", "data": {"name": "tv_api", "src": "D:/dsContent/medias/images/tv.jpg", "description": "Media test API"}},
+            {"action": "playlist_check_content_list", "data": {"name": "do_not_delete", "contentList": ["bg4.jpg", "img_api", "newYear.mp4"]}},
+            {"action": "playlist_check_content_nb", "data": {"name": "playlist_api", "contentName": "twc_api_media", "nbContent": 1}},
+            {"action": "playlist_check_data", "data": {"name": "do_not_delete", "check": {"title": "do_not_delete", "description": "", "media_nb": 3}}},
+            {"action": "playlist_check_exist", "data": {"name": "playlist_api"}},
+            {"action": "playlist_check_rights_to_device_list", "data": {"name": "do_not_delete", "deviceList": ["QA_ERIC", "eric web"], "value": "set"}},
+            {"action": "playlist_create", "data": {"name": "playlist_api", "description": "new playlist created with API call"}},
+            {"action": "playlist_delete", "data": {"name": "playlist_api"}},
+            {"action": "playlist_delete_content", "data": {"name": "playlist_api", "contentName": "twc_api"}},
+            {"action": "playlist_delete_multiContent", "data": {"name": "playlist_test_api", "mediaList": ["media1_test_api", "media2_test_api"]}},
+            {"action": "playlist_get_content", "data": {"name": "playlist_api", "display": ["title"]}},
+            {"action": "playlist_get_data", "data": {"name": "do_not_delete"}},
+            {"action": "playlist_get_id", "data": {"name": "playlist_api"}},
+            {"action": "playlist_get_list", "data": {"display": ["title", "media_nb"]}},
+            {"action": "playlist_post_content", "data": {"name": "playlist_api", "contentType": "media", "contentName": "twc_api", "rank": 3}},
+            {"action": "playlist_publish", "data": {"name": "playlist_api"}},
+            {"action": "playlist_rights_to_device_list", "data": {"name": "do_not_delete", "deviceList": ["QA_ERIC", "eric web"], "value": "set"}},
+            {"action": "playlist_upload_content", "data": {"name": "playlist_api", "src": "D:/dsContent/medias/images/twc.jpg", "contentName": "twc_api_media"}},
+            {"action": "qm_check_exist", "data": {"maxDelay": 60, "check": {"device": "QA_ERIC", "title": "config_update", "type": "set", "status": "new"}}},
+            {"action": "qm_delete_all", "data": {"device": "QA_ERIC"}},
+            {"action": "qm_get_list", "data": {"filter": {"device": "QA_ERIC"}, "display": ["device", "title", "status", "params"]}},
+            {"action": "qrc_check_exist", "data": {"name": "qrc_test_api"}},
+            {"action": "qrc_create", "data": {"name": "qrc_test_api", "url": "http://ds.meylan.test"}},
+            {"action": "qrc_delete", "data": {"name": "qrc_test_api"}},
+            {"action": "qrc_get_data", "data": {"name": "qrc_test_api"}},
+            {"action": "qrc_get_list", "data": {"display": ["title"]}},
+            {"action": "role_set_actions", "data": {"name": "Test-role-multi-orga", "actions":[4,17,46,52,53,62,75,76,77,78]}},
+            {"action": "slide_create", "data": {"name": "airbox1_api", "src": "D:/dsContent/slideData/airbox/airbox1.json", "template": "airbox1_api"}},
+            {"action": "slide_delete", "data": {"name": "airbox1_api"}},
+            {"action": "slide_get_list", "data": {"display": ["title"]}},
+            {"action": "slideTemplate_delete", "data": {"name": "mob_feed_api"}},
+            {"action": "slideTemplate_get_id", "data": {"name": "airbox1"}},
+            {"action": "slideTemplate_get_list", "data": {"display": ["title"]}},
+            {"action": "slideTemplate_upload", "data": {"name": "mob_feed_api", "type": "feed", "src": "D:/dsContent/slideTemplates/mob_feed"}},
+            {"action": "stream_check_exist", "data": {"name": "stream_test_api"}},
+            {"action": "stream_create", "data": {"name": "stream_test_api", "url": "http://artelive-lh.akamaihd.net/i/artelive_fr@344805/master.m3u8"}},
+            {"action": "stream_delete", "data": {"name": "stream_test_api"}},
+            {"action": "stream_get", "data": {"name": "stream_test_api"}},
+            {"action": "stream_get_list", "data": {"display": ["title"]}},
+            {"action": "variable_check_data", "data": {"name": "var_api_test", "check": {"value": "API variable test"}}},
+            {"action": "variable_create", "data": {"name": "var_api_test", "type": "text", "value": "API variable test"}},
+            {"action": "variable_delete", "data": {"name": "var_api_test"}},
+            {"action": "variable_get_data", "data": {"name": "var_api_test"}},
+            {"action": "variable_get_list", "data": {"display": ["title"]}},
+            {"action": "variable_modify", "data": {"name": "var_api_test", "value": "API variable test modified"}},
+            {"action": "wait", "data": {"duration": 5}},
+            {"action": "web_check_exist", "data": {"name": "web_test_api"}},
+            {"action": "web_create", "data": {"name": "web_api_test", "url": "https://www.deezer.com"}},
+            {"action": "web_delete", "data": {"name": "web_test_api"}},
+            {"action": "web_get", "data": {"name": "web_test_api"}},
+            {"action": "web_get_list", "data": {"display": ["title"]}}
+        ]
+    }
+}

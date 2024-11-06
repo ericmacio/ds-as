@@ -1,0 +1,177 @@
+{
+    "wait_task_ms": 0,
+    "wait_loop_ms": 0,
+    "scenarioList": [
+        "create_playlists",
+        "upload_templates",
+        "create_layout",
+        "create_feeds",
+        "create_channel",
+        "create_variables",
+        "associate_channel_with_device"
+    ],
+    "create_slide": {
+        "name": "Create a slide",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slide_create", "data": {"name": "slide_mediaboom", "src": "D:/dsContent/demo_as/slideData/mediaboom.json", "template": "mediaboom"}}
+        ]
+    },
+    "list": {
+        "name": "List",
+        "nbLoop": 5,
+        "taskList": [
+            {"action": "playlist_get_list", "data": {"display": ["title"]}},
+            {"action": "slideTemplate_get_list", "data": {"display": ["title"]}},
+            {"action": "feed_get_list", "data": {"display": ["title"]}},
+            {"action": "channel_get_list", "data": {"display": ["title"]}},
+            {"action": "variable_get_list", "data": {"display": ["title"]}}
+        ]
+    },
+    "create_playlists": {
+        "name": "Create playlists",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "playlist_create", "data": {"name": "drop", "description": "Playlist used for drop service demo"}},
+            {"action": "playlist_create", "data": {"name": "graph", "description": "Playlist used for graph service demo"}},
+            {"action": "playlist_create", "data": {"name": "slidefeed", "description": "Playlist used for dbSlide service demo"}},
+            {"action": "playlist_get_list", "data": {"display": ["title"]}}
+        ]
+    },
+    "upload_templates": {
+        "name": "Upload templates",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "dbslide0", "type": "manual", "src": "D:/dsContent/demo_as/slideTemplates/dbslide0"}},
+            {"action": "slideTemplate_upload", "data": {"name": "dbslide1", "type": "manual", "src": "D:/dsContent/demo_as/slideTemplates/dbslide1"}},
+            {"action": "slideTemplate_upload", "data": {"name": "dbslide2", "type": "manual", "src": "D:/dsContent/demo_as/slideTemplates/dbslide2"}},
+            {"action": "slideTemplate_upload", "data": {"name": "dbslide3", "type": "manual", "src": "D:/dsContent/demo_as/slideTemplates/dbslide3"}},
+            {"action": "slideTemplate_upload", "data": {"name": "dbslide4", "type": "manual", "src": "D:/dsContent/demo_as/slideTemplates/dbslide4"}},
+            {"action": "slideTemplate_upload", "data": {"name": "dbslide5", "type": "manual", "src": "D:/dsContent/demo_as/slideTemplates/dbslide5"}},
+            {"action": "slideTemplate_upload", "data": {"name": "dbslide_top", "type": "manual", "src": "D:/dsContent/demo_as/slideTemplates/dbslide_top"}},
+            {"action": "slideTemplate_upload", "data": {"name": "dbslide_top_category", "type": "manual", "src": "D:/dsContent/demo_as/slideTemplates/dbslide_top_category"}},
+            {"action": "slideTemplate_upload", "data": {"name": "graph0", "type": "manual", "src": "D:/dsContent/demo_as/slideTemplates/graph0"}},
+            {"action": "slideTemplate_upload", "data": {"name": "graph1", "type": "manual", "src": "D:/dsContent/demo_as/slideTemplates/graph1"}},
+            {"action": "slideTemplate_upload", "data": {"name": "graph2", "type": "manual", "src": "D:/dsContent/demo_as/slideTemplates/graph2"}},
+            {"action": "slideTemplate_upload", "data": {"name": "graph3", "type": "manual", "src": "D:/dsContent/demo_as/slideTemplates/graph3"}},
+            {"action": "slideTemplate_upload", "data": {"name": "rss", "type": "feed", "src": "D:/dsContent/demo_as/slideTemplates/rss"}},
+            {"action": "slideTemplate_upload", "data": {"name": "mob", "type": "feed", "src": "D:/dsContent/demo_as/slideTemplates/mob_feed"}},
+            {"action": "slideTemplate_upload", "data": {"name": "twc", "type": "feed", "src": "D:/dsContent/demo_as/slideTemplates/twc"}},
+            {"action": "slideTemplate_upload", "data": {"name": "mediaboom", "type": "feed", "src": "D:/dsContent/demo_as/slideTemplates/mediaboom"}},
+            {"action": "slideTemplate_get_list", "data": {"display": ["title"]}}
+        ]
+    },
+    "create_layout": {
+        "name": "Create layout",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "layoutTemplate_upload", "data": {"name": "demo_4areas", "src": "D:/dsContent/demo_as/layoutTemplates/demo_4areas"}},
+            {"action": "layout_create", "data": {"name": "demo_4areas", "template": "demo_4areas"}},
+            {"action": "layout_generate", "data": {"name": "demo_4areas", "broadcastAreaList": [{"name": "Diff2", "playlist": "drop"}, {"name": "Diff3", "playlist": "slidefeed"}, {"name": "Diff4", "playlist": "graph"}]}}
+        ]
+    },
+    "create_feeds": {
+        "name": "Create feeds",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "feed_create", "data": {"name": "rss_nasa", "type": "rss", "url": "https://www.nasa.gov/rss/dyn/educationnews.rss", "frequency": "15m", "nbItem": 3, "template": "rss"}},
+            {"action": "feed_create", "data": {"name": "xml_mob", "type": "xml", "url": "http://ftp.ds-piksel.com/feeds/XML/MOB/ava06.xml", "frequency": "15m", "nbItem": 3, "template": "mob", "typeGeneration": "n-1", "node": "/data/page", "fields": {"Ent1_i": "/entete/ent1", "Ent2_i": "/entete/ent2", "Ent3_i": "/entete/ent3", "Ent4_i": "/entete/ent4", "Col1_i": "/ligne[i]/col1", "Col2_i": "/ligne[i]/col2", "Col3_i": "/ligne[i]/col3", "Col4_i": "/ligne[i]/col4", "Retard_i": "/ligne[i]/retard", "Message_i": "/ligne[i]/message", "No_voit1_i": "/ligne[i]/no_voit1", "No_voit2_i": "/ligne[i]/no_voit2", "No_voit3_i": "/ligne[i]/no_voit3", "No_voit4_i": "/ligne[i]/no_voit4", "No_voit5_i": "/ligne[i]/no_voit5", "No_voit6_i": "/ligne[i]/no_voit6", "No_voit7_i": "/ligne[i]/no_voit7", "No_voit8_i": "/ligne[i]/no_voit8", "No_voit9_i": "/ligne[i]/no_voit9", "Text_indispo_i": "/text_indispo", "Img_secteurs_i": "/ligne[i]/img_secteurs", "Img_voit1_i": "/ligne[i]/img_voit1", "Img_voit2_i": "/ligne[i]/img_voit2", "Img_voit3_i": "/ligne[i]/img_voit3", "Img_voit4_i": "/ligne[i]/img_voit4", "Img_voit5_i": "/ligne[i]/img_voit5", "Img_voit6_i": "/ligne[i]/img_voit6", "Img_voit7_i": "/ligne[i]/img_voit7", "Img_voit8_i": "/ligne[i]/img_voit8", "Img_voit9_i": "/ligne[i]/img_voit9"}}},
+            {"action": "feed_create", "data": {"name": "ftp_info", "type": "ftp", "url": "ftp://ftp.ds-piksel.com", "login":"qa", "password": "QA!Ks-player2019", "frequency": "15m", "nbItem": 10, "ftpXmlPath": "/feeds/PIKSEL_TEST/index.xml", "ftpXmlNodeType": "Info"}},
+            {"action": "feed_create", "data": {"name": "xml_mediaboom", "type": "xml", "url": "http://ftp.ds-piksel.com/feeds/XML/mediaboom/flux-mediaboom.xml", "frequency": "15m", "nbItem": 1, "template": "mediaboom", "typeGeneration": "1-1", "fields": {"Video": "/root/data/video2", "Text1": "/root/data/text1", "Text2": "/root/data/text2", "Text3": "/root/data/text3", "Text4": "/root/data/text4", "Image": "/root/data/image1"}}},
+            {"action": "feed_create", "data": {"name": "xml_twc", "type": "xml", "url": "http://ftp.ds-piksel.com/feeds/XML/TWC/twc.xml", "frequency": "15m", "nbItem": 3, "template": "twc", "typeGeneration": "n-1", "node": "/channel/item", "fields": {"Product_i": "/product", "Text_i": "/description", "Price_i": "/price", "Taille_i": "/size", "Stars_i": "/stars", "Photo_i": "/photo"}}},
+            {"action": "feed_get_list", "data": {"display": ["title"]}}
+        ]
+    },
+    "create_channel": {
+        "name": "Create channel",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_create", "data": {"name": "demo_channel", "description": "Channel used for drop demo"}},
+            {"action": "channel_upload_content", "data": {"name": "demo_channel", "src": "D:/dsContent/demo_as/medias/emotion.png", "contentName": "emotion"}},
+            {"action": "channel_upload_content", "data": {"name": "demo_channel", "src": "D:/dsContent/demo_as/medias/landscape.jpg", "contentName": "landscape"}},
+            {"action": "channel_default_layout", "data": {"name": "demo_channel", "layout": "demo_4areas", "value": "set"}},
+            {"action": "channel_publish", "data": {"name": "demo_channel"}},
+            {"action": "channel_get_list", "data": {"display": ["title"]}}
+        ]
+    },
+    "create_variables": {
+        "name": "Create variables",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "variable_create", "data": {"name": "as-demo-var1", "type": "text", "value": ""}},
+            {"action": "variable_create", "data": {"name": "as-demo-var2", "type": "text", "value": ""}},
+            {"action": "variable_create", "data": {"name": "as-demo-var3", "type": "text", "value": ""}},
+            {"action": "variable_create", "data": {"name": "as-demo-var4", "type": "text", "value": ""}},
+            {"action": "variable_create", "data": {"name": "as-demo-var5", "type": "text", "value": ""}},
+            {"action": "variable_get_list", "data": {"display": ["title"]}}
+        ]
+    },
+    "associate_channel_with_device": {
+        "name": "Associate channel",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "playlist_rights_to_device_list", "data": {"name": "drop", "deviceList": ["QA_ERIC"], "value": "set"}},
+            {"action": "playlist_rights_to_device_list", "data": {"name": "slidefeed", "deviceList": ["QA_ERIC"], "value": "set"}},
+            {"action": "playlist_rights_to_device_list", "data": {"name": "graph", "deviceList": ["QA_ERIC"], "value": "set"}},
+            {"action": "device_rights_to_list", "data": {"name": "QA_ERIC", "type": "variable", "list": ["as-demo-var1", "as-demo-var2", "as-demo-var3", "as-demo-var4", "as-demo-var5"], "value": "set"}},
+            {"action": "channel_associate_device_list", "data": {"name": "demo_channel", "deviceList":["QA_ERIC"]}}
+        ]
+    },
+    "cleanup": {
+        "name": "Cleanup",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_delete", "data": {"name": "demo_channel"}},
+            {"action": "media_delete", "data": {"name": "emotion"}},
+            {"action": "media_delete", "data": {"name": "landscape"}},
+            {"action": "playlist_delete", "data": {"name": "drop"}},
+            {"action": "playlist_delete", "data": {"name": "graph"}},
+            {"action": "playlist_delete", "data": {"name": "slidefeed"}},
+            {"action": "feed_delete", "data": {"name": "rss_nasa"}},
+            {"action": "feed_delete", "data": {"name": "ftp_info"}},
+            {"action": "feed_delete", "data": {"name": "xml_mob"}},
+            {"action": "feed_delete", "data": {"name": "xml_twc"}},
+            {"action": "feed_delete", "data": {"name": "xml_mediaboom"}},
+            {"action": "variable_delete", "data": {"name": "as-demo-var1"}},
+            {"action": "variable_delete", "data": {"name": "as-demo-var2"}},
+            {"action": "variable_delete", "data": {"name": "as-demo-var3"}},
+            {"action": "variable_delete", "data": {"name": "as-demo-var4"}},
+            {"action": "variable_delete", "data": {"name": "as-demo-var5"}},
+            {"action": "slideTemplate_delete", "data": {"name": "dbslide0"}},
+            {"action": "slideTemplate_delete", "data": {"name": "dbslide1"}},
+            {"action": "slideTemplate_delete", "data": {"name": "dbslide2"}},
+            {"action": "slideTemplate_delete", "data": {"name": "dbslide3"}},
+            {"action": "slideTemplate_delete", "data": {"name": "dbslide4"}},
+            {"action": "slideTemplate_delete", "data": {"name": "dbslide5"}},
+            {"action": "slideTemplate_delete", "data": {"name": "dbslide_top"}},
+            {"action": "slideTemplate_delete", "data": {"name": "dbslide_top_category"}},
+            {"action": "slideTemplate_delete", "data": {"name": "graph0"}},
+            {"action": "slideTemplate_delete", "data": {"name": "graph1"}},
+            {"action": "slideTemplate_delete", "data": {"name": "graph2"}},
+            {"action": "slideTemplate_delete", "data": {"name": "graph3"}},
+            {"action": "slideTemplate_delete", "data": {"name": "rss"}},
+            {"action": "slideTemplate_delete", "data": {"name": "mob"}},
+            {"action": "slideTemplate_delete", "data": {"name": "twc"}},
+            {"action": "slideTemplate_delete", "data": {"name": "mediaboom"}},
+            {"action": "layout_delete", "data": {"name": "demo_4areas"}},
+            {"action": "layoutTemplate_delete", "data": {"name": "demo_4areas"}}
+        ]
+    },
+    "scenarioFullList": [
+        "create_playlists",
+        "upload_templates",
+        "create_layout",
+        "create_feeds",
+        "create_channel",
+        "create_variables",
+        "associate_channel_with_device",
+        "cleanup"
+    ],
+    "test": {
+        "name": "Test",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "device_rights_to_list", "data": {"name": "QA_ERIC", "type": "variable", "list": ["as-demo-var1", "as-demo-var2", "as-demo-var3", "as-demo-var4", "as-demo-var5"], "value": "set"}}
+        ]
+    }
+}

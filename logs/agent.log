@@ -1,0 +1,333 @@
+2021-3-31 13:45:23:621 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-3-31 13:45:23:623 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start agent core. Version: 1.0.0
+2021-3-31 13:45:23:642 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start child process agent
+2021-3-31 13:45:23:652 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: starting
+2021-3-31 13:45:24:520 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: running
+2021-3-31 13:45:23:763 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-3-31 13:45:24:510 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-3-31 13:45:24:539 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-3-31 13:45:24:538 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-3-31 13:56:21:674 [D:\Node.js\ds-as\src\agent\core\CorePollMgr.js][CorePollMgr][start]: WARNING: New core poll timer: 32000
+2021-3-31 13:56:21:677 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: WARNING: corePollMgr error
+2021-3-31 13:56:22:517 [D:\Node.js\ds-as\src\agent\agent\PollMgr.js][PollMgr][start]: WARNING: New poll timer: 32000
+2021-3-31 13:56:22:519 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: WARNING: PollMgr error
+2021-3-31 13:56:25:781 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-3-31 13:56:25:783 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start agent core. Version: 1.0.0
+2021-3-31 13:56:25:828 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start child process agent
+2021-3-31 13:56:25:835 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: starting
+2021-3-31 13:56:26:759 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: running
+2021-3-31 13:56:25:951 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-3-31 13:56:26:747 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-3-31 13:56:26:784 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-3-31 13:56:26:782 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-4-1 18:34:11:913 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-4-1 18:34:11:915 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start agent core. Version: 1.0.0
+2021-4-1 18:34:12:195 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start child process agent
+2021-4-1 18:34:12:222 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: starting
+2021-4-1 18:34:13:90 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: running
+2021-4-1 18:34:12:330 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-4-1 18:34:13:75 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-4-1 18:34:13:200 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-4-1 18:34:13:201 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-4-1 18:35:47:860 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-4-1 18:35:47:863 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start agent core. Version: 1.0.0
+2021-4-1 18:35:47:923 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start child process agent
+2021-4-1 18:35:47:930 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: starting
+2021-4-1 18:35:48:764 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: running
+2021-4-1 18:35:48:39 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-4-1 18:35:48:754 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-4-1 18:35:48:823 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-4-1 18:35:48:822 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-4-1 18:47:52:479 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: ERROR: Registration process failed
+2021-4-1 18:47:52:482 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Agent registration process failed
+2021-4-1 18:47:53:103 [D:\Node.js\ds-as\src\agent\core\CorePollMgr.js][CorePollMgr][start]: WARNING: New core poll timer: 32000
+2021-4-1 18:47:53:104 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: WARNING: corePollMgr error
+2021-4-1 18:47:54:09 [D:\Node.js\ds-as\src\agent\agent\PollMgr.js][PollMgr][start]: WARNING: New poll timer: 32000
+2021-4-1 18:47:54:11 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: WARNING: PollMgr error
+2021-4-1 18:47:54:824 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: ERROR: Heartbeat on error
+2021-4-1 18:47:54:825 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][start]: ERROR: Heartbeat process failed
+2021-4-1 18:48:05:03 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Restarting corePollMgr
+2021-4-1 18:48:05:04 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Receive msg from core: heartbeat_recovered
+2021-4-1 18:48:05:06 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Not register yet. Force registration
+2021-4-1 18:48:05:60 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-4-1 18:48:05:61 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-4-1 18:49:37:352 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: ERROR: Registration process failed
+2021-4-1 18:49:37:354 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Agent registration process failed
+2021-4-1 18:49:42:269 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: ERROR: Heartbeat on error
+2021-4-1 18:49:42:271 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][start]: ERROR: Heartbeat process failed
+2021-4-1 18:49:43:530 [D:\Node.js\ds-as\src\agent\core\CorePollMgr.js][CorePollMgr][start]: WARNING: New core poll timer: 32000
+2021-4-1 18:49:43:532 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: WARNING: corePollMgr error
+2021-4-1 18:49:43:568 [D:\Node.js\ds-as\src\agent\agent\PollMgr.js][PollMgr][start]: WARNING: New poll timer: 32000
+2021-4-1 18:49:43:570 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: WARNING: PollMgr error
+2021-4-1 18:49:54:428 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: ERROR: Heartbeat on error
+2021-4-1 18:49:54:431 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][start]: ERROR: Heartbeat process failed
+2021-4-1 18:50:06:604 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: ERROR: Heartbeat on error
+2021-4-1 18:50:06:606 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][start]: ERROR: Heartbeat process failed
+2021-4-1 18:50:17:688 [D:\Node.js\ds-as\src\agent\core\CorePollMgr.js][CorePollMgr][start]: WARNING: New core poll timer: 64000
+2021-4-1 18:50:17:690 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: WARNING: corePollMgr error
+2021-4-1 18:50:17:730 [D:\Node.js\ds-as\src\agent\agent\PollMgr.js][PollMgr][start]: WARNING: New poll timer: 64000
+2021-4-1 18:50:17:732 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: WARNING: PollMgr error
+2021-4-1 18:50:18:749 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: ERROR: Heartbeat on error
+2021-4-1 18:50:18:750 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][start]: ERROR: Heartbeat process failed
+2021-4-1 18:50:30:899 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: ERROR: Heartbeat on error
+2021-4-1 18:50:30:901 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][start]: ERROR: Heartbeat process failed
+2021-4-1 18:50:39:514 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Agent registration process failed
+2021-4-1 18:50:39:512 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: ERROR: Registration process failed
+2021-4-1 18:50:43:70 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: ERROR: Heartbeat on error
+2021-4-1 18:50:43:73 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][start]: ERROR: Heartbeat process failed
+2021-4-1 18:50:55:244 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: ERROR: Heartbeat on error
+2021-4-1 18:50:55:246 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][start]: ERROR: Heartbeat process failed
+2021-4-1 18:51:05:442 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Restarting corePollMgr
+2021-4-1 18:51:05:442 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Receive msg from core: heartbeat_recovered
+2021-4-1 18:51:05:451 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Not register yet. Force registration
+2021-4-1 18:51:05:521 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-4-1 18:51:05:522 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-4-1 18:54:18:220 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: unregistering
+2021-4-1 18:54:18:220 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Receive msg from core: unregister_cmd
+2021-4-1 18:54:18:273 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][unregister]: Agent has been succesfully unregistered: QA1
+2021-4-1 18:54:18:274 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Agent has been unregistered
+2021-4-1 18:54:18:276 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: unregistered
+2021-4-1 18:54:18:277 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: stopping
+2021-4-1 18:54:18:300 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: Child process exited
+2021-4-1 18:54:18:300 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: stopped
+2021-4-1 18:54:18:301 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: Child process closed
+2021-4-1 18:54:33:597 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: starting
+2021-4-1 18:54:34:705 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: running
+2021-4-1 18:54:33:765 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-4-1 18:54:34:689 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-4-1 18:54:34:768 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-4-1 18:54:34:766 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-2 12:14:16:533 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-2 12:14:16:535 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start agent core. Version: 1.0.0
+2021-7-2 12:14:37:600 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: ERROR: Heartbeat on error
+2021-7-2 12:14:37:601 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][start]: ERROR: Heartbeat process failed
+2021-7-2 12:15:56:905 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start agent core. Version: 1.0.0
+2021-7-2 12:15:56:903 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-2 12:15:56:945 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start child process agent
+2021-7-2 12:15:56:954 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: starting
+2021-7-2 12:15:57:835 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: running
+2021-7-2 12:15:57:96 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-2 12:15:57:825 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-2 12:15:57:856 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-7-2 12:15:57:855 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-2 12:16:13:11 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: unregistering
+2021-7-2 12:16:13:17 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Receive msg from core: unregister_cmd
+2021-7-2 12:16:13:33 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][unregister]: Agent has been succesfully unregistered: QA1
+2021-7-2 12:16:13:34 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Agent has been unregistered
+2021-7-2 12:16:13:34 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: unregistered
+2021-7-2 12:16:13:36 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: stopping
+2021-7-2 12:16:13:58 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: Child process exited
+2021-7-2 12:16:13:58 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: stopped
+2021-7-2 12:16:13:59 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: Child process closed
+2021-7-2 12:16:44:176 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: starting
+2021-7-2 12:16:45:117 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: running
+2021-7-2 12:16:44:320 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-2 12:16:45:106 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-2 12:16:45:140 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-7-2 12:16:45:139 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-2 12:35:09:136 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-2 12:35:09:138 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start agent core. Version: 1.0.0
+2021-7-2 12:35:09:174 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start child process agent
+2021-7-2 12:35:09:191 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: starting
+2021-7-2 12:35:10:92 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: running
+2021-7-2 12:35:09:312 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-2 12:35:10:81 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-2 12:35:10:111 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-2 12:35:10:113 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-7-8 16:12:43:360 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-8 16:12:43:381 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start agent core. Version: 1.0.0
+2021-7-8 16:13:04:447 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: ERROR: Heartbeat on error
+2021-7-8 16:13:04:449 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][start]: ERROR: Heartbeat process failed
+2021-7-8 16:13:51:803 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-8 16:13:51:805 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start agent core. Version: 1.0.0
+2021-7-8 16:13:51:846 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start child process agent
+2021-7-8 16:13:51:868 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: starting
+2021-7-8 16:13:52:799 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: running
+2021-7-8 16:13:52:18 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-8 16:13:52:789 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-8 16:13:52:824 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-7-8 16:13:52:823 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-8 16:14:38:618 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-8 16:14:38:620 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start agent core. Version: 1.0.0
+2021-7-8 16:14:38:640 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start child process agent
+2021-7-8 16:14:38:651 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: starting
+2021-7-8 16:14:39:545 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: running
+2021-7-8 16:14:38:788 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-8 16:14:39:528 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-8 16:14:39:574 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-7-8 16:14:39:573 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-8 16:14:54:689 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: unregistering
+2021-7-8 16:14:54:692 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Receive msg from core: unregister_cmd
+2021-7-8 16:14:54:713 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][unregister]: Agent has been succesfully unregistered: QA1
+2021-7-8 16:14:54:715 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Agent has been unregistered
+2021-7-8 16:14:54:717 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: unregistered
+2021-7-8 16:14:54:720 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: stopping
+2021-7-8 16:14:54:742 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: Child process exited
+2021-7-8 16:14:54:743 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: stopped
+2021-7-8 16:14:54:744 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: Child process closed
+2021-7-8 16:15:09:849 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: starting
+2021-7-8 16:15:12:56 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: running
+2021-7-8 16:15:10:140 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-8 16:15:12:02 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-8 16:15:12:101 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-7-8 16:15:12:94 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-8 16:29:53:897 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-8 16:29:53:899 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start agent core. Version: 1.0.0
+2021-7-8 16:29:53:928 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start child process agent
+2021-7-8 16:29:53:937 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: starting
+2021-7-8 16:29:54:819 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: running
+2021-7-8 16:29:54:53 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-8 16:29:54:808 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-8 16:29:54:843 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-7-8 16:29:54:842 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-8 16:39:07:68 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-8 16:39:07:71 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start agent core. Version: 1.0.0
+2021-7-8 16:39:07:96 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start child process agent
+2021-7-8 16:39:07:113 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: starting
+2021-7-8 16:39:08:110 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: running
+2021-7-8 16:39:07:249 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-8 16:39:08:98 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-8 16:39:08:135 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-7-8 16:39:08:133 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-8 17:46:56:787 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-8 17:46:56:788 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start agent core. Version: 1.0.0
+2021-7-8 17:46:56:813 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start child process agent
+2021-7-8 17:46:56:823 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: starting
+2021-7-8 17:46:57:734 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: running
+2021-7-8 17:46:56:968 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-8 17:46:57:725 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-8 17:46:57:756 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-8 17:46:57:756 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-7-8 17:47:12:863 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: unregistering
+2021-7-8 17:47:12:864 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Receive msg from core: unregister_cmd
+2021-7-8 17:47:12:877 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: unregistered
+2021-7-8 17:47:12:878 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: stopping
+2021-7-8 17:47:12:909 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: Child process exited
+2021-7-8 17:47:12:909 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: stopped
+2021-7-8 17:47:12:912 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: Child process closed
+2021-7-8 17:47:15:953 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: starting
+2021-7-8 17:47:16:971 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: running
+2021-7-8 17:47:16:96 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-8 17:47:16:960 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-8 17:47:16:997 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-8 17:47:16:999 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-7-8 18:54:41:415 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-8 18:54:41:417 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start agent core. Version: 1.0.0
+2021-7-8 18:54:41:466 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][coreApp]: Start child process agent
+2021-7-8 18:54:41:483 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: starting
+2021-7-8 18:54:42:425 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: running
+2021-7-8 18:54:41:646 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-8 18:54:42:414 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-8 18:54:42:444 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-8 18:54:42:445 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-7-8 18:55:13:532 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: unregistering
+2021-7-8 18:55:13:534 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Receive msg from core: unregister_cmd
+2021-7-8 18:55:13:544 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][unregister]: Agent has been succesfully unregistered: QA1
+2021-7-8 18:55:13:545 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Agent has been unregistered
+2021-7-8 18:55:13:547 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: unregistered
+2021-7-8 18:55:13:548 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: stopping
+2021-7-8 18:55:13:566 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: Child process exited
+2021-7-8 18:55:13:567 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][stopAgent]: New agent process status: stopped
+2021-7-8 18:55:13:568 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: Child process closed
+2021-7-8 18:55:20:651 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: starting
+2021-7-8 18:55:21:651 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: running
+2021-7-8 18:55:20:780 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-8 18:55:21:641 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-8 18:55:21:682 [D:\Node.js\ds-as\src\agent\core\appCore.js][appCore][startAgent]: New agent process status: registered
+2021-7-8 18:55:21:680 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-9 11:08:05:521 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-9 11:08:05:523 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][coreApp]: Start agent core. Version: 1.0.0
+2021-7-9 11:08:05:558 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][coreApp]: Start child process agent
+2021-7-9 11:08:05:569 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: starting
+2021-7-9 11:08:06:446 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: running
+2021-7-9 11:08:05:697 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-9 11:08:06:435 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-9 11:08:06:465 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: registered
+2021-7-9 11:08:06:465 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-9 11:08:21:595 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][stopAgent]: New agent process status: unregistering
+2021-7-9 11:08:21:600 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Receive msg from core: unregister_cmd
+2021-7-9 11:08:21:617 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][unregister]: Agent has been succesfully unregistered: QA1
+2021-7-9 11:08:21:618 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Agent has been unregistered
+2021-7-9 11:08:21:620 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][stopAgent]: New agent process status: unregistered
+2021-7-9 11:08:21:622 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][stopAgent]: New agent process status: stopping
+2021-7-9 11:08:21:645 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][stopAgent]: Child process exited
+2021-7-9 11:08:21:645 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][stopAgent]: New agent process status: stopped
+2021-7-9 11:08:21:647 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: Child process closed
+2021-7-9 11:08:36:717 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: starting
+2021-7-9 11:08:37:711 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: running
+2021-7-9 11:08:36:856 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-9 11:08:37:698 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-9 11:08:37:744 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: registered
+2021-7-9 11:08:37:742 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-21 16:27:36:116 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-21 16:27:36:118 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][coreApp]: Start agent core. Version: 1.0.0
+2021-7-21 16:27:57:188 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][coreApp]: ERROR: Heartbeat on error
+2021-7-21 16:27:57:190 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][start]: ERROR: Heartbeat process failed
+2021-7-21 16:28:51:904 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-21 16:28:51:906 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][coreApp]: Start agent core. Version: 1.0.0
+2021-7-21 16:28:51:940 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][coreApp]: Start child process agent
+2021-7-21 16:28:51:962 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: starting
+2021-7-21 16:28:53:524 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: running
+2021-7-21 16:28:52:109 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-21 16:28:53:513 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-21 16:28:53:546 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: registered
+2021-7-21 16:28:53:545 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-21 16:48:39:596 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-21 16:48:39:598 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][coreApp]: Start agent core. Version: 1.0.0
+2021-7-21 16:48:39:622 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][coreApp]: Start child process agent
+2021-7-21 16:48:39:632 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: starting
+2021-7-21 16:48:40:494 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: running
+2021-7-21 16:48:39:773 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-21 16:48:40:483 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-21 16:48:40:516 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: registered
+2021-7-21 16:48:40:514 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-21 16:52:21:416 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-21 16:52:21:418 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][coreApp]: Start agent core. Version: 1.0.0
+2021-7-21 16:52:21:439 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][coreApp]: Start child process agent
+2021-7-21 16:52:21:450 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: starting
+2021-7-21 16:52:22:316 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: running
+2021-7-21 16:52:21:594 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-21 16:52:22:306 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-21 16:52:22:334 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-21 16:52:22:336 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: registered
+2021-7-21 16:54:03:746 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-21 16:54:03:747 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][coreApp]: Start agent core. Version: 1.0.0
+2021-7-21 16:54:03:769 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][coreApp]: Start child process agent
+2021-7-21 16:54:03:778 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: starting
+2021-7-21 16:54:04:639 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: running
+2021-7-21 16:54:03:906 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-21 16:54:04:627 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-21 16:54:04:664 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-21 16:54:04:666 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: registered
+2021-7-22 8:16:08:443 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-22 8:16:08:457 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][coreApp]: Start agent core. Version: 1.0.0
+2021-7-22 8:16:08:488 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][coreApp]: Start child process agent
+2021-7-22 8:16:08:502 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: starting
+2021-7-22 8:16:17:734 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: running
+2021-7-22 8:16:08:666 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-22 8:16:17:724 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-22 8:16:17:768 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-22 8:16:17:768 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: registered
+2021-7-22 8:17:19:950 [D:\Node.js\ds-as\src\agent\core\Heartbeat.js][Heartbeat][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-22 8:17:19:952 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][coreApp]: Start agent core. Version: 1.0.0
+2021-7-22 8:17:20:01 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][coreApp]: Start child process agent
+2021-7-22 8:17:20:09 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: starting
+2021-7-22 8:17:20:960 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: running
+2021-7-22 8:17:20:133 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-22 8:17:20:948 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-22 8:17:20:983 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: registered
+2021-7-22 8:17:20:982 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1
+2021-7-22 8:17:36:31 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][stopAgent]: New agent process status: unregistering
+2021-7-22 8:17:36:33 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Receive msg from core: unregister_cmd
+2021-7-22 8:17:36:54 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][unregister]: Agent has been succesfully unregistered: QA1
+2021-7-22 8:17:36:60 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][stopAgent]: New agent process status: unregistered
+2021-7-22 8:17:36:61 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][stopAgent]: New agent process status: stopping
+2021-7-22 8:17:36:84 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][stopAgent]: Child process exited
+2021-7-22 8:17:36:85 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][stopAgent]: New agent process status: stopped
+2021-7-22 8:17:36:86 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: Child process closed
+2021-7-22 8:18:07:192 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: starting
+2021-7-22 8:18:08:179 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: running
+2021-7-22 8:18:07:336 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][logger]: New log file added to table: D:/node.js/ds-as/logs/agent.log
+2021-7-22 8:18:08:166 [D:\Node.js\ds-as\src\agent\agent\appAgent.js][appAgent][appAgent]: Starting agent process ... Version: 1.0.0
+2021-7-22 8:18:08:222 [D:\Node.js\ds-as\src\agent\core\app.js][appAgentCore][startAgent]: New agent process status: registered
+2021-7-22 8:18:08:211 [D:\Node.js\ds-as\src\agent\agent\Register.js][Register][register]: Agent has been successfully registered: QA1

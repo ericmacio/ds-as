@@ -1,0 +1,39 @@
+{
+  "name": "ds-as",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcrypt": "^5.0.0",
+    "chart.js": "^2.9.3",
+    "chartjs-node-canvas": "^3.0.6",
+    "cheerio": "^1.0.0-rc.3",
+    "cookie-parser": "^1.4.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "extract-zip": "^2.0.1",
+    "form-data": "^3.0.0",
+    "googleapis": "^39.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.9",
+    "mongoose-unique-validator": "^2.0.3",
+    "multer": "^1.4.2",
+    "nocache": "^2.1.0",
+    "promise": "^8.1.0",
+    "puppeteer": "^2.1.1",
+    "request": "^2.88.2",
+    "serve-favicon": "^2.5.0",
+    "ws": "^7.2.1",
+    "xlsx-to-json-lc": "^0.5.0",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

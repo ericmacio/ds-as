@@ -1,0 +1,63 @@
+{
+    "cmd" : {
+        "get": "getSlides",
+		"getData": "getData",
+		"getContent": "getContent",
+        "post": "postMediaGenerate",
+        "postValidate": "postValidateGeneration",
+        "delete": "deleteSlide"
+    },
+    "cmdList": {
+        "getSlides": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/medias?type[]=generate", 
+			"attributes": "[media_id]",
+			"responseType": "application/json"
+		},
+		"getData": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/medias", 
+			"attributes": "[media_id]",
+			"responseType": "application/json"
+		},
+		"getContent": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/medias/content", 
+			"attributes": "[media_id]",
+			"responseType": "application/json"
+		},
+        "postMediaGenerate": {
+			"request": "POST",
+			"cookie": true,
+			"contentType": "application/json; charset=UTF-8",
+			"contentData": "TBD",
+			"url": "/medias/generate",
+			"attributes": "[template_id]",
+			"description": "Create a media in the library using a template",
+			"responseType": "application/json"
+        },
+        "postValidateGeneration": {
+			"request": "POST",
+			"cookie": true,
+			"url": "/medias/validateGeneration",
+			"attributes": "[template_id]",
+			"description": "Validate a generated media. Can not be used alone",
+			"contentType": "application/json"
+		},
+        "deleteSlide": {
+			"request": "DELETE",
+			"cookie": true,
+			"contentType": "",
+			"url": "/medias", 
+			"attributes": "[media_id]",
+			"description": "Delete a media from the library",
+			"responseType": "application/json"
+		}
+    },
+    "createData": {
+        
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "url": "https://www.google.fr/maps/place/Leroy+Merlin+Saint-Egr%C3%A8ve+-+Grenoble/@45.241902,5.665889,15z/data=!4m7!3m6!1s0x0:0x4807598e51117633!8m2!3d45.241902!4d5.665889!9m1!1b1",
+    "nbItems": 1,
+    "playlistName": "avis-saint-egreve",
+    "pollingTimerSec": 30,
+    "mediaPrefix": "LM_ST_EGREVE_",
+    "templateName": "lm-ratings-2",
+    "templateData": {
+        "Name": {"type": "text", "value": "name"},
+        "Review": {"type": "text", "value": "review"},
+        "Rating": {"type": "text", "value": "rating"},
+        "Title": {"type": "text", "value": "date"},
+        "Stars": {"type": "image", "value": "stars"},
+        "Photo": {"type": "image", "value": "photo"}
+    }
+} 

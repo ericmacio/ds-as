@@ -1,0 +1,92 @@
+{
+    "cmd" : {
+        "get": "getDevices", 
+		"getContentStatus": "getDeviceContentStatus",
+		"getLogs": "getLogs",
+		"putRights": "putDeviceRights",
+		"putConfig": "putDeviceConfiguration",
+		"requestLogs": "putLogs"
+    },
+    "cmdList": {
+        "getDevices": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/devices", 
+			"attributes": "[device_id]",
+			"responseType": "application/json"
+        },
+        "getDeviceContentStatus": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/devices/contentstatus", 
+			"attributes": "[device_id]",
+			"description": "Get device content status",
+			"responseType": "application/json"
+		},
+		"getDeviceConfiguration": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/devices/configuration",
+			"attributes": "[device_id]",
+			"description": "Change device config",
+			"responseType": "application/json"
+		},
+		"getLogs": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/devices/debugLogs",
+			"attributes": "[device_id]",
+			"description": "Get device logs",
+			"responseType": "application/json"
+		},
+        "putDeviceConfiguration": {
+			"request": "PUT",
+			"cookie": true,
+			"url": "/devices/configuration",
+			"attributes": "[device_id]",
+			"contentType": "application/json",
+			"contentData": "device id + configuration object",
+			"description": "Change device config",
+			"responseType": "application/json"
+		},
+		"putDeviceConfigurationMulti": {
+			"request": "PUT",
+			"cookie": true,
+			"url": "/devices/configuration/multi",
+			"attributes": "none",
+			"contentType": "application/x-www-form-urlencoded; charset=UTF-8",
+			"contentData": "device id[] + configuration settings",
+			"description": "Change multi device config",
+			"responseType": "application/json"
+		},
+		"putDeviceCleanInternalDb": {
+			"request": "PUT",
+			"cookie": true,
+			"url": "/devices/cleanInternalDb/",
+			"attributes": "none",
+			"contentData": "device id",
+			"description": "Change multi device config",
+			"responseType": "application/json"
+		},
+		"putDeviceRights": {
+			"request": "PUT",
+			"cookie": true,
+			"contentType": "application/json",
+			"url": "/devices/rights",
+			"attributes": "[device_id]",
+			"description": "Change the rights of the device",
+			"responseType": "application/json"
+		},
+		"putLogs": {
+			"request": "PUT",
+			"cookie": true,
+			"url": "/devices/debugLogs",
+			"attributes": "[device_id]",
+			"description": "Request device logs",
+			"responseType": "application/json"
+		}
+    },
+    "createData": {
+        
+    }
+}

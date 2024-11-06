@@ -1,0 +1,99 @@
+{
+    "cmdList": {
+        "postRegister": {
+            "description": "Register the player to the server",
+            "request": "POST",
+            "url": "/devices/WinDevice",
+            "contentType": "application/json",
+            "responseType": "application/json"
+        },
+        "putConfiguration": {
+            "description": "Send configuration message to the server",
+            "request": "PUT",
+            "url": "/devices/configurationFromDevice",
+            "attributes": "[player_id]",
+            "contentType": "application/x-www-form-urlencoded; charset=UTF-8",
+            "responseType": "application/json"
+        },
+        "putKeepAlive": {
+            "description": "Send keep alive message to the server",
+            "request": "PUT",
+            "url": "/devices/keepAlive",
+            "attributes": "[player_id]",
+            "contentType": "application/x-www-form-urlencoded; charset=UTF-8",
+            "responseType": "application/json"
+        },
+        "putBroadcastInformation": {
+            "description": "Send broadcast information to the server",
+            "request": "PUT",
+            "url": "/devices/broadcastInformation",
+            "attributes": "[player_id]",
+            "contentType": "application/x-www-form-urlencoded; charset=UTF-8",
+            "responseType": "application/json"
+        },
+        "postWinDevicesLoopDuration": {
+            "description": "Send broadcast information to the server",
+            "request": "POST",
+            "url": "/devices/winDevicesLoopDuration",
+            "attributes": "[player_id]",
+            "contentType": "application/x-www-form-urlencoded; charset=UTF-8",
+            "responseType": "application/json"
+        },
+        "getChannelToBroadcast": {
+            "description": "Request player channel from the server",
+            "request": "GET",
+            "url": "/devices/channelToBroadcast",
+            "attributes": "[player_name]",
+            "responseType": "application/json"
+        },
+        "getQuickMessage": {
+            "description": "Send quick message to the server",
+            "request": "GET",
+            "url": "/devices/quickmessage",
+            "attributes": "[player_id]",
+            "responseType": "application/json"
+        },
+        "getPlaylistOrFeedToBroadcast": {
+            "request": "GET",
+            "cookie": true,
+            "url": "/devices/playlistOrFeedToBroadcast", 
+            "attributes": "[device_id]",
+            "description": "Get playlist list for that device",
+            "responseType": "application/json"
+        },
+        "putDeviceBroadcast": {
+            "description": "Send playlist list from screen lis file to the server",
+            "request": "PUT",
+            "url": "/devices/deviceBroadcast",
+            "attributes": "[player_id]",
+            "contentType": "application/x-www-form-urlencoded; charset=UTF-8",
+            "responseType": "application/json"
+        },
+        "getVariablesToBroadcast": {
+            "request": "GET",
+            "cookie": true,
+            "url": "/devices/variablesToBroadcast", 
+            "attributes": "[device_id]",
+            "description": "Get variable list",
+            "responseType": "application/json"
+        },
+        "putQmTaskStart": {
+            "description": "Send start QM message to the server",
+            "request": "PUT",
+            "url": "/devices/qmTaskStart",
+            "attributes": "[qm_id]",
+            "contentType": "application/x-www-form-urlencoded; charset=UTF-8",
+            "responseType": "application/json"
+        },
+        "postQmTaskSuccess": {
+            "description": "Send success QM message to the server",
+            "request": "POST",
+            "url": "/devices/qmTaskSuccess",
+            "urlServerV4": "/folder_server.php?_p=quick_message&_a=taskSuccess&task_id=",
+            "attributes": "[qm_id]",
+            "contentType":  "application/json",
+            "contentTypeServerV4": "text/xml; charset=UTF-8",
+            "responseType": "application/json"
+        }
+    }
+}

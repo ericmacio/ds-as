@@ -1,0 +1,12 @@
+{
+    "configKeyList": ["sound", "licence", "licence_text", "ram", "screen_size", "screen_bits", "screen_freq", "pivot",
+        "next_diff_date", "monitor_power", "monitor_volume", "monitor_input", "monitor_mute", "monitor_status", "monitor_status_info",
+        "monitor_info", "monitor_type", "disk_free_space_mbytes", "disk_free_space_percent", "disk_status", "start_diff", "end_diff",
+        "hebdo_days", "subtitle_default_lang", "hors_diff_start_date", "hors_diff_end_date", "boot_type", "boot_time", "write_debug",
+        "os_version", "lang", "codepage", "screen_diag_duration", "diagnostic_screen", "principal_server", "proxy_used", "proxy_user",
+        "proxy_password", "proxy_type", "proxy_name", "proxy_port", "freq_qm", "freq_playlist", "freq_feed", "freq_var", "freq_screen",
+        "freq_keep", "freq_media_error", "freq_trc_diff", "max_trc_diff", "max_time_diff_secs", "principal_api_url", "alias1", "alias2",
+        "alias3", "alias4", "alias5", "alias6", "alias7", "alias8", "alias9", "alias10", "timezone_offset_mins", "timezone_name",
+        "unique_id", "codekey", "organisation"
+    ]
+}

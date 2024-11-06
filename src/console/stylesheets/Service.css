@@ -1,0 +1,67 @@
+.boxes-service {
+	width: 190px;
+    display: flex;
+	flex-direction: column;
+	min-height: 130px;
+	align-items: center;
+	padding-bottom: 5px;
+}
+.boxes-service-data {
+	place-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+	height: 100%;
+	outline: 1px solid transparent;
+}
+.boxes-service >a {
+	text-decoration: none;
+    color: #4c5665;
+    flex: 1;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.boxes-appHeader {
+	grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+.boxes-serviceName {
+	font-size: 18px;
+	font-weight: bold;
+	width: 100%;
+	text-align: center;
+}
+.boxes-serviceStatus {
+	font-weight: bold;
+	font-size: 16px;
+}
+.boxes-serviceStatusRunning {
+	color: #2dab2d;
+	font-weight: bold;
+	font-size: 16px;
+}
+.boxes-serviceStatusIdle {
+	color: #ffa959;
+	font-weight: bold;
+	font-size: 16px;
+}
+.boxes-serviceStatusError {
+	color: #ff0000;
+	font-weight: bold;
+	font-size: 16px;
+}
+.boxes-loading {
+	height: 25px;
+	color: rgb(250, 136, 6);
+}
+.boxes-start {
+	height: 25px;
+	cursor: pointer;
+	color: green;
+}
+.boxes-stop {
+	height: 25px;
+	cursor: pointer;
+	color: red;
+}

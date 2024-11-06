@@ -1,0 +1,70 @@
+.login-header {
+    position: absolute;
+    width: 100%;
+    height: 8%;
+    display: flex;
+}
+#login-header-as {
+    margin-right: auto;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+#login-header-as-logo {
+    height: 90%;
+    margin-left: 20px;
+}
+#login-header-as-title {
+    font-size: 22px;
+    margin-left: 20px;
+    font-family: "Open Sans", sans-serif;
+    flex-wrap: wrap;
+}
+#login-header-logo-piksel {
+    margin-left: auto;
+    height: 70%;
+    padding: 10px;
+    margin-right: 20px;
+}
+.login-background {
+    background-image: url(/assets/bg/bg20.jpg);
+}
+.login-overlay {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.login-form {
+    color: #e8f0fe;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+    padding: 40px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 450px;
+}
+.login-form input {
+    height: 30px;
+    border: solid 1px;
+    font-size: 15px;
+}
+.login-form button {
+    margin-left: 10px;
+    width: 100px;
+    height: 30px;
+    font-size: 17px;
+    background-color: #0296d4;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+.login-failed {
+    color: #ff0000;
+    font-size: 16px;
+}

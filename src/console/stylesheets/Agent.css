@@ -1,0 +1,103 @@
+.agent {
+	width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.agent-items-list {
+    align-items: center;
+}
+.agent-menu-delete {
+	cursor: pointer;
+	height: 15px;
+	transition: color 0.5s;
+}
+.agent-menu-delete:hover {
+	color: #f14604;
+}
+.agent-menu-edit {
+	cursor: pointer;
+	height: 15px;
+	transition: color 0.5s;
+}
+.agent-menu-edit:hover {
+	color: #00802b;
+}
+.agent-link {
+    color: #4c5665;
+    text-decoration: none;
+}
+.agent-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #4c5665;
+}
+.agent-item-avatar {
+    margin-bottom: 10px;
+    color: #28688e;
+}
+.agent-item-avatar-registered {
+    margin-bottom: 10px;
+    color: #2cb12c;
+}
+.agent-item-hostname {
+    min-height: 1.5em;
+    font-size: 15px;
+    font-weight: bold;
+}
+.agent-item-heartbeat-ok {
+    color: #2cb12c;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.agent-item-heartbeat-ko {
+    color: #ca2418;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.agent-item-connected {
+    color: #2cb12c;
+    font-weight: bold;
+}
+.agent-item-notconnected {
+    font-weight: normal;
+}
+.agent-item-data {
+    min-height: 1.5em;
+    font-size: 12px;
+}
+.agent-status-registered {
+    height: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2a8e2a;
+}
+.agent-status-stopped {
+    height: 25px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.agent-status-idle {
+    height: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffa959;
+}
+.agent-status-unreachable {
+    height: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fb3e3e;
+}
+.agent-start {
+	height: 25px;
+	cursor: pointer;
+	color: green;
+}
+.agent-stop {
+	height: 25px;
+	cursor: pointer;
+	color: red;
+}

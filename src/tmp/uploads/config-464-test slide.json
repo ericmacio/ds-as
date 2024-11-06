@@ -1,0 +1,304 @@
+{
+    "wait_task_ms": 0,
+    "wait_loop_ms": 0,
+    "scenarioList": [
+        "get_slide_data"
+    ],
+    "full_demo": [
+        "create_airlines",
+        "create_porter",
+        "create_airbox",
+        "create_demo",
+        "play_demo",
+        "delete_demo",
+        "delete_airlines",
+        "delete_porter",
+        "delete_airbox"
+    ],
+    "get_slide_data": {
+        "name": "Get slide data",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slide_download_pgz", "data": {"name": "airlines1_demo_emk", "dir": "D:/dsContent/tests/airlines1_demo_emk", "file": "airlines1_demo_emk.pgz", "unzip": true}}
+        ]
+    },
+    "create_channel": {
+        "name": "Create Channel",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_create", "data": {"name": "demo_sylvain", "description": "Demo channel for Sylvain"}}
+        ]
+    },
+    "delete_channel": {
+        "name": "Delete Channel",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_delete", "data": {"name": "demo_sylvain"}}
+        ]
+    },
+    "create_demo": {
+        "name": "Create Demo",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "layoutTemplate_upload", "data": {"name": "porter_demo_emk", "url": "http://ftp.ds-piksel.com/layoutTemplates/porter/porter"}},
+            {"action": "layout_create", "data": {"name": "porter_demo_emk", "template": "porter_demo_emk"}},
+            {"action": "layoutTemplate_upload", "data": {"name": "airbox_demo_emk", "url": "http://ftp.ds-piksel.com/layoutTemplates/airbox/airbox"}},
+            {"action": "layout_create", "data": {"name": "airbox_demo_emk", "template": "airbox_demo_emk"}},
+            {"action": "layoutTemplate_upload", "data": {"name": "airlines_demo_emk", "url": "http://ftp.ds-piksel.com/layoutTemplates/airlines/airlines"}},
+            {"action": "layout_create", "data": {"name": "airlines_demo_emk", "template": "airlines_demo_emk"}},
+            {"action": "channel_create", "data": {"name": "channel_demo_emk", "description": "Demo channel including porter, airbox and airlines content"}},
+            {"action": "channel_post_content", "data": {"name": "channel_demo_emk", "contentType": "playlist", "contentName": "porter_demo_emk", "rank": 1}},
+            {"action": "channel_post_content", "data": {"name": "channel_demo_emk", "contentType": "playlist", "contentName": "airbox_demo_emk", "rank": 2}},
+            {"action": "channel_post_content", "data": {"name": "channel_demo_emk", "contentType": "playlist", "contentName": "airlines_demo_emk", "rank": 3}},
+            {"action": "channel_element_layout", "data": {"name": "channel_demo_emk", "element": "porter_demo_emk", "layout": "porter_demo_emk", "value": "set"}},
+            {"action": "channel_element_layout", "data": {"name": "channel_demo_emk", "element": "airbox_demo_emk", "layout": "airbox_demo_emk", "value": "set"}},
+            {"action": "channel_element_layout", "data": {"name": "channel_demo_emk", "element": "airlines_demo_emk", "layout": "airlines_demo_emk", "value": "set"}},
+            {"action": "channel_publish", "data": {"name": "channel_demo_emk"}}
+        ]
+    },
+    "wait_15s": {
+        "name": "Wait_15s",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "wait", "data": {"duration": 15}}
+        ]
+    },
+    "play_demo": {
+        "name": "Play demo",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "playlist_rights_to_device_list", "data": {"name": "porter_demo_emk", "deviceList": ["QA_ERIC"], "value": "set"}},
+            {"action": "playlist_rights_to_device_list", "data": {"name": "airbox_demo_emk", "deviceList": ["QA_ERIC"], "value": "set"}},
+            {"action": "playlist_rights_to_device_list", "data": {"name": "airlines_demo_emk", "deviceList": ["QA_ERIC"], "value": "set"}},
+            {"action": "qm_delete_all", "data": {"device": "QA_ERIC"}},
+            {"action": "channel_associate_device_list", "data": {"name": "channel_demo_emk", "deviceList":["QA_ERIC"]}},
+            {"action": "qm_check_exist", "data": {"check": {"device": "QA_ERIC", "title": "channel_update", "type": "command", "status": "end"}}},
+            {"action": "device_check_content_status", "data": {"name": "QA_ERIC", "check": {"channel": {"display_name": "channel_demo_emk", "version": "ok", "global_state": "ok"}, "playlist": [{"display_name": "porter_demo_emk", "version": "ok", "rights": true, "global_state": "ok"}, {"display_name": "airbox_demo_emk", "version": "ok", "rights": true, "global_state": "ok"}, {"display_name": "airlines_demo_emk", "version": "ok", "rights": true, "global_state": "ok"}]}}}
+        ]
+    },
+    "check_demo": {
+        "name": "Check demo",
+        "nbLoop": 2,
+        "taskList": [
+            {"action": "device_check_content_status", "data": {"name": "QA_ERIC", "check": {"last_loop_duration_s": 290, "channel": {"display_name": "channel_demo_emk", "current_version": 2, "global_state": "ok"}, "playlist": [{"display_name": "porter_demo_emk", "current_version": 3, "rights": true, "global_state": "ok"}, {"display_name": "airbox_demo_emk", "current_version": 3, "rights": true, "global_state": "ok"}, {"display_name": "airlines_demo_emk", "current_version": 3, "rights": true, "global_state": "ok"}]}}},
+            {"action": "wait", "data": {"duration": 30}}
+        ]
+    },
+    "delete_demo": {
+        "name": "Delete Demo",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_associate_device_list", "data": {"name": "do_not_delete", "deviceList":["QA_ERIC"]}},
+            {"action": "channel_delete", "data": {"name": "channel_demo_emk"}},
+            {"action": "layout_delete", "data": {"name": "porter_demo_emk"}},
+            {"action": "layout_delete", "data": {"name": "airbox_demo_emk"}},
+            {"action": "layout_delete", "data": {"name": "airlines_demo_emk"}},
+            {"action": "layoutTemplate_delete", "data": {"name": "porter_demo_emk"}},
+            {"action": "layoutTemplate_delete", "data": {"name": "airbox_demo_emk"}},
+            {"action": "layoutTemplate_delete", "data": {"name": "airlines_demo_emk"}}
+        ]
+    },
+    "create_airlines": {
+        "name": "Airlines",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "airlines1_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/airlines/airlines1"}},
+            {"action": "slide_create", "data": {"name": "airlines1_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/airlines/airlines1.json", "template": "airlines1_demo_emk"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airlines2_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/airlines/airlines2"}},
+            {"action": "slide_create", "data": {"name": "airlines2_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/airlines/airlines2.json", "template": "airlines2_demo_emk"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airlines3_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/airlines/airlines3"}},
+            {"action": "slide_create", "data": {"name": "airlines3_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/airlines/airlines3.json", "template": "airlines3_demo_emk"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airlines4_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/airlines/airlines4"}},
+            {"action": "slide_create", "data": {"name": "airlines4_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/airlines/airlines4.json", "template": "airlines4_demo_emk"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airlines5_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/airlines/airlines5"}},
+            {"action": "slide_create", "data": {"name": "airlines5_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/airlines/airlines5.json", "template": "airlines5_demo_emk"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airlines6_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/airlines/airlines6"}},
+            {"action": "slide_create", "data": {"name": "airlines6_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/airlines/airlines6.json", "template": "airlines6_demo_emk"}},
+            {"action": "playlist_create", "data": {"name": "airlines_demo_emk", "description": "Airlines playlist"}},
+            {"action": "playlist_upload_content", "data": {"name": "airlines_demo_emk", "url": "http://ftp.ds-piksel.com/medias/airlines/intro.mp4", "contentName": "airlines_intro_demo_emk"}},
+            {"action": "wait", "data": {"duration": 5}},
+            {"action": "media_check_video_encoded", "data": {"name": "airlines_intro_demo_emk", "timeOut": "60"}},
+            {"action": "playlist_post_content", "data": {"name": "airlines_demo_emk", "contentType": "slide", "contentName": "airlines1_demo_emk", "rank": 2}},
+            {"action": "playlist_post_content", "data": {"name": "airlines_demo_emk", "contentType": "slide", "contentName": "airlines2_demo_emk", "rank": 3}},
+            {"action": "playlist_post_content", "data": {"name": "airlines_demo_emk", "contentType": "slide", "contentName": "airlines3_demo_emk", "rank": 4}},
+            {"action": "playlist_post_content", "data": {"name": "airlines_demo_emk", "contentType": "slide", "contentName": "airlines4_demo_emk", "rank": 5}},
+            {"action": "playlist_post_content", "data": {"name": "airlines_demo_emk", "contentType": "slide", "contentName": "airlines5_demo_emk", "rank": 6}},
+            {"action": "playlist_post_content", "data": {"name": "airlines_demo_emk", "contentType": "slide", "contentName": "airlines6_demo_emk", "rank": 7}},
+            {"action": "playlist_publish", "data": {"name": "airlines_demo_emk"}}
+        ]
+    },
+    "delete_airlines": {
+        "name": "Delete Airlines",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "playlist_delete", "data": {"name": "airlines_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "airlines_intro_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "airlines1_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "airlines2_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "airlines3_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "airlines4_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "airlines5_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "airlines6_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airlines1_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airlines2_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airlines3_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airlines4_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airlines5_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airlines6_demo_emk"}}
+        ]
+    },
+    "create_porter": {
+        "name": "Porter",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "porter1_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/porter/porter1"}},
+            {"action": "slide_create", "data": {"name": "porter1_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/porter/porter1.json", "template": "porter1_demo_emk"}},
+            {"action": "slideTemplate_upload", "data": {"name": "porter2_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/porter/porter2"}},
+            {"action": "slide_create", "data": {"name": "porter2_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/porter/porter2.json", "template": "porter2_demo_emk"}},
+            {"action": "slideTemplate_upload", "data": {"name": "porter3_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/porter/porter3"}},
+            {"action": "slide_create", "data": {"name": "porter3_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/porter/porter3.json", "template": "porter3_demo_emk"}},
+            {"action": "slideTemplate_upload", "data": {"name": "porter4_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/porter/porter4"}},
+            {"action": "slide_create", "data": {"name": "porter4_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/porter/porter4.json", "template": "porter4_demo_emk"}},
+            {"action": "slideTemplate_upload", "data": {"name": "porter5_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/porter/porter5"}},
+            {"action": "slide_create", "data": {"name": "porter5_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/porter/porter5.json", "template": "porter5_demo_emk"}},
+            {"action": "slideTemplate_upload", "data": {"name": "porter6_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/porter/porter6"}},
+            {"action": "slide_create", "data": {"name": "porter6_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/porter/porter6.json", "template": "porter6_demo_emk"}},
+            {"action": "slideTemplate_upload", "data": {"name": "porter7_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/porter/porter7"}},
+            {"action": "slide_create", "data": {"name": "porter7_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/porter/porter6.json", "template": "porter7_demo_emk"}},
+            {"action": "playlist_create", "data": {"name": "porter_demo_emk", "description": "Porter playlist"}},
+            {"action": "playlist_upload_content", "data": {"name": "porter_demo_emk", "url": "http://ftp.ds-piksel.com/medias/porter/intro.mp4", "contentName": "porter_intro_demo_emk"}},
+            {"action": "wait", "data": {"duration": 5}},
+            {"action": "media_check_video_encoded", "data": {"name": "porter_intro_demo_emk", "timeOut": "60"}},
+            {"action": "playlist_post_content", "data": {"name": "porter_demo_emk", "contentType": "slide", "contentName": "porter1_demo_emk", "rank": 2}},
+            {"action": "playlist_post_content", "data": {"name": "porter_demo_emk", "contentType": "slide", "contentName": "porter2_demo_emk", "rank": 3}},
+            {"action": "playlist_post_content", "data": {"name": "porter_demo_emk", "contentType": "slide", "contentName": "porter3_demo_emk", "rank": 4}},
+            {"action": "playlist_post_content", "data": {"name": "porter_demo_emk", "contentType": "slide", "contentName": "porter4_demo_emk", "rank": 5}},
+            {"action": "playlist_post_content", "data": {"name": "porter_demo_emk", "contentType": "slide", "contentName": "porter5_demo_emk", "rank": 6}},
+            {"action": "playlist_post_content", "data": {"name": "porter_demo_emk", "contentType": "slide", "contentName": "porter6_demo_emk", "rank": 7}},
+            {"action": "playlist_post_content", "data": {"name": "porter_demo_emk", "contentType": "slide", "contentName": "porter7_demo_emk", "rank": 8}},
+            {"action": "playlist_publish", "data": {"name": "porter_demo_emk"}}
+        ]
+    },
+    "delete_porter": {
+        "name": "Delete Porter",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "playlist_delete", "data": {"name": "porter_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "porter1_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "porter2_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "porter3_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "porter4_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "porter5_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "porter6_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "porter7_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "porter_intro_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "porter1_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "porter2_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "porter3_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "porter4_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "porter5_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "porter6_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "porter7_demo_emk"}}
+        ]
+    },
+    "create_airbox": {
+        "name": "Airbox",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "airbox1_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/airbox/airbox1"}},
+            {"action": "slide_create", "data": {"name": "airbox1_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/airbox/airbox1.json", "template": "airbox1_demo_emk"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airbox2_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/airbox/airbox2"}},
+            {"action": "slide_create", "data": {"name": "airbox2_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/airbox/airbox2.json", "template": "airbox2_demo_emk"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airbox3_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/airbox/airbox3"}},
+            {"action": "slide_create", "data": {"name": "airbox3_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/airbox/airbox3.json", "template": "airbox3_demo_emk"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airbox4_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/airbox/airbox4"}},
+            {"action": "slide_create", "data": {"name": "airbox4_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/airbox/airbox4.json", "template": "airbox4_demo_emk"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airbox5_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/airbox/airbox5"}},
+            {"action": "slide_create", "data": {"name": "airbox5_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/airbox/airbox5.json", "template": "airbox5_demo_emk"}},
+            {"action": "slideTemplate_upload", "data": {"name": "airbox6_demo_emk", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/airbox/airbox6"}},
+            {"action": "slide_create", "data": {"name": "airbox6_demo_emk", "url": "http://ftp.ds-piksel.com/slideData/airbox/airbox6.json", "template": "airbox6_demo_emk"}},
+            {"action": "playlist_create", "data": {"name": "airbox_demo_emk", "description": "Airbox playlist"}},
+            {"action": "playlist_upload_content", "data": {"name": "airbox_demo_emk", "url": "http://ftp.ds-piksel.com/medias/airbox/intro.mp4", "contentName": "airbox_intro_demo_emk"}},
+            {"action": "wait", "data": {"duration": 5}},
+            {"action": "media_check_video_encoded", "data": {"name": "airbox_intro_demo_emk", "timeOut": "60"}},
+            {"action": "playlist_post_content", "data": {"name": "airbox_demo_emk", "contentType": "slide", "contentName": "airbox1_demo_emk", "rank": 2}},
+            {"action": "playlist_post_content", "data": {"name": "airbox_demo_emk", "contentType": "slide", "contentName": "airbox2_demo_emk", "rank": 3}},
+            {"action": "playlist_post_content", "data": {"name": "airbox_demo_emk", "contentType": "slide", "contentName": "airbox3_demo_emk", "rank": 4}},
+            {"action": "playlist_post_content", "data": {"name": "airbox_demo_emk", "contentType": "slide", "contentName": "airbox4_demo_emk", "rank": 5}},
+            {"action": "playlist_post_content", "data": {"name": "airbox_demo_emk", "contentType": "slide", "contentName": "airbox5_demo_emk", "rank": 6}},
+            {"action": "playlist_post_content", "data": {"name": "airbox_demo_emk", "contentType": "slide", "contentName": "airbox6_demo_emk", "rank": 7}},
+            {"action": "playlist_publish", "data": {"name": "airbox_demo_emk"}}
+        ]
+    },
+    "delete_airbox": {
+        "name": "Delete Airbox",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "playlist_delete", "data": {"name": "airbox_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "airbox1_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "airbox2_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "airbox3_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "airbox4_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "airbox5_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "airbox6_demo_emk"}},
+            {"action": "media_delete", "data": {"name": "airbox_intro_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airbox1_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airbox2_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airbox3_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airbox4_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airbox5_demo_emk"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airbox6_demo_emk"}}
+        ]
+    },
+    "Scenario4": {
+        "name": "Scenario4",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "layoutTemplate_upload", "data": {"name": "aa_airbox_eric", "url": "http://ftp.ds-piksel.com/layoutTemplates/airbox/airbox"}},
+            {"action": "layout_create", "data": {"name": "aa_airbox_eric", "template": "aa_airbox_eric"}},
+            {"action": "layout_delete", "data": {"name": "aa_airbox_eric"}},
+            {"action": "layoutTemplate_delete", "data": {"name": "aa_airbox_eric"}}
+        ]
+    },
+    "Scenario3": {
+        "name": "Scenario3",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "media_upload", "data": {"name": "test_video_eric", "url": "http://ftp.ds-piksel.com/medias/videos/ways.mp4"}},
+            {"action": "media_check_video_encoded", "data": {"name": "test_video_eric", "timeOut": "120"}},
+            {"action": "media_delete", "data": {"name": "test_video_eric"}}
+        ]
+    },
+    "Scenario2": {
+        "name": "Scenario2",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "playlist_create", "data": {"name": "aa_eric", "description": "New playlist created by EMK"}},
+            {"action": "playlist_check_exist", "data": {"name": "aa_eric"}},
+            {"action": "playlist_upload_content", "data": {"name": "aa_eric", "url": "http://ftp.ds-piksel.com/medias/images/twc.jpg", "contentName": "aa_eric_img"}},
+            {"action": "playlist_publish", "data": {"name": "aa_eric"}}
+        ]
+    },
+    "Scenario1": {
+        "name": "Test channel",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "AA_airbox2", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/airbox/airbox2"}},
+            {"action": "channel_create", "data": {"name": "channel_eric_1", "description": "Demo channel"}},
+            {"action": "channel_upload_content", "data": {"name": "channel_eric_1", "url": "http://ftp.ds-piksel.com/medias/images/ville1.jpg", "contentName": "img_ville"}},
+            {"action": "slide_create", "data": {"name": "AA_airbox2", "url": "http://ftp.ds-piksel.com/slideData/airbox/airbox2_demo.json", "template": "AA_airbox2"}},
+            {"action": "channel_post_content", "data": {"name": "channel_eric_1", "contentType": "slide", "contentName": "AA_airbox2"}},
+            {"action": "channel_publish", "data": {"name": "channel_eric_1"}}
+        ]
+    },
+    "CleanupScenario1": {
+        "name": "Delete channel",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_delete", "data": {"name": "channel_eric_1"}},
+            {"action": "media_delete", "data": {"name": "img_ville"}},
+            {"action": "slide_delete", "data": {"name": "AA_airbox2"}},
+            {"action": "slideTemplate_delete", "data": {"name": "AA_airbox2"}}
+        ]
+    }
+}

@@ -1,0 +1,39 @@
+.servicedetails-header-loading{
+    color: #faea06;
+}
+.servicedetails-header-start{
+    color: #32af32;
+}
+.servicedetails-header-start:hover{
+    cursor: pointer;
+}
+.servicedetails-header-stop{
+    color: #ff3838;
+}
+.servicedetails-header-stop:hover{
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+.servicedetails-header-status-title {
+    margin-left: 50px;
+    margin-right: 8px;
+}
+.servicedetails-header-status {
+    font-size: 20px;
+    font-weight: bold;
+    width: 150px;
+}
+.stopped {
+    color: #508de8;
+}
+.running {
+    color: #32af32;
+}
+.idle {
+    color: #ffa959;
+}
+.error {
+    color: #fb3e3e;
+}

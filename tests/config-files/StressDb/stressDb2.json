@@ -1,0 +1,8 @@
+{
+    "dataConnectors": {
+        "Xls1": {"type": "Xls", "access": {"type": "remote", "hostName": "QA1"}, "params": {"file": "D:/node.js/ds-as/appsData/StressDb/files/dbData1.xlsx", "sheet": "Sheet1"}},
+        "Xls2": {"type": "Xls", "access": {"type": "remote", "hostName": "QA1"}, "params": {"file": "D:/node.js/ds-as/appsData/StressDb/files/dbData2.xlsx", "sheet": "Sheet1"}}
+    },
+    "nbClient": 1,
+    "timerMs": 1000
+}

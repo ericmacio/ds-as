@@ -1,0 +1,12 @@
+{
+    "scenarioList": [
+        "Help"
+    ],
+    "Help": {
+        "name": "Help",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "help", "data": {"list": [], "display": {"name": true, "description": true, "example": true}}}
+        ]
+    }
+}

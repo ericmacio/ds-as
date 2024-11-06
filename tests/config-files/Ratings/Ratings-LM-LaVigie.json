@@ -1,0 +1,15 @@
+{
+    "url": "https://www.google.com/maps/place/Leroy+Merlin+La+Vigie+-+Ostwald/@48.534178,7.6942054,16.96z/data=!4m7!3m6!1s0x4796b5f8575c13ff:0x2e133d7b1fb5f3dc!8m2!3d48.5349224!4d7.6963112!9m1!1b1",
+    "nbItems": 5,
+    "playlistName": "avis-la-vigie",
+    "pollingTimerSec": 60,
+    "mediaPrefix": "LM_LA_VIGIE_RATINGS_",
+    "templateName": "lm_ratings",
+    "templateData": {
+        "Name": {"type": "text", "value": "name"},
+        "Review": {"type": "text", "value": "review"},
+        "Rating": {"type": "text", "value": "rating"},
+        "Title": {"type": "text", "value": "date"},
+        "Photo": {"type": "image", "value": "photo"}
+    }
+} 

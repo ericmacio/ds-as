@@ -1,0 +1,11 @@
+.appsummary {
+    display: flex;
+    min-height: 30px;
+}
+.appsummary-appName {
+	flex: 1 1 10px;
+	margin-left: 5px;
+}
+.appsummary-appNb {
+	flex: 1 1 60%
+}

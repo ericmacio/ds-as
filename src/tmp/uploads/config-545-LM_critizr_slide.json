@@ -1,0 +1,61 @@
+{
+    "url": "https://api.ds4.piksel.com/CritizrLM.php?shop=LEROY%20MERLIN%20LA%20VIGIE",
+    "slideInfoList": [
+        {
+            "name": "LM_note_enseigne_slide",
+            "template": "LM_note_enseigne",
+            "slideData": {
+                "Date": {"type": "text", "tag": "date_recup"},
+                "Nommagasin": {"type": "text", "value": "LA VIGIE"},
+                "Indice": {"type": "text", "tag": "note_critizr"},
+                "Avis": {"type": "text", "tag": "nb_avis_critizr"},
+                "Txtavis": {"type": "text", "value": "Avis"},
+                "Nb_region": {"type": "text", "tag": "rang_region_critizr"},
+                "Nb_region_text": {"type": "text", "tag": "exposant_region_critizr"},
+                "Total_region": {"type": "text", "tag": "nb_mag_region_critizr_long"},
+                "Nb_france": {"type": "text", "tag": "rang_france_critizr"},
+                "Nb_france_text": {"type": "text", "tag": "exposant_france_critizr"},
+                "Total_france": {"type": "text","tag": "nb_mag_france_critizr_long"}
+            }
+        },
+        {
+            "name": "LM_tps_tx_reponse_slide",
+            "template": "LM_tps_tx_reponse",
+            "slideData": {
+                "Date": {"type": "text", "tag": "date_recup"},
+                "Nommagasin": {"type": "text", "value": "LA VIGIE"},
+                "Tps_reponse": {"type": "text", "tag": "temps_reponse_critizr"},
+                "Tx_reponse": {"type": "text", "tag": "taux_traitement_critizr"}
+            }
+        },
+        {
+            "name": "LM_3_avis_enseigne_slide",
+            "template": "LM_3_avis_enseigne",
+            "slideData": {
+                "Note_1": {"type": "text", "tag": "image_note_avis_recent1"},
+                "Avis_1": {"type": "text", "tag": "avis_recent1"},
+                "Note_2": {"type": "text", "tag": "image_note_avis_recenté"},
+                "Avis_2": {"type": "text", "tag": "avis_recent2"},
+                "Note_3": {"type": "text", "tag": "image_note_avis_recent3"},
+                "Avis_3": {"type": "text", "tag": "avis_recent3"}
+            }
+        },
+        {
+            "name": "LM_note_google_slide",
+            "template": "LM_note_google",
+            "slideData": {
+                "Date": {"type": "text", "tag": "date_recup"},
+                "Nommagasin": {"type": "text", "value": "LA VIGIE"},
+                "Indice": {"type": "text", "tag": "note_google"},
+                "Avis": {"type": "text", "tag": "nb_avis_google"},
+                "Txtavis": {"type": "text", "value": "Avis"},
+                "Nb_region": {"type": "text", "tag": "do_not_display"},
+                "Nb_region_text": {"type": "text", "tag": "do_not_display"},
+                "Total_region": {"type": "text", "tag": "do_not_display"},
+                "Nb_france": {"type": "text", "tag": "do_not_display"},
+                "Nb_france_text": {"type": "text", "tag": "do_not_display"},
+                "Total_france": {"type": "text","tag": "do_not_display"}
+            }
+        }
+    ]
+}

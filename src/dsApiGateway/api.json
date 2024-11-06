@@ -1,0 +1,65 @@
+{
+	"cmdList": {
+		"getVersion": {
+			"request": "GET",
+			"cookie": false,
+			"url": "/version", 
+			"description": "Get API version",
+			"responseType": "application/json"
+		},
+		"getIsTokenValid": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/accounts/token/isvalid", 
+			"description": "Check if account token in Cookie header is valid",
+			"responseType": "application/json"
+		},
+		"getProductsContext": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/products/context", 
+			"attributes": "[orga_id]",
+			"responseType": "application/json"
+		},
+		"logOut": {
+			"request": "POST",
+			"cookie": true,
+			"url": "/accounts/logout", 
+			"description": "Logout from current account",
+			"responseType": "application/json"
+		},
+		"postAccount": {
+			"request": "POST",
+			"cookie": false,
+			"contentType": "application/json",
+			"url": "/accounts/token", 
+			"description": "Get accounts token and user id for username dsadmin",
+			"responseType": "application/json"
+		},
+		"postFilesUploads": {
+			"request": "POST",
+			"cookie": true,
+			"contentType": "",
+			"url": "/filesuploads", 
+			"uploadId": "abcdef12345",
+			"description": "Upload a local media into the library. Can not be used alone",
+			"responseType": "application/json"
+		},
+		"putAccountContext": {
+			"request": "PUT",
+			"cookie": true,
+			"url": "/accounts/context", 
+			"attributes": "[orga_id]",
+			"description": "Change organization for the current account",
+			"responseType": "application/json"
+		},
+		"putSaveUpload": {
+			"request": "PUT",
+			"cookie": true,
+			"url": "/uploads/UploadData",
+			"attributes": "[upload_id]",
+			"description": "Save an uploaded media file. Can not be used alone",
+			"contentType": "application/json"
+		}
+	}
+}

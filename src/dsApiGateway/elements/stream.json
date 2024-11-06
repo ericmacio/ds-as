@@ -1,0 +1,35 @@
+{
+    "cmd" : {
+        "get": "getStream", 
+		"delete": "deleteStream",
+		"post": "postStream"
+    },
+    "cmdList": {
+		"getStream": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/medias?type[]=stream", 
+			"attributes": "[media_id]",
+			"responseType": "application/json"
+        },
+		"postStream": {
+			"request": "POST",
+			"cookie": true,
+			"contentType": "application/json",
+			"url": "/medias/stream",
+			"description": "Create a stream page into the library",
+			"responseType": "application/json"
+		},
+		"deleteStream": {
+			"request": "DELETE",
+			"cookie": true,
+			"contentType": "",
+			"url": "/medias/stream",
+			"attributes": "[media_id]",
+			"description": "Delete a stream from the library",
+			"responseType": "application/json"
+		}
+    },
+    "createData": {
+    }
+}

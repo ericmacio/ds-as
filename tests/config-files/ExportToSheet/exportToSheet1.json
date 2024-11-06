@@ -1,0 +1,32 @@
+{
+    "server": {"name": "qa_azure", "apiUrl": "qa-dsapi.piksel.com", "apiPort": 80, "user": "api", "password": "api2019"},
+    "updateSec": 30,
+    "sheetName": "exportData",
+    "range": "Feeds!A3:Z15",
+    "lastTimeRange": "Feeds!A1",
+    "majorDimension": "ROWS",
+    "filter": {
+        "list": [
+            "title",
+            "csig",
+            "enabled",
+            "status",
+            "subtype",
+            "creation_date",
+            "update_date",
+            "generation_status",
+            "generation_status_message"
+        ],
+        "data": [
+            "frequency",
+            "nb_items",
+            "template_title",
+            "type_generation",
+            "url"
+        ],
+        "content": [
+            "html5_url",
+            "url"
+        ]
+    }
+}

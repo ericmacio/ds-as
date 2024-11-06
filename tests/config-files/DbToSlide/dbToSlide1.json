@@ -1,0 +1,26 @@
+{
+    "server": {"name": "qa_azure", "apiUrl": "qa-dsapi.piksel.com", "apiPort": 80, "user": "api", "password": "test2019"},
+    "dataConnectors": {"Xls1": {"type": "Xls", "access": {"type": "local", "hostName": "QA"}, "params": {"file": "D:/node.js/ds-as/dbData/dbData1.xlsx", "sheet": "Sheet1"}}},
+    "prefix": "DB1_",
+    "checkKeyList": ["Category", "Product", "Reference", "Description", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    "scanTimeSec": 5,
+    "forceUpdate": false,
+    "plugin": "../appsData/DbToSlide/plugin_dbToSlide1.js",
+    "template": "template",
+    "slideName": "dbToSlide",
+    "playlist": "dbtoslide",
+    "templateMatrix": {
+        "Product": {
+            "type": "text",
+            "name": "Title"
+        },
+        "Reference": {
+            "type": "text",
+            "name": "Text1"
+        },
+        "Description": {
+            "type": "text",
+            "name": "Text2"
+        }
+    }
+}

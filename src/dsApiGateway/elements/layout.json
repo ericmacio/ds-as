@@ -1,0 +1,63 @@
+{
+    "cmd" : {
+        "get": "getLayouts", 
+        "post": "postLayouts",
+		"getContent": "getLayoutContent",
+		"generate": "generateLayout",
+		"validateGeneration": "validateLayoutGeneration",
+        "delete": "deleteLayout"
+    },
+    "cmdList": {
+        "getLayouts": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/layouts",
+			"description": "Get layout list",
+			"responseType": "application/json"
+        },
+        "postLayouts": {
+			"request": "POST",
+			"cookie": true,
+			"contentType": "application/json",
+			"url": "/layouts",
+			"description": "Post layout upload data",
+			"responseType": "application/json"
+		},
+		"getLayoutContent": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/layouts/content", 
+			"attributes": "[layout_id]",
+			"description": "Get layout content ",
+			"responseType": "application/json"
+		},
+		"generateLayout": {
+			"request": "POST",
+			"cookie": true,
+			"contentType": "application/json",
+			"url": "/layouts/generate",
+			"attributes": "[layout_id]",
+			"description": "Post layout upload data",
+			"responseType": "application/json"
+		},
+		"validateLayoutGeneration": {
+			"request": "POST",
+			"cookie": true,
+			"contentType": "application/json",
+			"url": "/layouts/validateGeneration",
+			"attributes": "[layout_id]",
+			"description": "Post layout upload data",
+			"responseType": "application/json"
+        },
+        "deleteLayout": {
+			"request": "DELETE",
+			"cookie": true,
+			"url": "/layouts",
+			"attributes": "[layout_id]",
+			"description": "Delete a template",
+			"responseType": "application/json"
+		}
+    },
+    "createData": {
+    }
+}

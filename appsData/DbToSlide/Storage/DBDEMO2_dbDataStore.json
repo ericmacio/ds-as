@@ -1,0 +1,22 @@
+[
+    {
+        "Image": "appsData/DbToSlide/graphs/demo_bar_1.png",
+        "Text": "15:16:29",
+        "PRV_slideName": "DBDEMO2_slidefeed_2104"
+    },
+    {
+        "Image": "appsData/DbToSlide/graphs/demo3_line_1.png",
+        "Text": "15:16:29",
+        "PRV_slideName": "DBDEMO2_slidefeed_7299"
+    },
+    {
+        "Image": "appsData/DbToSlide/graphs/demo_radar_1.png",
+        "Text": "15:16:29",
+        "PRV_slideName": "DBDEMO2_slidefeed_5112"
+    },
+    {
+        "Image": "appsData/DbToSlide/graphs/demo_pie_1.png",
+        "Text": "15:16:29",
+        "PRV_slideName": "DBDEMO2_slidefeed_5253"
+    }
+]

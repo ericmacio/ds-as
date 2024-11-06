@@ -1,0 +1,115 @@
+{
+    "cmd" : {
+        "get": "getPlaylists", 
+        "getContent": "getPlaylistContent",
+        "post": "postPlaylist",
+        "postContent": "postPlaylistContent",
+        "postPublish": "postPublishPlaylist",
+        "delete": "deletePlaylist",
+        "deleteContent": "deletePlaylistContent",
+        "deleteMultiContent": "postDeleteMultiContentFromPlaylist",
+        "putRights": "putPlaylistRights"
+    },
+    "cmdList": {
+        "getPlaylists": {
+            "description": "Request playlist info from the server",
+            "request": "GET",
+            "cookie": true,
+            "url": "/playlists",
+            "attributes": "[playlist_id]",
+            "responseType": "application/json"
+        },
+        "getPlaylistContent": {
+            "request": "GET",
+            "cookie": true,
+            "url": "/playlists/content", 
+            "attributes": "[playlist_id]",
+            "description": "Get playlist content",
+            "responseType": "application/json"
+        },
+        "postPlaylist": {
+            "request": "POST",
+            "cookie": true,
+            "contentType": "application/json",
+            "contentData" : {
+                "link": "#playlist/undefined/content",
+                "element_type": "folder",
+                "folder_type": "rubrique",
+                "rights_devices": [],
+                "rights_groupsdevices": [],
+                "rights_groupsusers": [],
+                "rights_managers": [],
+                "rights_users": [],
+                "description": "Nouvelle playlist via API",
+                "title": ""
+            },
+            "url": "/playlists",
+            "description": "Create a new playlist",
+            "responseType": "application/json"
+        },
+        "postDeleteMultiContentFromPlaylist": {
+            "request": "POST",
+            "cookie": true,
+            "contentType": "application/x-www-form-urlencoded; charset=UTF-8",
+            "contentData": "items[]",
+            "url": "/playlists/deleteMultiContent", 
+            "attributes": "[playlist_id]",
+            "description": "Delete multi media from playlist",
+            "responseType": "application/json"
+        },
+        "postPlaylistContent": {
+            "request": "POST",
+            "cookie": true,
+            "contentType": "application/x-www-form-urlencoded; charset=UTF-8",
+            "contentData": "type=media&value=[MediaId-TBD]&rank=1",
+            "url": "/playlists/content", 
+            "attributes": "[playlist_id]",
+            "description": "Put and publish a media library into a playlist at first rank",
+            "responseType": "application/json"
+        },
+        "postPublishPlaylist": {
+            "request": "POST",
+            "cookie": true,
+            "url": "/playlists/publish", 
+            "attributes": "[playlist_id]",
+            "description": "Publish a playlist",
+            "responseType": "application/json"
+        },
+        "putPlaylistRights": {
+            "request": "PUT",
+            "cookie": true,
+            "contentType": "application/json",
+            "url": "/playlists/rights",
+            "attributes": "[playlist_id]",
+            "description": "Change the access rights of the playlist",
+            "responseType": "application/json"
+        },
+        "deletePlaylist": {
+            "description": "Delete playlist info from the server",
+            "request": "DELETE",
+            "cookie": true,
+            "url": "/playlists",
+            "attributes": "[playlist_id]",
+            "responseType": "application/json"
+        },
+        "deletePlaylistContent": {
+            "description": "Delete playlist content from the server",
+            "request": "DELETE",
+            "cookie": true,
+            "url": "/playlists/content",
+            "attributes": "[playlist_id]/[content_id]",
+            "responseType": "application/json"
+        }
+    },
+    "createData": {
+        "link": "#playlist/undefined/content",
+        "element_type": "folder",
+        "folder_type": "rubrique",
+        "rights_devices": [],
+        "rights_groupsdevices": [],
+        "rights_groupsusers": [],
+        "rights_managers": [],
+        "rights_users": [],
+        "description": "Playlist created via API"
+    }
+}

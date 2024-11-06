@@ -1,0 +1,15 @@
+{
+    "wait_task_ms": 0,
+    "wait_loop_ms": 0,
+    "scenarioList": [
+        "slideTemplate"
+    ],
+    "slideTemplate": {
+        "name": "slideTemplate",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "test-slideTemplate", "type": "feed", "src": "http://dsxfer.meylan.test/EMK/slideTemplates/rss1"}},
+            {"action": "slideTemplate_get_list", "data": {"display": ["title"]}}
+        ]
+    }
+}

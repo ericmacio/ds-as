@@ -1,0 +1,10 @@
+.logfile-name {
+    background-color: #f3f3f3;
+    text-align: center;
+    color: #4c5665;
+    margin-bottom: 12px;
+}
+.logfile-name:hover {
+    background-color: #c5c5c5;
+    cursor: pointer;
+}

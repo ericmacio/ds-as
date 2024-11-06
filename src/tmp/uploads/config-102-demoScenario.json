@@ -1,0 +1,34 @@
+{
+    "wait_task_ms": 0,
+    "wait_loop_ms": 1000,
+    "scenarioList": [
+        "create_playlist",
+        "delete_playlist"
+    ],
+    "create_playlist": {
+        "name": "Create playlist",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "playlist_create", "data": {"name": "tmp_demo_playlist", "description": "Demo playlist"}},
+            {"action": "playlist_upload_content", "data": {"name": "tmp_demo_playlist", "url": "http://ftp.ds-piksel.com/medias/videos/ways.mp4", "contentName": "tmp_demo_video"}},
+            {"action": "media_check_video_encoded", "data": {"name": "tmp_demo_video", "timeOut": "180"}},
+            {"action": "slideTemplate_upload", "data": {"name": "tmp_demo_slideTemplate", "type": "manual", "src": "D:/dsContent/slideTemplates/airlines/airlines1"}},
+            {"action": "playlist_post_content", "data": {"name": "tmp_demo_playlist", "contentType": "slide", "contentName": "tmp_demo_slide"}},
+            {"action": "slide_create", "data": {"name": "tmp_demo_slide", "src": "D:/dsContent/slideData/airlines/airlines1.json", "template": "tmp_demo_slideTemplate"}},
+            {"action": "feed_create", "data": {"name": "tmp_demo_feed", "type": "xml", "url": "http://ftp.ds-piksel.com/feeds/XML/MOB/ava06.xml", "frequency": "15m", "nbItem": 3, "typeGeneration": "n-1", "node": "/data/page", "fields": {"Ent1_i": "/entete/ent1", "Ent2_i": "/entete/ent2", "Ent3_i": "/entete/ent3", "Ent4_i": "/entete/ent4", "Col1_i": "/ligne[i]/col1", "Col2_i": "/ligne[i]/col2", "Col3_i": "/ligne[i]/col3", "Col4_i": "/ligne[i]/col4", "Retard_i": "/ligne[i]/retard", "Message_i": "/ligne[i]/message", "No_voit1_i": "/ligne[i]/no_voit1", "No_voit2_i": "/ligne[i]/no_voit2", "No_voit3_i": "/ligne[i]/no_voit3", "No_voit4_i": "/ligne[i]/no_voit4", "No_voit5_i": "/ligne[i]/no_voit5", "No_voit6_i": "/ligne[i]/no_voit6", "No_voit7_i": "/ligne[i]/no_voit7", "No_voit8_i": "/ligne[i]/no_voit8", "No_voit9_i": "/ligne[i]/no_voit9", "Text_indispo_i": "/text_indispo", "Img_secteurs_i": "/ligne[i]/img_secteurs", "Img_voit1_i": "/ligne[i]/img_voit1", "Img_voit2_i": "/ligne[i]/img_voit2", "Img_voit3_i": "/ligne[i]/img_voit3", "Img_voit4_i": "/ligne[i]/img_voit4", "Img_voit5_i": "/ligne[i]/img_voit5", "Img_voit6_i": "/ligne[i]/img_voit6", "Img_voit7_i": "/ligne[i]/img_voit7", "Img_voit8_i": "/ligne[i]/img_voit8", "Img_voit9_i": "/ligne[i]/img_voit9"}, "template": "slideTemplate_xml_test_api"}},
+            {"action": "playlist_post_content", "data": {"name": "tmp_demo_playlist", "contentType": "feed", "contentName": "tmp_demo_feed"}},
+            {"action": "playlist_publish", "data": {"name": "tmp_demo_playlist"}}
+        ]
+    },
+    "delete_playlist": {
+        "name": "Delete playlist",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "playlist_delete", "data": {"name": "tmp_demo_playlist"}},
+            {"action": "media_delete", "data": {"name": "tmp_demo_video"}},
+            {"action": "media_delete", "data": {"name": "tmp_demo_slide"}},
+            {"action": "media_delete", "data": {"name": "tmp_demo_feed"}},
+            {"action": "slideTemplate_delete", "data": {"name": "tmp_demo_slideTemplate"}}
+        ]
+    }
+}

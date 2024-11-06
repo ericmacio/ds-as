@@ -1,0 +1,17 @@
+{
+    "server": {"name": "qa_azure", "apiUrl": "qa-dsapi.piksel.com", "apiPort": 80, "user": "demo", "password": "demo2020"},
+    "dataConnectors": {
+        "Xls1": {
+            "type": "Xls",
+            "access": {
+                "type": "googleApi"
+            },
+            "params": {
+                "file": "feeds",
+                "cellRange": "Variables!A2:B6",
+                "sheet": "Variables",
+                "majorDimension": "COLUMNS"
+            }
+        }
+    }
+}

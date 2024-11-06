@@ -1,0 +1,42 @@
+.mainmenu {
+	grid-column: 1 / 2;
+	grid-row: 1 / -1;
+	display: flex;
+	flex-direction: column;
+}
+.mainmenu > img {
+	margin-left: auto;
+	margin-right: auto;
+}
+.mainmenu > a {
+	text-decoration: none;
+}
+.mainmenu > a > p {
+	margin-top: auto;
+}
+.mainmenu-link {
+	text-align: center;
+	display: block;
+	margin-top: 12%;
+    margin-bottom: 12%;
+	font-size: 15px;
+	color: #b6b6b6;
+	grid-column: 1 / -1;
+}
+.mainmenu-link:hover {
+	color: #ffffff;
+}
+.mainmenu-link--active {
+	color: #ffaf5d;
+}
+#logoas {
+	width: 25px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+#logopiksel {
+	width: 80px;
+	margin-top: auto;
+    margin-bottom: 15px;
+}
+

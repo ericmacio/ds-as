@@ -1,0 +1,44 @@
+{
+    "cmd" : {
+        "get": "getRoles", 
+		"delete": "deleteRole",
+		"post": "postRole",
+		"putAction": "putRoleAction"
+    },
+    "cmdList": {
+		"getRoles": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/roles", 
+			"responseType": "application/json"
+        },
+		"postRole": {
+			"request": "POST",
+			"cookie": true,
+			"contentType": "application/json",
+			"url": "/roles", 
+			"description": "Create a role",
+			"responseType": "application/json"
+		},
+		"putRoleAction": {
+			"request": "PUT",
+			"cookie": true,
+			"contentType": "application/json",
+			"url": "/roles/roleAction",
+			"attributes": "[role_id]",
+			"description": "Set role action list",
+			"responseType": "application/json"
+		},
+		"deleteRole": {
+			"request": "DELETE",
+			"cookie": true,
+			"contentType": "",
+			"url": "/roles", 
+			"attributes": "[role_id]",
+			"description": "Delete a role",
+			"responseType": "application/json"
+		}
+    },
+    "createData": {
+    }
+}

@@ -1,0 +1,29 @@
+.servicesummary {
+    display: flex;
+    min-height: 25px;
+}
+.servicesummary-serviceName {
+	flex: 1 1 100px;
+	margin-left: 5px;
+}
+.servicesummary-appName {
+	flex: 1 1 100px;
+}
+.servicesummary-serviceStart {
+	flex: 1 1 50px;
+}
+.servicesummary-serviceStatus {
+	flex: 1 1 50px;
+}
+.servicesummary-serviceStatusRunning {
+	flex: 1 1 50px;
+	color: #68cf68;
+}
+.servicesummary-serviceStatusIdle {
+	flex: 1 1 50px;
+	color: #ffa959;
+}
+.servicesummary-serviceStatusError {
+	flex: 1 1 50px;
+	color: #ff4f4f;
+}

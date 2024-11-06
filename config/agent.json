@@ -1,0 +1,27 @@
+{
+   "hostName": "QA1",
+   "autoStartAgent": true,
+   "proxy": {
+      "host": "127.0.0.1",
+      "port": 4000
+   },
+   "corePollMgr": {
+      "defaultPollTimerMsec": 16000,
+      "minPollTimerMsec": 1000,
+      "maxPollTimerMsec": 64000
+   },
+   "pollMgr" : {
+      "defaultPollTimerMsec": 16000,
+      "minPollTimerMsec": 1000,
+      "maxPollTimerMsec": 64000,
+      "maxCmds": 100
+   },
+   "cmdList": {"asAgent_cmd": ["create_dataConnector", "delete_dataConnector"], "dataConnector_cmd": ["read", "access", "fileTime"]},
+   "defaultExpires": 600,
+   "registerRetryTimer": 60,
+   "defaultHeartbeatTimer": 10,
+   "logger": {
+      "logToFile": true,
+      "logFileName": "agent.log"
+   }
+}

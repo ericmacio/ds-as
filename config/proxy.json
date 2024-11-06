@@ -1,0 +1,7 @@
+{
+    "port": 4000,
+    "registrationExpiresSec": 60,
+    "minHeartbeatTimer": 30,
+    "suffix": "ProxyDataConnector",
+    "agentVersions": ["1.0.0", "1.1.*", "2.*.*"]
+}

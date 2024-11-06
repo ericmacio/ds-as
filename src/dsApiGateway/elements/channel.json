@@ -1,0 +1,137 @@
+{
+	"api": ["checkContentList", "checkContentNb"],
+	"elementApi": ["list", "get", "toto"],
+    "cmd" : {
+        "get": "getChannels", 
+        "getContent": "getChannelContent",
+        "post": "postChannel",
+        "postContent": "postChannelContent",
+        "postPublish": "postPublishChannel",
+        "delete": "deleteChannel",
+        "deleteContent": "deleteChannelContent",
+		"putDevice": "putDeviceChannel",
+		"putDefaultLayout": "putDefaultLayout",
+		"deleteDefaultLayout": "deleteDefaultLayout",
+		"putElementLayout": "putChannelsElementLayout",
+		"deleteElementLayout": "deleteChannelsElementLayout"
+    },
+    "cmdList": {
+        "getChannels": {
+			"description": "Request channel info from the server",
+			"request": "GET",
+			"cookie": true,
+			"url": "/channels",
+			"attributes": "[channel_id]",
+			"responseType": "application/json"
+        },
+        "getChannelContent": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/channels/content", 
+			"attributes": "[channel_id]",
+			"description": "Get channel content",
+			"responseType": "application/json"
+        },
+        "postChannel": {
+			"request": "POST",
+			"cookie": true,
+			"contentType": "application/json",
+			"contentData" : {
+				"background": "keep",
+				"link": "#channel/undefined/content",
+				"rights_managers": [],
+				"rights_users": [],
+				"channelName": ""
+			},
+			"url": "/channels",
+			"description": "Create a new channel",
+			"responseType": "application/json"
+        },
+        "postChannelContent": {
+			"request": "POST",
+			"cookie": true,
+			"contentType": "application/x-www-form-urlencoded; charset=UTF-8",
+			"contentData": "type=media&value=[MediaId-TBD]&rank=1",
+			"url": "/channels/content", 
+			"attributes": "[channel_id]",
+			"description": "Put and publish a media library into a channel at first rank",
+			"responseType": "application/json"
+        },
+        "postPublishChannel": {
+			"request": "POST",
+			"cookie": true,
+			"url": "/channels/publish", 
+			"attributes": "[channel_id]",
+			"description": "Publish a channel",
+			"responseType": "application/json"
+        },
+        "putChannelsElementLayout": {
+			"request": "PUT",
+			"cookie": true,
+			"url": "/channels/elementLayout",
+			"attributes": "channel_id/playlist_id",
+			"contentData": "layout_id=xxx",
+			"description": "Assign a  layout to a playlist in a channel",
+			"contentType": "application/json"
+		},
+		"putDeviceChannel": {
+			"request": "PUT",
+			"cookie": true,
+			"url": "/devices/channel",
+			"attributes": "[device_id]",
+			"contentData": "channel_id=xxx",
+			"description": "Assign a channel to a device",
+			"contentType": "application/x-www-form-urlencoded; charset=UTF-8"
+		},
+		"putDefaultLayout": {
+			"request": "PUT",
+			"cookie": true,
+			"url": "/channels/defaultLayout",
+			"attributes": "channel_id",
+			"contentData": "layout_id=xxx",
+			"description": "Assign a default layout to a channel",
+			"contentType": "application/json"
+		},
+        "deleteChannel": {
+			"description": "Delete channel info from the server",
+			"request": "DELETE",
+			"cookie": true,
+			"url": "/channels",
+			"attributes": "[channel_id]",
+			"responseType": "application/json"
+		},
+		"deleteChannelContent": {
+			"description": "Delete channel content from the server",
+			"request": "DELETE",
+			"cookie": true,
+			"url": "/channels/content",
+			"attributes": "[channel_id]/[content_id]",
+			"responseType": "application/json"
+        },
+		"deleteDefaultLayout": {
+			"request": "DELETE",
+			"cookie": true,
+			"url": "/channels/defaultLayout",
+			"attributes": "channel_id",
+			"contentData": "layout_id=xxx",
+			"description": "Assign a default layout to a channel",
+			"contentType": "application/json"
+		},
+		"deleteChannelsElementLayout": {
+			"request": "DELETE",
+			"cookie": true,
+			"url": "/channels/elementLayout",
+			"attributes": "channel_id/playlist_id",
+			"contentData": "layout_id=xxx",
+			"description": "Assign a  layout to a playlist in a channel",
+			"contentType": "application/json"
+		}
+    },
+    "createData": {
+        "background": "keep",
+        "link": "#channel/undefined/content",
+        "rights_managers": [],
+        "rights_users": [],
+        "description": "Channel de test"
+    }
+}

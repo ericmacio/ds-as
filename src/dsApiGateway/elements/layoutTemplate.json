@@ -1,0 +1,35 @@
+{
+    "cmd" : {
+        "get": "getLayoutTemplates", 
+        "post": "postLayoutTemplates",
+        "getContent": "getLayoutTemplateContent",
+        "delete": "deleteLayoutTemplate"
+    },
+    "cmdList": {
+        "getLayoutTemplates": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/layouttemplates",
+			"description": "Get layout template list",
+			"responseType": "application/json"
+        },
+        "postLayoutTemplates": {
+			"request": "POST",
+			"cookie": true,
+			"contentType": "application/json",
+			"url": "/layouttemplates",
+			"description": "Post layout template upload data",
+			"responseType": "application/json"
+        },
+        "deleteLayoutTemplate": {
+			"request": "DELETE",
+			"cookie": true,
+			"url": "/layouttemplates",
+			"attributes": "[template_id]",
+			"description": "Delete a template",
+			"responseType": "application/json"
+		}
+    },
+    "createData": {
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "pollingTimerSec": 30,
+    "elementList": [
+        {
+            "enable": true,
+            "url": "https://www.google.fr/maps/place/Leroy+Merlin+Saint-Egr%C3%A8ve+-+Grenoble/@45.241902,5.665889,15z/data=!4m7!3m6!1s0x0:0x4807598e51117633!8m2!3d45.241902!4d5.665889!9m1!1b1",
+            "nbItems": 2,
+            "nbPhotos": 3,
+            "ordering": "pertinent",
+            "playlistName": "avis-saint-egreve-pertinent",
+            "mediaPrefix": "LM_STE_RATINGS_PERTINENT_",
+            "templateName_0photos": "google-ratings-0photos",
+            "templateName_1photos": "google-ratings-1photos",
+            "templateName_2photos": "google-ratings-2photos",
+            "templateName_3photos": "google-ratings-3photos",
+            "templateData": {
+                "Name": {"type": "text", "value": "name"},
+                "Review": {"type": "text", "value": "review"},
+                "Rating": {"type": "text", "value": "rating"},
+                "Title": {"type": "text", "value": "date"},
+                "Stars": {"type": "image", "value": "stars"},
+                "Photo1": {"type": "image", "value": "photo1"},
+                "Photo2": {"type": "image", "value": "photo2"},
+                "Photo3": {"type": "image", "value": "photo3"}
+            }
+        },
+        {
+            "enable": false,
+            "url": "https://www.google.fr/maps/place/Leroy+Merlin+Saint-Egr%C3%A8ve+-+Grenoble/@45.241902,5.665889,15z/data=!4m7!3m6!1s0x0:0x4807598e51117633!8m2!3d45.241902!4d5.665889!9m1!1b1",
+            "nbItems": 10,
+            "nbPhotos": 3,
+            "ordering": "recent",
+            "playlistName": "avis-saint-egreve-recent",
+            "mediaPrefix": "LM_STE_RATINGS_RECENT_",
+            "templateName_0photos": "google-ratings-0photos",
+            "templateName_1photos": "google-ratings-1photos",
+            "templateName_2photos": "google-ratings-2photos",
+            "templateName_3photos": "google-ratings-3photos",
+            "templateData": {
+                "Name": {"type": "text", "value": "name"},
+                "Review": {"type": "text", "value": "review"},
+                "Rating": {"type": "text", "value": "rating"},
+                "Title": {"type": "text", "value": "date"},
+                "Stars": {"type": "image", "value": "stars"},
+                "Photo1": {"type": "image", "value": "photo1"},
+                "Photo2": {"type": "image", "value": "photo2"},
+                "Photo3": {"type": "image", "value": "photo3"}
+            }
+        },
+        {
+            "enable": false,
+            "url": "https://www.google.com/maps/place/Leroy+Merlin+La+Vigie+-+Ostwald/@48.534178,7.6942054,16.96z/data=!4m7!3m6!1s0x4796b5f8575c13ff:0x2e133d7b1fb5f3dc!8m2!3d48.5349224!4d7.6963112!9m1!1b1",
+            "nbItems": 1,
+            "nbPhotos": 1,
+            "ordering": "recent",
+            "playlistName": "avis-la-vigie",
+            "mediaPrefix": "LM_LA-VIGIE_RATINGS_",
+            "templateName_0photos": "google-ratings-0photos",
+            "templateName_1photos": "google-ratings-1photos",
+            "templateName_2photos": "google-ratings-2photos",
+            "templateName_3photos": "google-ratings-3photos",
+            "templateData": {
+                "Name": {"type": "text", "value": "name"},
+                "Review": {"type": "text", "value": "review"},
+                "Rating": {"type": "text", "value": "rating"},
+                "Title": {"type": "text", "value": "date"},
+                "Stars": {"type": "image", "value": "stars"},
+                "Photo1": {"type": "image", "value": "photo1"}
+            }
+        }
+    ]
+} 

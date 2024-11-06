@@ -1,0 +1,22 @@
+.topmenu {
+	grid-column: 1 / -1;
+	grid-row: 2 / 3;
+	display: flex;
+	margin-left: 50px;
+}
+.topmenu-link {
+	color: black;
+	text-decoration: none;
+	border-bottom: 5px solid #ffaf5d29;
+	text-align: center;
+	line-height: 25px;
+	width: 100px;
+	margin-right: 20px;
+	transition: border-bottom 0.7s;
+}
+.topmenu-link:hover {
+	font-weight: bold;
+}
+.topmenu-link--active {
+	border-bottom: 5px solid #ffaf5d;
+}

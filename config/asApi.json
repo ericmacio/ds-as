@@ -1,0 +1,23 @@
+{
+    "serverConfig": {
+        "ip": "127.0.0.1",
+        "logUrl": "ws://",
+        "logPort": 3001,
+        "defaultConsolelogTypeList": {"server": true, "services": true},
+        "defaultConsolelogFormatList": {"date": true, "time": true, "app": true, "file": true, "caller": true},
+        "defaultConsoleLogLevel": "INFO0",
+        "defaultConsoleLogServiceName": "All",
+        "logMask": "INFO0",
+        "serviceNotifier": {
+            "url": "ws://",
+            "port": 3002
+        },
+        "agentNotifier": {
+            "url": "ws://",
+            "port": 3003
+        },
+        "appsDirectory": "../apps",
+        "indexFile": "../apps/index.js"
+    },
+    "oamConsolePort": 3000
+}

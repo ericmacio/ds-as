@@ -1,0 +1,14 @@
+.logview {
+    max-height: 100%;
+    max-width: 100%;
+}
+.logview-txt {
+    font: 13px courier, sans-serif;
+    background-color: #222222;
+    color: #b3d9ff;
+    padding: 10px;
+    white-space: pre-wrap;
+    margin-bottom: 10px;
+    width: 98%;
+    overflow: auto;
+}

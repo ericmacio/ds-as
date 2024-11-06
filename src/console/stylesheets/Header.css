@@ -1,0 +1,27 @@
+.header {
+	grid-column: 2 / -1;
+	grid-row: 1 / 2;
+	display: grid;
+	grid-template-columns: 5% 75% 20%;
+	grid-template-rows: 30px 30px;
+	align-items: center;
+    border-bottom-style: solid;
+	border-bottom-color:#d3d8dc;
+	margin-top: 4px;
+}
+.header #icon {
+	width: 20px;
+	margin-left: 1%;
+	margin-right: 1%;
+	justify-self: center;
+	grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+.header #name {
+	font-family: "Open Sans", sans-serif;
+	font-size: 24px;
+    font-weight: bold;
+	margin-left: 0px;
+	grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}

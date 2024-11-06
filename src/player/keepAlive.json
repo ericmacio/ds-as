@@ -1,0 +1,33 @@
+{
+    "keepAliveFeedbackList": [
+        {"type": "ip", "item": "local"},
+        {"type": "mac_address", "item": "local"},
+        {"type": "netbios", "item": "local"},
+        {"type": "fqdn", "item": "local"},
+        {"type": "port", "item": "http"},
+        {"type": "sound", "item": "local"},
+        {"type": "licence", "item": "local"},
+        {"type": "licence_text", "item": "local"},
+        {"type": "codekey", "item": "local"},
+        {"type": "ram", "item": ""},
+        {"type": "screen_size", "item": ""},
+        {"type": "screen_bits", "item": ""},
+        {"type": "screen_freq", "item": ""},
+        {"type": "pivot", "item": ""},
+        {"type": "next_diff_date", "item": "diff"},
+        {"type": "monitor_power", "item": ""},
+        {"type": "monitor_volume", "item": ""},
+        {"type": "monitor_input", "item": ""},
+        {"type": "monitor_mute", "item": ""},
+        {"type": "monitor_status", "item": ""},
+        {"type": "monitor_status_info", "item": ""},
+        {"type": "monitor_info", "item": ""},
+        {"type": "monitor_type", "item": ""},
+        {"type": "disk_free_space_mbytes", "item": "C"},
+        {"type": "disk_free_space_percent", "item": "C"},
+        {"type": "disk_status", "item": "\\\\.\\PHYSICALDRIVE0"},
+        {"type": "temperature_hdd_celsius", "item": ""},
+        {"type": "temperature_gpu_celsius", "item": ""},
+        {"type": "temperature_celsius", "item": ""}
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "display": [
+        "title",
+        "identifier",
+        "version",
+        "global_status"
+    ],
+	"timerSec": 5
+}

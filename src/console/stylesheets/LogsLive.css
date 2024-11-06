@@ -1,0 +1,28 @@
+.logs {
+    position: relative;
+    display: grid;
+    grid-template-rows: 2% 15% 83%;
+    padding: 0.5%;
+    flex: 2 1 auto;
+    outline: solid 1px #c0c0c0;
+    height: 97%;
+    min-width: 500px;
+}
+.logs-close {
+    grid-row: 1;
+    cursor: pointer;
+    margin-left: auto;
+    border: solid thin;
+    border-radius: 50%;
+    z-index: 99;
+}
+.logs-close:hover {
+    background-color: #c7c7c7;
+}
+.logs-menu {
+    display: flex;
+    transition: color 0.5s;
+}
+.logs:hover .logs-menu {
+    color: #4c5665;
+}

@@ -1,0 +1,34 @@
+{
+    "cmd" : {
+        "get": "getEvents",
+        "post": "postEvent",
+        "delete": "deleteEvent"
+    },
+    "cmdList": {
+        "getEvents": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/events", 
+			"attributes": "",
+			"responseType": "application/json"
+        },
+        "postEvent": {
+            "request": "POST",
+            "cookie": true,
+            "contentType": "application/json",
+            "url": "/events",
+            "description": "Create a new event",
+            "responseType": "application/json"
+        },
+        "deleteEvent": {
+            "request": "DELETE",
+            "cookie": true,
+            "contentType": "application/json",
+            "url": "/events",
+            "description": "Create a new event",
+            "responseType": "application/json"
+        }
+    },
+    "createData": {
+    }
+}

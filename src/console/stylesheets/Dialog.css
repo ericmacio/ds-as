@@ -1,0 +1,35 @@
+.dialog-overlay {
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #28546cd1;
+    display: flex;
+    z-index: 5;
+}
+.dialog-display {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #7b0606;
+    color: #e3e6e8;
+    padding: 10px;
+}
+.dialog-display-title {
+	font-size: 24px;
+	height: 40px;
+}
+.dialog-display-text {
+	font-size: 15px;
+	height: 30px;
+}
+.dialog-display-button {
+    display: block;
+}
+.dialog-display-button button {
+    margin-left: 15px;
+}

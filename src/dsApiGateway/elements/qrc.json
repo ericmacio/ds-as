@@ -1,0 +1,39 @@
+{
+    "cmd" : {
+        "get": "getQRCode", 
+		"delete": "deleteQRCode",
+		"post": "postQRCode"
+    },
+    "cmdList": {
+		"getQRCode": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/medias", 
+			"attributes": "[media_id]",
+			"responseType": "application/json"
+        },
+		"postQRCode": {
+			"request": "POST",
+			"cookie": true,
+			"contentType": "application/json",
+			"url": "/medias/QRCode",
+			"description": "Create a QR code page into the library",
+			"responseType": "application/json"
+		},
+		"deleteQRCode": {
+			"request": "DELETE",
+			"cookie": true,
+			"contentType": "",
+			"url": "/medias/",
+			"attributes": "[media_id]",
+			"description": "Delete a QR code from the library",
+			"responseType": "application/json"
+		}
+    },
+    "createData": {
+		"type": "qrc",
+		"share": "share",
+		"loop_choice": "loop",
+		"default-broadcasting[]": "daily"
+    }
+}

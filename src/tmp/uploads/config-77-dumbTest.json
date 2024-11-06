@@ -1,0 +1,56 @@
+{
+    "wait_task_ms": 0,
+    "wait_loop_ms": 0,
+    "scenarioList": [
+        "Scenario0"
+    ],
+    "Scenario0": {
+        "name": "Scenario",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_get_list"},
+            {"action": "channel_get_list", "data": {"name": "do_not_delete"}}
+        ]
+    },
+    "Scenario1": {
+        "name": "Scenario1",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "media_upload", "data": {"name": "test_video_eric", "url": "http://ftp.ds-piksel.com/medias/videos/ways.mp4"}},
+            {"action": "media_check_video_encoded", "data": {"name": "test_video_eric", "timeOut": "120"}},
+            {"action": "media_delete", "data": {"name": "test_video_eric"}}
+        ]
+    },
+    "Scenario2": {
+        "name": "Scenario2",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "playlist_create", "data": {"name": "aa_eric", "description": "New playlist created by EMK"}},
+            {"action": "playlist_check_exist", "data": {"name": "aa_eric"}},
+            {"action": "playlist_upload_content", "data": {"name": "aa_eric", "url": "http://ftp.ds-piksel.com/medias/images/twc.jpg", "contentName": "aa_eric_img"}},
+            {"action": "playlist_publish", "data": {"name": "aa_eric"}}
+        ]
+    },
+    "Scenario3": {
+        "name": "Scenario3",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "AA_airbox2", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/airbox/airbox2"}},
+            {"action": "channel_create", "data": {"name": "channel_eric_1", "description": "Demo channel"}},
+            {"action": "channel_upload_content", "data": {"name": "channel_eric_1", "url": "http://ftp.ds-piksel.com/medias/images/ville1.jpg", "contentName": "img_ville"}},
+            {"action": "slide_create", "data": {"name": "AA_airbox2", "url": "http://ftp.ds-piksel.com/slideData/airbox/airbox2_demo.json", "template": "AA_airbox2"}},
+            {"action": "channel_post_content", "data": {"name": "channel_eric_1", "contentType": "slide", "contentName": "AA_airbox2"}},
+            {"action": "channel_publish", "data": {"name": "channel_eric_1"}}
+        ]
+    },
+    "CleanupScenario3": {
+        "name": "CleanupScenario3",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_delete", "data": {"name": "channel_eric_1"}},
+            {"action": "media_delete", "data": {"name": "img_ville"}},
+            {"action": "slide_delete", "data": {"name": "AA_airbox2"}},
+            {"action": "slideTemplate_delete", "data": {"name": "AA_airbox2"}}
+        ]
+    }
+}

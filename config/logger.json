@@ -1,0 +1,27 @@
+{
+    "logToFile": true,
+    "logDir": "D:/node.js/ds-as/logs/",
+    "logFileName": "as.log",
+    "logLevel": {
+        "default": "INFO0",
+        "server": "INFO0",
+        "Api": "INFO0",
+        "ApiCore": "INFO0",
+        "Proxy": "INFO0",
+        "utils": "INFO0",
+        "scanXls": "INFO0",
+        "scanDir": "INFO0",
+        "scenario": "INFO0",
+        "parseXml": "INFO0",
+        "webPlayer": "INFO0",
+        "graph": "INFO0",
+        "GoogleRatings": "INFO0",
+        "Service": "INFO0",
+        "As": "INFO0",
+        "App": "INFO0",
+        "DsApiGateway": "INFO0"
+    },
+    "maxLogSizeKo": 1024,
+    "checkTimerSec": 30,
+    "logServerPort": 3001
+}

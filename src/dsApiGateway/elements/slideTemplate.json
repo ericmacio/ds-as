@@ -1,0 +1,44 @@
+{
+    "cmd" : {
+        "get": "getSlideTemplates", 
+        "post": "postSlideTemplates",
+        "getContent": "getSlideTemplateContent",
+        "delete": "deleteSlideTemplate"
+    },
+    "cmdList": {
+        "getSlideTemplates": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/templates", 
+			"description": "Get template list",
+			"responseType": "application/json"
+        },
+        "postSlideTemplates": {
+			"request": "POST",
+			"cookie": true,
+			"contentType": "application/json",
+			"url": "/Templates", 
+			"description": "Post template upload data",
+			"responseType": "application/json"
+		},
+		"getSlideTemplateContent": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/templates/content", 
+			"attributes": "[template_id]",
+			"description": "Get template content ",
+			"responseType": "application/json"
+        },
+        "deleteSlideTemplate": {
+			"request": "DELETE",
+			"cookie": true,
+			"url": "/templates",
+			"attributes": "[template_id]",
+			"description": "Delete a template",
+			"responseType": "application/json"
+		}
+    },
+    "createData": {
+        
+    }
+}

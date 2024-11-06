@@ -1,0 +1,44 @@
+{
+    "cmd" : {
+        "get": "getRooms", 
+		"delete": "deleteRoom",
+		"post": "postRoom",
+		"postBooking": "postBooking"
+    },
+    "cmdList": {
+		"getRooms": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/booking/rooms", 
+			"responseType": "application/json"
+        },
+		"postRoom": {
+			"request": "POST",
+			"cookie": true,
+			"contentType": "application/json",
+			"url": "/booking/rooms", 
+			"description": "Create a room",
+			"responseType": "application/json"
+		},
+		"deleteRoom": {
+			"request": "DELETE",
+			"cookie": true,
+			"contentType": "",
+			"url": "/booking/rooms", 
+			"attributes": "[room_id]",
+			"description": "Delete a room",
+			"responseType": "application/json"
+		},
+		"postBooking": {
+			"request": "POST",
+			"cookie": true,
+			"contentType": "application/json",
+			"url": "/booking", 
+			"description": "Create a meeting",
+			"responseType": "application/json"
+		}
+    },
+    "createData": {
+		"link": "#booking/rroms/undefined"
+    }
+}

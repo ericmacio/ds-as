@@ -1,0 +1,26 @@
+{
+    "cmd" : {
+        "get": "getMedias", 
+		"delete": "deleteMedia"
+    },
+    "cmdList": {
+        "getMedias": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/medias", 
+			"attributes": "[media_id]",
+			"responseType": "application/json"
+        },
+        "deleteMedia": {
+			"request": "DELETE",
+			"cookie": true,
+			"contentType": "",
+			"url": "/medias", 
+			"attributes": "[media_id]",
+			"description": "Delete a media from the library",
+			"responseType": "application/json"
+		}
+    },
+    "createData": {
+    }
+}

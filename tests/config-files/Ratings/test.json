@@ -1,0 +1,782 @@
+{
+    "MediaInfo": {
+        "File": "google-avis.pgz",
+        "XMLVersion": "3",
+        "MediaVersion": "9",
+        "EstimatedDuration": "1240",
+        "MinDuration": "10000",
+        "Width": "1280",
+        "Height": "720"
+    },
+    "Items": {
+        "Item": [
+            {
+                "UID": "3690581639000",
+                "Name": "Background",
+                "Row": "1",
+                "Type": "ImageFond",
+                "Blocked": "0",
+                "Modified": "0",
+                "Deleted": "0",
+                "Visible": "1",
+                "Grouped": "0",
+                "Geometry": {
+                    "Modified": "0",
+                    "ShapeInfo": {
+                        "ShapeType": "Rectangle",
+                        "ShapeBox": {
+                            "Top": "0",
+                            "Bottom": "720",
+                            "Left": "0",
+                            "Right": "1280"
+                        }
+                    },
+                    "GraphBox": {
+                        "Top": "0",
+                        "Bottom": "720",
+                        "Left": "0",
+                        "Right": "1280"
+                    },
+                    "Angles": {
+                        "AngleZ": "0",
+                        "AngleX": "0",
+                        "AngleY": "0"
+                    }
+                },
+                "Style": {
+                    "Modified": "0",
+                    "Border": {
+                        "BorderWidth": "0",
+                        "BorderHeight": "0",
+                        "BorderColor": "#000000"
+                    },
+                    "Background": {
+                        "InsideNbColors": "0",
+                        "InsideStyle": "0",
+                        "InsideColor1": "#c0c0c0",
+                        "InsideColor2": "#a0a0a0",
+                        "InsideColor3": "#000000",
+                        "InsideColor4": "#000000",
+                        "InsideColorFactor1": "33",
+                        "InsideColorFactor2": "66",
+                        "InsideColorAngle": "0",
+                        "InsideColorXCenter": "0",
+                        "InsideColorYCenter": "0"
+                    },
+                    "Transparencies": {
+                        "Transparency": "0",
+                        "InsideTransNbColors": "0",
+                        "InsideTransStyle": "0",
+                        "InsideTransColor1": "0",
+                        "InsideTransColor2": "0",
+                        "InsideTransColor3": "0",
+                        "InsideTransColor4": "0",
+                        "InsideTransColorFactor1": "0",
+                        "InsideTransColorFactor2": "0",
+                        "InsideTransColorAngle": "0",
+                        "InsideTransColorXCenter": "0",
+                        "InsideTransColorYCenter": "0"
+                    },
+                    "Shadow": {
+                        "ShadowTransparency": "0",
+                        "ShadowRelief": "0",
+                        "ShadowDx": "0",
+                        "ShadowDy": "0",
+                        "ShadowColor": "#000000",
+                        "ShadowBlur": "0"
+                    },
+                    "Reflect": {
+                        "ReflectDirection": "0",
+                        "ReflectSize": "0",
+                        "ReflectDecal": "0",
+                        "ReflectAlphaBegin": "0",
+                        "ReflectAlphaEnd": "0"
+                    }
+                },
+                "Effects": {
+                    "Modified": "0",
+                    "AnimSync": "0",
+                    "DelayDuration": "0",
+                    "TextEffectItems": "0",
+                    "TextEffectAninmSync": "0",
+                    "Regeneration": "0",
+                    "NbLigneMultiLigne": "0",
+                    "Effect": [
+                        {
+                            "Common": {
+                                "Type": "1",
+                                "InOut": "1",
+                                "Duration": "500",
+                                "WaitDuration": "0",
+                                "Direction": "0",
+                                "NbLines": "1",
+                                "NbColumns": "1",
+                                "Mask": "0",
+                                "Speed": "2",
+                                "AppliToAllGeneration": "0"
+                            },
+                            "Custom": {
+                                "Virtual_param": 0
+                            }
+                        },
+                        {
+                            "Common": {
+                                "Type": "-1",
+                                "InOut": "2",
+                                "Duration": "0",
+                                "WaitDuration": "0",
+                                "Direction": "0",
+                                "NbLines": "1",
+                                "NbColumns": "1",
+                                "Mask": "0",
+                                "Speed": "0",
+                                "AppliToAllGeneration": "0"
+                            },
+                            "Custom": {
+                                "Virtual_param": 0
+                            }
+                        }
+                    ]
+                },
+                "Content": {
+                    "Modified": "0",
+                    "Value": "001.jpg",
+                    "AdjustMode": "0",
+                    "Do_not_display_empty": "0"
+                }
+            },
+            {
+                "UID": "3690576815001",
+                "Name": "Title",
+                "Row": "2",
+                "Type": "Text",
+                "Blocked": "0",
+                "Modified": 1,
+                "Deleted": "0",
+                "Visible": "1",
+                "Grouped": "0",
+                "Geometry": {
+                    "Modified": "0",
+                    "ShapeInfo": {
+                        "ShapeType": "Rectangle",
+                        "ShapeBox": {
+                            "Top": "78",
+                            "Bottom": "136",
+                            "Left": "37",
+                            "Right": "670"
+                        }
+                    },
+                    "GraphBox": {
+                        "Top": "78",
+                        "Bottom": "136",
+                        "Left": "37",
+                        "Right": "670"
+                    },
+                    "Angles": {
+                        "AngleZ": "0",
+                        "AngleX": "0",
+                        "AngleY": "0"
+                    }
+                },
+                "Style": {
+                    "Modified": "0",
+                    "Border": {
+                        "BorderWidth": "0",
+                        "BorderHeight": "0",
+                        "BorderColor": "#000000"
+                    },
+                    "Background": {
+                        "InsideNbColors": "0",
+                        "InsideStyle": "0",
+                        "InsideColor1": "#a0a0a0",
+                        "InsideColor2": "#c0c0c0",
+                        "InsideColor3": "#000000",
+                        "InsideColor4": "#000000",
+                        "InsideColorFactor1": "33",
+                        "InsideColorFactor2": "66",
+                        "InsideColorAngle": "0",
+                        "InsideColorXCenter": "0",
+                        "InsideColorYCenter": "0"
+                    },
+                    "Transparencies": {
+                        "Transparency": "0",
+                        "InsideTransNbColors": "0",
+                        "InsideTransStyle": "0",
+                        "InsideTransColor1": "0",
+                        "InsideTransColor2": "0",
+                        "InsideTransColor3": "0",
+                        "InsideTransColor4": "0",
+                        "InsideTransColorFactor1": "0",
+                        "InsideTransColorFactor2": "0",
+                        "InsideTransColorAngle": "0",
+                        "InsideTransColorXCenter": "0",
+                        "InsideTransColorYCenter": "0"
+                    },
+                    "Shadow": {
+                        "ShadowTransparency": "102",
+                        "ShadowRelief": "1",
+                        "ShadowDx": "2",
+                        "ShadowDy": "2",
+                        "ShadowColor": "#000000",
+                        "ShadowBlur": "2"
+                    },
+                    "Reflect": {
+                        "ReflectDirection": "0",
+                        "ReflectSize": "0",
+                        "ReflectDecal": "0",
+                        "ReflectAlphaBegin": "0",
+                        "ReflectAlphaEnd": "0"
+                    }
+                },
+                "Effects": {
+                    "Modified": "0",
+                    "AnimSync": "1",
+                    "DelayDuration": "0",
+                    "TextEffectItems": "0",
+                    "TextEffectAninmSync": "0",
+                    "Regeneration": "0",
+                    "NbLigneMultiLigne": "0",
+                    "Effect": [
+                        {
+                            "Common": {
+                                "Type": "4096",
+                                "InOut": "1",
+                                "Duration": "500",
+                                "WaitDuration": "0",
+                                "Direction": "0",
+                                "NbLines": "1",
+                                "NbColumns": "1",
+                                "Mask": "0",
+                                "Speed": "2",
+                                "AppliToAllGeneration": "0"
+                            },
+                            "Custom": {
+                                "Fade": "1",
+                                "Angle": "0",
+                                "GlobZoom": "0"
+                            }
+                        },
+                        {
+                            "Common": {
+                                "Type": "-1",
+                                "InOut": "2",
+                                "Duration": "1000",
+                                "WaitDuration": "0",
+                                "Direction": "0",
+                                "NbLines": "1",
+                                "NbColumns": "1",
+                                "Mask": "0",
+                                "Speed": "0",
+                                "AppliToAllGeneration": "0"
+                            },
+                            "Custom": {
+                                "Virtual_param": 0
+                            }
+                        }
+                    ]
+                },
+                "Content": {
+                    "Modified": 1,
+                    "ForceUppercase": "0",
+                    "MaxCharCount": "15",
+                    "MultiLineEdit": "0",
+                    "MandatoryContent": "0",
+                    "HJustification": "0",
+                    "VJustification": "0",
+                    "Kerning": "6",
+                    "Interline": "-17",
+                    "Margins": {
+                        "LeftMargin": "0",
+                        "TopMargin": "0",
+                        "RightMargin": "0",
+                        "BottomMargin": "0"
+                    },
+                    "TextDynamic": "0",
+                    "FontFamily": "arimo-bold.ttf",
+                    "FontColor": "#ede0b6",
+                    "FontSize": "28",
+                    "FontStyle": "0",
+                    "OutlineColor": "#00000000",
+                    "OutlineThickness": "1",
+                    "ShadowColor": "#00000000"
+                }
+            },
+            {
+                "UID": "3690554446002",
+                "Name": "Photo",
+                "Row": "3",
+                "Type": "Image",
+                "Blocked": "0",
+                "Modified": "0",
+                "Deleted": "0",
+                "Visible": "1",
+                "Grouped": "0",
+                "Geometry": {
+                    "Modified": "0",
+                    "ShapeInfo": {
+                        "ShapeType": "Rectangle",
+                        "ShapeBox": {
+                            "Top": "85",
+                            "Bottom": "353",
+                            "Left": "815",
+                            "Right": "1215"
+                        }
+                    },
+                    "GraphBox": {
+                        "Top": "85",
+                        "Bottom": "353",
+                        "Left": "815",
+                        "Right": "1215"
+                    },
+                    "Angles": {
+                        "AngleZ": "0",
+                        "AngleX": "0",
+                        "AngleY": "0"
+                    }
+                },
+                "Style": {
+                    "Modified": "0",
+                    "Border": {
+                        "BorderWidth": "1",
+                        "BorderHeight": "1",
+                        "BorderColor": "#ffffff"
+                    },
+                    "Background": {
+                        "InsideNbColors": "0",
+                        "InsideStyle": "0",
+                        "InsideColor1": "#c0c0c0",
+                        "InsideColor2": "#a0a0a0",
+                        "InsideColor3": "#000000",
+                        "InsideColor4": "#000000",
+                        "InsideColorFactor1": "33",
+                        "InsideColorFactor2": "66",
+                        "InsideColorAngle": "0",
+                        "InsideColorXCenter": "0",
+                        "InsideColorYCenter": "0"
+                    },
+                    "Transparencies": {
+                        "Transparency": "0",
+                        "InsideTransNbColors": "0",
+                        "InsideTransStyle": "0",
+                        "InsideTransColor1": "0",
+                        "InsideTransColor2": "0",
+                        "InsideTransColor3": "0",
+                        "InsideTransColor4": "0",
+                        "InsideTransColorFactor1": "0",
+                        "InsideTransColorFactor2": "0",
+                        "InsideTransColorAngle": "0",
+                        "InsideTransColorXCenter": "0",
+                        "InsideTransColorYCenter": "0"
+                    },
+                    "Shadow": {
+                        "ShadowTransparency": "197",
+                        "ShadowRelief": "1",
+                        "ShadowDx": "6",
+                        "ShadowDy": "6",
+                        "ShadowColor": "#000000",
+                        "ShadowBlur": "4"
+                    },
+                    "Reflect": {
+                        "ReflectDirection": "0",
+                        "ReflectSize": "0",
+                        "ReflectDecal": "0",
+                        "ReflectAlphaBegin": "0",
+                        "ReflectAlphaEnd": "0"
+                    }
+                },
+                "Effects": {
+                    "Modified": "0",
+                    "AnimSync": "0",
+                    "DelayDuration": "0",
+                    "TextEffectItems": "0",
+                    "TextEffectAninmSync": "0",
+                    "Regeneration": "0",
+                    "NbLigneMultiLigne": "0",
+                    "Effect": [
+                        {
+                            "Common": {
+                                "Type": "4096",
+                                "InOut": "1",
+                                "Duration": "500",
+                                "WaitDuration": "0",
+                                "Direction": "0",
+                                "NbLines": "1",
+                                "NbColumns": "1",
+                                "Mask": "0",
+                                "Speed": "2",
+                                "AppliToAllGeneration": "0"
+                            },
+                            "Custom": {
+                                "Fade": "1",
+                                "Angle": "180",
+                                "GlobZoom": "0"
+                            }
+                        },
+                        {
+                            "Common": {
+                                "Type": "-1",
+                                "InOut": "2",
+                                "Duration": "1000",
+                                "WaitDuration": "0",
+                                "Direction": "0",
+                                "NbLines": "1",
+                                "NbColumns": "1",
+                                "Mask": "0",
+                                "Speed": "0",
+                                "AppliToAllGeneration": "0"
+                            },
+                            "Custom": {
+                                "Virtual_param": 0
+                            }
+                        }
+                    ]
+                },
+                "Content": {
+                    "Modified": "0",
+                    "Value": "002.jpg",
+                    "AdjustMode": "2",
+                    "Do_not_display_empty": "0"
+                }
+            },
+            {
+                "UID": "3690516016003",
+                "Name": "Name",
+                "Row": "4",
+                "Type": "Text",
+                "Blocked": "0",
+                "Modified": 1,
+                "Deleted": "0",
+                "Visible": "1",
+                "Grouped": "1",
+                "Geometry": {
+                    "Modified": "0",
+                    "ShapeInfo": {
+                        "ShapeType": "Rectangle",
+                        "ShapeBox": {
+                            "Top": "168",
+                            "Bottom": "256",
+                            "Left": "247",
+                            "Right": "698"
+                        }
+                    },
+                    "GraphBox": {
+                        "Top": "168",
+                        "Bottom": "256",
+                        "Left": "247",
+                        "Right": "698"
+                    },
+                    "Angles": {
+                        "AngleZ": "0",
+                        "AngleX": "0",
+                        "AngleY": "0"
+                    }
+                },
+                "Style": {
+                    "Modified": "0",
+                    "Border": {
+                        "BorderWidth": "0",
+                        "BorderHeight": "0",
+                        "BorderColor": "#000000"
+                    },
+                    "Background": {
+                        "InsideNbColors": "0",
+                        "InsideStyle": "0",
+                        "InsideColor1": "#a0a0a0",
+                        "InsideColor2": "#c0c0c0",
+                        "InsideColor3": "#000000",
+                        "InsideColor4": "#000000",
+                        "InsideColorFactor1": "33",
+                        "InsideColorFactor2": "66",
+                        "InsideColorAngle": "0",
+                        "InsideColorXCenter": "0",
+                        "InsideColorYCenter": "0"
+                    },
+                    "Transparencies": {
+                        "Transparency": "0",
+                        "InsideTransNbColors": "0",
+                        "InsideTransStyle": "0",
+                        "InsideTransColor1": "0",
+                        "InsideTransColor2": "0",
+                        "InsideTransColor3": "0",
+                        "InsideTransColor4": "0",
+                        "InsideTransColorFactor1": "0",
+                        "InsideTransColorFactor2": "0",
+                        "InsideTransColorAngle": "0",
+                        "InsideTransColorXCenter": "0",
+                        "InsideTransColorYCenter": "0"
+                    },
+                    "Shadow": {
+                        "ShadowTransparency": "0",
+                        "ShadowRelief": "0",
+                        "ShadowDx": "0",
+                        "ShadowDy": "0",
+                        "ShadowColor": "#000000",
+                        "ShadowBlur": "0"
+                    },
+                    "Reflect": {
+                        "ReflectDirection": "0",
+                        "ReflectSize": "0",
+                        "ReflectDecal": "0",
+                        "ReflectAlphaBegin": "0",
+                        "ReflectAlphaEnd": "0"
+                    }
+                },
+                "Content": {
+                    "Modified": 1,
+                    "ForceUppercase": "0",
+                    "MaxCharCount": "4",
+                    "MultiLineEdit": "0",
+                    "MandatoryContent": "0",
+                    "HJustification": "0",
+                    "VJustification": "0",
+                    "Kerning": "0",
+                    "Interline": "0",
+                    "Margins": {
+                        "LeftMargin": "0",
+                        "TopMargin": "0",
+                        "RightMargin": "0",
+                        "BottomMargin": "0"
+                    },
+                    "TextDynamic": "0",
+                    "FontFamily": "Arial.ttf",
+                    "FontColor": "#e2e2e2",
+                    "FontSize": "28",
+                    "FontStyle": "0",
+                    "OutlineColor": "#00000000",
+                    "OutlineThickness": "1",
+                    "ShadowColor": "#00000000",
+                    "FontDetails": {
+                        "Bold_Italic": "/kit_fonts/Arial Gras Italique.ttf",
+                        "Bold": "/kit_fonts/Arial Gras.ttf",
+                        "Italic": "/kit_fonts/Arial Italique.ttf",
+                        "Default": "/kit_fonts/Arial.ttf"
+                    }
+                }
+            },
+            {
+                "UID": "3690562446004",
+                "Name": "Rating",
+                "Row": "5",
+                "Type": "Text",
+                "Blocked": "0",
+                "Modified": 1,
+                "Deleted": "0",
+                "Visible": "1",
+                "Grouped": "1",
+                "Geometry": {
+                    "Modified": "0",
+                    "ShapeInfo": {
+                        "ShapeType": "Rectangle",
+                        "ShapeBox": {
+                            "Top": "245",
+                            "Bottom": "333",
+                            "Left": "246",
+                            "Right": "697"
+                        }
+                    },
+                    "GraphBox": {
+                        "Top": "245",
+                        "Bottom": "333",
+                        "Left": "246",
+                        "Right": "697"
+                    },
+                    "Angles": {
+                        "AngleZ": "0",
+                        "AngleX": "0",
+                        "AngleY": "0"
+                    }
+                },
+                "Style": {
+                    "Modified": "0",
+                    "Border": {
+                        "BorderWidth": "0",
+                        "BorderHeight": "0",
+                        "BorderColor": "#000000"
+                    },
+                    "Background": {
+                        "InsideNbColors": "0",
+                        "InsideStyle": "0",
+                        "InsideColor1": "#a0a0a0",
+                        "InsideColor2": "#c0c0c0",
+                        "InsideColor3": "#000000",
+                        "InsideColor4": "#000000",
+                        "InsideColorFactor1": "33",
+                        "InsideColorFactor2": "66",
+                        "InsideColorAngle": "0",
+                        "InsideColorXCenter": "0",
+                        "InsideColorYCenter": "0"
+                    },
+                    "Transparencies": {
+                        "Transparency": "0",
+                        "InsideTransNbColors": "0",
+                        "InsideTransStyle": "0",
+                        "InsideTransColor1": "0",
+                        "InsideTransColor2": "0",
+                        "InsideTransColor3": "0",
+                        "InsideTransColor4": "0",
+                        "InsideTransColorFactor1": "0",
+                        "InsideTransColorFactor2": "0",
+                        "InsideTransColorAngle": "0",
+                        "InsideTransColorXCenter": "0",
+                        "InsideTransColorYCenter": "0"
+                    },
+                    "Shadow": {
+                        "ShadowTransparency": "0",
+                        "ShadowRelief": "0",
+                        "ShadowDx": "0",
+                        "ShadowDy": "0",
+                        "ShadowColor": "#000000",
+                        "ShadowBlur": "0"
+                    },
+                    "Reflect": {
+                        "ReflectDirection": "0",
+                        "ReflectSize": "0",
+                        "ReflectDecal": "0",
+                        "ReflectAlphaBegin": "0",
+                        "ReflectAlphaEnd": "0"
+                    }
+                },
+                "Content": {
+                    "Modified": 1,
+                    "ForceUppercase": "0",
+                    "MaxCharCount": "6",
+                    "MultiLineEdit": "0",
+                    "MandatoryContent": "0",
+                    "HJustification": "0",
+                    "VJustification": "0",
+                    "Kerning": "0",
+                    "Interline": "0",
+                    "Margins": {
+                        "LeftMargin": "0",
+                        "TopMargin": "0",
+                        "RightMargin": "0",
+                        "BottomMargin": "0"
+                    },
+                    "TextDynamic": "0",
+                    "FontFamily": "Arial.ttf",
+                    "FontColor": "#e2e2e2",
+                    "FontSize": "28",
+                    "FontStyle": "0",
+                    "OutlineColor": "#00000000",
+                    "OutlineThickness": "1",
+                    "ShadowColor": "#00000000",
+                    "FontDetails": {
+                        "Bold_Italic": "/kit_fonts/Arial Gras Italique.ttf",
+                        "Bold": "/kit_fonts/Arial Gras.ttf",
+                        "Italic": "/kit_fonts/Arial Italique.ttf",
+                        "Default": "/kit_fonts/Arial.ttf"
+                    }
+                }
+            },
+            {
+                "UID": "3690596096005",
+                "Name": "Review",
+                "Row": "6",
+                "Type": "Text",
+                "Blocked": "0",
+                "Modified": 1,
+                "Deleted": "0",
+                "Visible": "1",
+                "Grouped": "1",
+                "Geometry": {
+                    "Modified": "0",
+                    "ShapeInfo": {
+                        "ShapeType": "Rectangle",
+                        "ShapeBox": {
+                            "Top": "407",
+                            "Bottom": "662",
+                            "Left": "220",
+                            "Right": "1111"
+                        }
+                    },
+                    "GraphBox": {
+                        "Top": "407",
+                        "Bottom": "662",
+                        "Left": "220",
+                        "Right": "1111"
+                    },
+                    "Angles": {
+                        "AngleZ": "0",
+                        "AngleX": "0",
+                        "AngleY": "0"
+                    }
+                },
+                "Style": {
+                    "Modified": "0",
+                    "Border": {
+                        "BorderWidth": "0",
+                        "BorderHeight": "0",
+                        "BorderColor": "#000000"
+                    },
+                    "Background": {
+                        "InsideNbColors": "0",
+                        "InsideStyle": "0",
+                        "InsideColor1": "#a0a0a0",
+                        "InsideColor2": "#c0c0c0",
+                        "InsideColor3": "#000000",
+                        "InsideColor4": "#000000",
+                        "InsideColorFactor1": "33",
+                        "InsideColorFactor2": "66",
+                        "InsideColorAngle": "0",
+                        "InsideColorXCenter": "0",
+                        "InsideColorYCenter": "0"
+                    },
+                    "Transparencies": {
+                        "Transparency": "0",
+                        "InsideTransNbColors": "0",
+                        "InsideTransStyle": "0",
+                        "InsideTransColor1": "0",
+                        "InsideTransColor2": "0",
+                        "InsideTransColor3": "0",
+                        "InsideTransColor4": "0",
+                        "InsideTransColorFactor1": "0",
+                        "InsideTransColorFactor2": "0",
+                        "InsideTransColorAngle": "0",
+                        "InsideTransColorXCenter": "0",
+                        "InsideTransColorYCenter": "0"
+                    },
+                    "Shadow": {
+                        "ShadowTransparency": "0",
+                        "ShadowRelief": "0",
+                        "ShadowDx": "0",
+                        "ShadowDy": "0",
+                        "ShadowColor": "#000000",
+                        "ShadowBlur": "0"
+                    },
+                    "Reflect": {
+                        "ReflectDirection": "0",
+                        "ReflectSize": "0",
+                        "ReflectDecal": "0",
+                        "ReflectAlphaBegin": "0",
+                        "ReflectAlphaEnd": "0"
+                    }
+                },
+                "Content": {
+                    "Modified": 1,
+                    "ForceUppercase": "0",
+                    "MaxCharCount": "134",
+                    "MultiLineEdit": "0",
+                    "MandatoryContent": "0",
+                    "HJustification": "0",
+                    "VJustification": "0",
+                    "Kerning": "10",
+                    "Interline": "-1",
+                    "Margins": {
+                        "LeftMargin": "0",
+                        "TopMargin": "0",
+                        "RightMargin": "0",
+                        "BottomMargin": "0"
+                    },
+                    "TextDynamic": "0",
+                    "FontFamily": "arimo-regular.ttf",
+                    "FontColor": "#e4e4e4",
+                    "FontSize": "24",
+                    "FontStyle": "0",
+                    "OutlineColor": "#00000000",
+                    "OutlineThickness": "1",
+                    "ShadowColor": "#00000000"
+                }
+            }
+        ]
+    }
+}

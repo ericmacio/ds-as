@@ -1,0 +1,42 @@
+{
+  "name": "as_console",
+  "version": "1.0.0",
+  "description": "AS console",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode development"
+  },
+  "keywords": [],
+  "author": "Eric Macioszczyk",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^4.2.1",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "file-loader": "^6.2.0",
+    "react": "^16.13.1",
+    "react-color": "^2.19.3",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.11.0",
+    "react-json-editor-ajrm": "^2.5.13",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-useanimations": "^2.0.5"
+  }
+}

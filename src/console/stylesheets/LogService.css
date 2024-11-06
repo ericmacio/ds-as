@@ -1,0 +1,10 @@
+.selectService{
+    flex: 1 1 auto;
+}
+.title {
+    width: 15%;
+    display: inline-block;
+}
+.list {
+    background-color: #f7f7f7;
+}

@@ -1,0 +1,11 @@
+{
+    "display": [
+        "title",
+        "identifier",
+        "version",
+        "global_status",
+        "content_status",
+        "network_status"
+    ],
+    "timerSec": 5
+}

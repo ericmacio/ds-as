@@ -1,0 +1,70 @@
+{
+    "cmd" : {
+		"get": "getFeed",
+		"getData": "getFeedData", 
+        "post": "postDataFeed",
+		"getContent": "getFeedContent",
+		"delete": "deleteFeed",
+		"generate": "generateFeed"
+    },
+    "cmdList": {
+		"generateFeed": {
+			"request": "PUT",
+			"cookie": true,
+			"url": "/datafeed/startGeneration",
+			"attributes": "[csig]",
+			"description": "Generate feed",
+			"responseType": "application/json"
+		},
+        "getFeed": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/medias?type[]=datafeed", 
+			"description": "Get data feeds list",
+			"responseType": "application/json"
+		},
+		"getFeedData": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/datafeed", 
+			"attributes": "[datafeed_id]",
+			"description": "Get feed data",
+			"responseType": "application/json"
+        },
+        "getTwitterDatafeed": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/datafeed/twittertoxml", 
+			"attributes": "[datafeed_id]",
+			"description": "Get twitter feed data",
+			"responseType": "application/json"
+		},
+		"getFeedContent": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/datafeed/content", 
+			"attributes": "[datafeed_id]",
+			"description": "Get feed content",
+			"responseType": "application/json"
+		},
+        "postDataFeed": {
+			"request": "POST",
+			"cookie": true,
+			"url": "/datafeed",
+			"attributes": "",
+			"description": "Create a media feed",
+			"contentType": "application/json"
+        },
+        "deleteFeed": {
+			"request": "DELETE",
+			"cookie": true,
+			"url": "/datafeed",
+			"attributes": "[feed_id]",
+			"description": "Delete a data feed",
+			"responseType": "application/json"
+		}
+    },
+    "createData": {
+        "link": "#feed/undefined"
+    }
+}

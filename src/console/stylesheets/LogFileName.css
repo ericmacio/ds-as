@@ -1,0 +1,10 @@
+.logfilename-select{
+    flex: 1 1 auto;
+}
+.logfilename-title {
+    width: 15%;
+    display: inline-block;
+}
+.logfilename-list {
+    background-color: #f7f7f7;
+}

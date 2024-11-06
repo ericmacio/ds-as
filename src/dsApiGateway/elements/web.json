@@ -1,0 +1,35 @@
+{
+    "cmd" : {
+        "get": "getWeb", 
+		"delete": "deleteWeb",
+		"post": "postWeb"
+    },
+    "cmdList": {
+		"getWeb": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/medias?type[]=web", 
+			"attributes": "[media_id]",
+			"responseType": "application/json"
+        },
+		"postWeb": {
+			"request": "POST",
+			"cookie": true,
+			"contentType": "application/json",
+			"url": "/medias/webPage",
+			"description": "Create a web page into the library",
+			"responseType": "application/json"
+		},
+		"deleteWeb": {
+			"request": "DELETE",
+			"cookie": true,
+			"contentType": "",
+			"url": "/medias/webPage",
+			"attributes": "[media_id]",
+			"description": "Delete a web page from the library",
+			"responseType": "application/json"
+		}
+    },
+    "createData": {
+    }
+}

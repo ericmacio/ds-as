@@ -1,0 +1,28 @@
+.appsrc {
+    max-height:100%;
+    max-width:  70%;
+}
+.appsrc-menu {
+    display: flex;
+    padding-bottom: 1px;
+}
+.appsrc-menu-close {
+    cursor: pointer;
+    margin-left: auto;
+    border: solid thin;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+}
+.appsrc-menu-close:hover {
+    background-color: #c7c7c7;
+}
+.appsrc-txt {
+    font: 13px courier, sans-serif;
+    background-color: #222222;
+    color: #b3d9ff;
+    padding: 10px;
+    white-space: pre-wrap;
+    margin-bottom: 10px;
+    width: 95%;
+    overflow: auto;
+}

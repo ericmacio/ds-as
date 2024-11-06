@@ -1,0 +1,27 @@
+.displayerror-overlay {
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #28546cd1;
+    display: flex;
+    z-index: 10;
+}
+.displayerror-display {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #7b0606;
+    color: #e3e6e8;
+    padding: 20px;
+}
+.displayerror-display-text {
+	height: 30px;
+}
+.displayerror-display button {
+    font-size: 16px;
+}

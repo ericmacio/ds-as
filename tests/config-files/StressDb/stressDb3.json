@@ -1,0 +1,11 @@
+{
+    "dataConnectors": {
+        "Xls1": {"type": "Xls", "access": {"type": "remote", "hostName": "QA1"}, "params": {"file": "D:/node.js/ds-as/appsData/StressDb/files/dbData1.xlsx", "sheet": "Sheet1"}},
+        "Xls2": {"type": "Xls", "access": {"type": "remote", "hostName": "QA1"}, "params": {"file": "D:/node.js/ds-as/appsData/StressDb/files/dbData2.xlsx", "sheet": "Sheet1"}},
+        "Xls3": {"type": "Xls", "access": {"type": "remote", "hostName": "QA1"}, "params": {"file": "D:/node.js/ds-as/appsData/StressDb/files/dbData3.xlsx", "sheet": "Sheet1"}},
+        "Xls4": {"type": "Xls", "access": {"type": "remote", "hostName": "QA1"}, "params": {"file": "D:/node.js/ds-as/appsData/StressDb/files/dbData4.xlsx", "sheet": "Sheet1"}},
+        "Xls5": {"type": "Xls", "access": {"type": "remote", "hostName": "QA1"}, "params": {"file": "D:/node.js/ds-as/appsData/StressDb/files/dbData5.xlsx", "sheet": "Sheet1"}}
+    },
+    "nbClient": 2,
+    "timerMs": 500
+}

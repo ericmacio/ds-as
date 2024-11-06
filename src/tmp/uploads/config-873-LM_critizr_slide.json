@@ -1,0 +1,22 @@
+{
+    "url": "https://api.ds4.piksel.com/CritizrLM.php?shop=LEROY%20MERLIN%20LA%20VIGIE",
+    "slideInfoList": [
+        {
+            "name": "LM_note_enseigne_slide",
+            "template": "LM_note_enseigne",
+            "slideData": {
+                "Date": {"type": "text", "tag": "date_recup"},
+                "Nommagasin": {"type": "text", "value": "LA VIGIE"},
+                "Indice": {"type": "text", "tag": "note_critizr"},
+                "Avis": {"type": "text", "tag": "nb_avis_critizr"},
+                "Txtavis": {"type": "text", "value": "Avis"},
+                "Nb_region": {"type": "text", "tag": "rang_region_critizr"},
+                "Nb_region_text": {"type": "text", "tag": "exposant_region_critizr"},
+                "Total_region": {"type": "text", "tag": "nb_mag_region_critizr_long"},
+                "Nb_france": {"type": "text", "tag": "rang_france_critizr"},
+                "Nb_france_text": {"type": "text", "tag": "exposant_france_critizr"},
+                "Total_france": {"type": "text","tag": "nb_mag_france_critizr_long"}
+            }
+        }
+    ]
+}

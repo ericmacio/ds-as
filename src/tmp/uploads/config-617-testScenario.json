@@ -1,0 +1,40 @@
+{
+    "wait_task_ms": 0,
+    "wait_loop_ms": 0,
+    "scenarioList": [
+        "channelTest"
+    ],
+    "slideTemplate": {
+        "name": "slideTemplate",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "test-slideTemplate", "type": "feed", "url": "http://ftp.ds-piksel.com/slideTemplates/rss1"}}
+        ]
+    },
+    "channelTest": {
+        "name": "Test channel",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "slideTemplate_upload", "data": {"name": "airbox2_test", "type": "manual", "url": "http://ftp.ds-piksel.com/slideTemplates/airbox/airbox2"}},
+            {"action": "channel_create", "data": {"name": "channel_eric_1", "description": "Demo channel"}},
+            {"action": "channel_upload_content", "data": {"name": "channel_eric_1", "url": "http://ftp.ds-piksel.com/medias/images/ville1.jpg", "contentName": "img_ville"}},
+            {"action": "slide_create", "data": {"name": "airbox2_test", "url": "http://ftp.ds-piksel.com/slideData/airbox/airbox2_demo.json", "template": "airbox2_test"}},
+            {"action": "channel_post_content", "data": {"name": "channel_api", "contentType": "slide", "contentName": "airbox2_api"}},
+            {"action": "channel_publish", "data": {"name": "channel_eric_1"}},
+            {"action": "channel_delete", "data": {"name": "channel_eric_1"}},
+            {"action": "slide_delete", "data": {"name": "airbox2_api"}},
+            {"action": "media_delete", "data": {"name": "ville_api"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airbox2_api"}}
+        ]
+    },
+    "channelDelete": {
+        "name": "Delete channel",
+        "nbLoop": 1,
+        "taskList": [
+            {"action": "channel_delete", "data": {"name": "channel_eric_1"}},
+            {"action": "slide_delete", "data": {"name": "airbox2_test"}},
+            {"action": "media_delete", "data": {"name": "img_ville"}},
+            {"action": "slideTemplate_delete", "data": {"name": "airbox2_test"}}
+        ]
+    }
+}

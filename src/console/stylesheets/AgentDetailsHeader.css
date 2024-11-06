@@ -1,0 +1,75 @@
+.agentdetails-header-avatar-heartbeat-ok {
+    color: #2e4557;
+    color: #014059;
+}
+.agentdetails-header-avatar-heartbeat-ko {
+    color: #ff3838;
+}
+.agentdetails-header-avatar-registered {
+    color: #2a8e2a;
+}
+.agentdetails-header-hostname {
+    margin-left: 20px;
+    font-size: 24px;
+    margin-right: 30px;
+}
+.agentdetails-header-heartbeat-ok {
+    color: #2a8e2a;
+}
+.agentdetails-header-heartbeat-ko {
+    color: #ff3838;
+}
+.agentdetails-header-connected {
+    margin-left: 20px;
+    font-size: 20px;
+    color: #2a8e2a;
+    font-weight: bold;
+}
+.agentdetails-header-notconnected {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: normal;
+}
+.agentdetails-header-loading{
+    color: #faea06;
+}
+.agentdetails-header-start{
+    color: #32af32;
+}
+.agentdetails-header-start:hover{
+    cursor: pointer;
+}
+.agentdetails-header-stop{
+    color: #ff3838;
+}
+.agentdetails-header-stop:hover{
+    cursor: pointer;
+}
+.agentdetails-header-status-registered {
+    font-size: 20px;
+    font-weight: bold;
+    width: 150px;
+    margin-left: 20px;
+    color: #2a8e2a;
+}
+.agentdetails-header-status-stopped {
+    font-size: 20px;
+    font-weight: bold;
+    width: 150px;
+    margin-left: 20px;
+}
+.agentdetails-header-status-idle {
+    font-size: 20px;
+    font-weight: bold;
+    width: 150px;
+    margin-left: 20px;
+    color: #ffa959;
+}
+.agentdetails-header-status-unreachable {
+    font-size: 20px;
+    font-weight: bold;
+    width: 150px;
+    margin-left: 20px;
+    color: #fb3e3e;
+}

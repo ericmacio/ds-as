@@ -1,0 +1,26 @@
+.search {
+	border: solid thin #c5c5c5;
+	padding: 1px;
+	display: flex;
+	height: fit-content;
+	margin-left: 30px;
+	align-items: center;
+}
+.search-clear {
+	cursor: pointer;
+	color: #d42222;
+}
+.search-clear:hover {
+	color: #d42222;
+}
+.search-input {
+	height: 1.1em;
+	width: 120px;
+	border-style: none;
+}
+.search-input:focus {
+	outline: none;
+}
+.search-label {
+	margin-left: auto;
+}

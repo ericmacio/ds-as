@@ -1,0 +1,7 @@
+{
+    "errorCode": {
+        "NOT_ALLOWED": 403,
+        "DATABASE": 400,
+        "FATAL": 500
+    }
+}

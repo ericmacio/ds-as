@@ -1,0 +1,11 @@
+.logMsg {
+	width: 100%;
+}
+.logMsgError {
+	width: 100%;
+	color: #fd5c1f;
+}
+.logMsgWarning {
+	width: 100%;
+	color: #f8e471;
+}

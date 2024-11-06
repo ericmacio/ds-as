@@ -1,0 +1,26 @@
+{
+    "cmd" : {
+        "get": "getQMs",
+        "delete": "deleteQM"
+    },
+    "cmdList": {
+        "getQMs": {
+			"request": "GET",
+			"cookie": true,
+			"url": "/QMtasks", 
+			"attributes": "",
+			"responseType": "application/json"
+        },
+        "deleteQM": {
+			"description": "Delete QM from the server",
+			"request": "DELETE",
+			"cookie": true,
+			"url": "/QMtasks",
+			"attributes": "[qm_id]",
+			"responseType": "application/json"
+		}
+    },
+    "createData": {
+        
+    }
+}
